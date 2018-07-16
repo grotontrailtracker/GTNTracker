@@ -1,0 +1,282 @@
+[
+  {
+    "Identifier": "TownForest",
+    "Name": "Town Forest",
+    "Description": "",
+    "Regions": null
+  },
+  {
+    "Identifier": "FitchsWoods",
+    "Name": "Fitch's Woods",
+    "Description": "",
+    "Regions": null
+  },
+  {
+    "Identifier": "BertozziWildlife",
+    "Name": "Bertozzi Wildlife",
+    "Description": "",
+    "Regions": null
+  },
+  {
+    "Identifier": "GrotonPlace",
+    "Name": "Groton Place",
+    "Description": "The Groton Place is a well loved property that follows the Nashua River. With many intertwined loops these trails are optimal for everyone, whether you are an experienced hiker or just looking for a relaxing stroll. This property has stunning features scattered throughout its network of trails.",
+    "Regions": [
+      {
+        "Identifier": "GrotonPlace1",
+        "TrailIdentifier": "GrotonPlace",
+        "TrailName": null,
+        "Name": "Trail Start",
+        "Description": null,
+        "ImageName": "http://www.grotontrails.org/images/groton-place-rhododendron-trail.jpg",
+        "IsImageNameURI": true,
+        "Center": {
+          "Latitude": 42.603786,
+          "Longitude": -71.596655
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      },
+      {
+        "Identifier": "GrotonPlace2",
+        "TrailIdentifier": "GrotonPlace",
+        "TrailName": null,
+        "Name": "First Fork",
+        "Description": null,
+        "ImageName": null,
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.603301,
+          "Longitude": -71.596631
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      },
+      {
+        "Identifier": "GrotonPlace3",
+        "TrailIdentifier": "GrotonPlace",
+        "TrailName": null,
+        "Name": "Trail Bench",
+        "Description": "Taking a well-deserved break",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp3.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60169,
+          "Longitude": -71.59655
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      },
+      {
+        "Identifier": "GrotonPlace4",
+        "TrailIdentifier": "GrotonPlace",
+        "TrailName": null,
+        "Name": "River Intersection",
+        "Description": null,
+        "ImageName": null,
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.601466,
+          "Longitude": -71.598563
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      },
+      {
+        "Identifier": "GrotonPlace5",
+        "TrailIdentifier": "GrotonPlace",
+        "TrailName": null,
+        "Name": "Dumaine Memorial",
+        "Description": null,
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp5.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.602225,
+          "Longitude": -71.599272
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      },
+      {
+        "Identifier": "GrotonPlace6",
+        "TrailIdentifier": "GrotonPlace",
+        "TrailName": null,
+        "Name": "End of Loop",
+        "Description": "End of the trail!",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp6.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.604058,
+          "Longitude": -71.59802
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      }
+    ]
+  },
+  {
+    "Identifier": "MattyHouse",
+    "Name": "Matt's Test",
+    "Description": "Test Trail Description",
+    "Regions": [
+      {
+        "Identifier": "MattyHouseLoc",
+        "TrailIdentifier": "MattyHouse",
+        "TrailName": null,
+        "Name": "Matt's House",
+        "Description": "This is a test description for Matt's House. We need to test a very long description, so let's add some more information. I live with my best friend Allie who's my friendly yellow lab.",
+        "ImageName": "GTNTracker.Images.cablecar.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60988875,
+          "Longitude": -71.59536214
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      }
+    ]
+  },
+  {
+    "Identifier": "MattyTest",
+    "Name": "Matt's Test Track",
+    "Description": "Test Track Around PatridgeBerry Woods",
+    "Regions": [
+      {
+        "Identifier": "MattyTT1",
+        "TrailIdentifier": "MattyTest",
+        "TrailName": null,
+        "Name": "Bus Stop",
+        "Description": "A wonderful place to wait for Bus #14",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt1.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.611156,
+          "Longitude": -71.596322
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      },
+      {
+        "Identifier": "MattyTT2",
+        "TrailIdentifier": "MattyTest",
+        "TrailName": null,
+        "Name": "My Hydrant",
+        "Description": "A fun place on Riverbend Drive",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt2.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.612618,
+          "Longitude": -71.599428
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      },
+      {
+        "Identifier": "MattyTT3",
+        "TrailIdentifier": "MattyTest",
+        "TrailName": null,
+        "Name": "Hickory Drive Intersection",
+        "Description": "Just a way to duck out towards the Groton Fairground",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt3.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.614801,
+          "Longitude": -71.5968
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      },
+      {
+        "Identifier": "MattyTT4",
+        "TrailIdentifier": "MattyTest",
+        "TrailName": null,
+        "Name": "Start of Wintergreen Lane",
+        "Description": "Onto our home's street",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt4.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.612275,
+          "Longitude": -71.591138
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      },
+      {
+        "Identifier": "MattyTT5",
+        "TrailIdentifier": "MattyTest",
+        "TrailName": null,
+        "Name": "Ranch House on Wintergreen",
+        "Description": "A nice single floor ranch house.",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt5.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.612154,
+          "Longitude": -71.594343
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      }
+    ]
+  },
+  {
+    "Identifier": "LegionHall",
+    "Name": "Legion Hall",
+    "Description": "Legion Hall - 75 Hollis St",
+    "Regions": [
+      {
+        "Identifier": "LegionHall1",
+        "TrailIdentifier": "LegionHall",
+        "TrailName": null,
+        "Name": "Legion Hall",
+        "Description": "This is a test description for the Groton Legion Hall",
+        "ImageName": "GTNTracker.Images.legion.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.613210,
+          "Longitude": -71.573405
+        },
+        "Radius": {
+          "TotalMiles": 0.03106855,
+          "TotalMeters": 50.0,
+          "TotalKilometers": 0.05
+        }
+      }
+    ]
+  }
+]

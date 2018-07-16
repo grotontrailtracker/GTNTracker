@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localViews:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GTNTracker"
+             xmlns:localViews="clr-namespace:GTNTracker.Views"
+             xmlns:converters="clr-namespace:GTNTracker.Converters;assembly=GTNTracker"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             BackgroundColor="#F5F5F5"
+             x:Class="GTNTracker.Views.WaypointCapture"  >
+    <localViews:BasePage.Resources>
+        <ResourceDictionary>
+            <converters:TimeConverter x:Key="TimeConverter" />
+            <Style x:Key="GridLblStyle"  TargetType="Label">
+                <Setter Property="TextColor" Value="#313131" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </localViews:BasePage.Resources>
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,5,0,0">
+            <Grid Margin="5,0" BackgroundColor="#E0E0E0" Padding="5,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Longitude:" HorizontalOptions="Start" FontSize="Micro"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Latitude:" HorizontalOptions="Start" FontSize="Micro"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Accuracy:" HorizontalOptions="Start" FontSize="Micro"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Longitude}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Micro"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Latitude}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Micro"/>
+                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Accuracy}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Micro"/>
+                <Label Grid.Row="2" Grid.Column="2" Text="{Binding LastUpdate, StringFormat=' Last Updated: {0}', Converter={StaticResource TimeConverter}}"
+                       HorizontalOptions="EndAndExpand" FontSize="Micro" VerticalOptions="Center"/>
+            </Grid>
+            <Entry x:Name="TrailNameEntry" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" Text="{Binding TrailName}"
+                   Placeholder="Trail Name" FontSize="Small" Margin="5,0" />
+            <Entry x:Name="WaypointNameEntry" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" Text="{Binding WaypointName}"
+                   Placeholder="Waypoint Name" FontSize="Small" Margin="5,0"/>
+            <Label Text="Description:" FontSize="Micro" Margin="5,1" />
+            <Editor x:Name="WaypointDescriptionEntry" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" Text="{Binding Description}"
+                   HeightRequest="60" FontSize="Small" Margin="5,0"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button Image="camera.png" Command="{Binding TakePictureCommand}"
+                        x:Name="SnapshotBtn" WidthRequest="75" 
+                        Grid.Column="1" VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="Center" Margin="5,0"/>
+                <Grid Grid.Column="0" IsVisible="False" BackgroundColor="#EEEEEE" Margin="5,2"
+                      HeightRequest="180" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.Triggers>
+                        <DataTrigger TargetType="Grid" Binding="{Binding IsImageAvailable}" Value="False" >
+                            <Setter Property="IsVisible" Value="True" />
+                        </DataTrigger>
+                    </Grid.Triggers>
+                    <Label Text="No Photo Available" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+                <ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0"
+                    WidthRequest="180" HeightRequest="180" IsVisible="{Binding IsImageAvailable}"
+                    DownsampleToViewSize="true"
+                    LoadingPlaceholder="loading.gif"
+                    ErrorPlaceholder="error404.png"
+                    Source = "{Binding Image}" />
+            </Grid>
+            <Button x:Name="SubmitBtn" Image="save.png" Text="Save Waypoint" Margin="5,0" Command="{Binding SaveCommand}"/>
+        </StackLayout>
+    </ScrollView>
+</localViews:BasePage>

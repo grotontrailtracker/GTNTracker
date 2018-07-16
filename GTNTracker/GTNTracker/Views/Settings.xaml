@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localViews:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GTNTracker"
+             xmlns:localViews="clr-namespace:GTNTracker.Views"
+             xmlns:converters="clr-namespace:GTNTracker.Converters;assembly=GTNTracker"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="GTNTracker.Views.Settings" BackgroundColor="#F5F5F5">
+    <localViews:BasePage.Resources>
+        
+    </localViews:BasePage.Resources>
+    <ScrollView>
+        
+        <!--<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,15,0,0">-->
+
+            <TableView Intent="Settings" Grid.Row="0" HasUnevenRows="true">
+              <TableRoot x:Name="SettingsRoot">
+                <TableSection Title="User Preferences">
+                  <SwitchCell x:Name="PopupSwitch" Text="Display Waypoint Visit Popups" OnChanged="DisplayPopupsChanged"/>
+                  <SwitchCell x:Name="MetricSwitch" Text="Display Distance in Meters"  OnChanged="MetricChanged"/>
+                </TableSection>
+                <TableSection x:Name="resetSection" Title="Reset Waypoint Visits">
+                    <ViewCell x:Name="RecoverViewCell">
+                        <Grid>                 
+                            <StackLayout Orientation="Horizontal" Margin="0,4" IsVisible="true" x:Name="WarningPanel">
+                                <Label Text="Warning! This will delete all your visits!" VerticalOptions="Center" x:Name="WarningText"
+                                       TextColor="#EF6C00" Margin="15,10" FontSize="Small"/>
+                            </StackLayout>
+                          <StackLayout Orientation="Horizontal" Margin="0,4" IsVisible="false" x:Name="TimestampPanel">
+                            <Label Text="" VerticalOptions="Center" x:Name="TimestampLabel"
+                                    Margin="15,10" FontSize="Small"/>
+                          </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell x:Name="ResetViewCell">
+                      <Grid>
+                        <StackLayout Orientation="Horizontal" Margin="0,4" IsVisible="false" x:Name="RecoverPanel">
+                          <Label Text="Recover Deleted Visit Data" VerticalOptions="Center" Margin="15,0" FontSize="Small" x:Name="RecoverText"/>
+                          <Button Text="Recover" WidthRequest="90" HorizontalOptions="EndAndExpand" Margin="5,0" x:Name="RecoverWaypointsBtn" Clicked="RecoverWaypointsBtn_Clicked"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,4" x:Name="resetStackPanel" IsVisible="true">
+                            <Label Text="Reset All Trail Visit Data" VerticalOptions="Center" Margin="15,0" FontSize="Small" x:Name="ResetText"/>
+                            <Button Text="Reset" WidthRequest="90" HorizontalOptions="EndAndExpand" Margin="5,0" x:Name="ResetWaypointsBtn" Clicked="ResetWaypointsBtn_Clicked"/>
+                        </StackLayout>
+                      </Grid>
+                    </ViewCell>
+                </TableSection>
+                <TableSection x:Name="developerSection" Title="For Development Only">
+                  <SwitchCell x:Name="CaptureSwitch" Text="Enable Waypoint Capture" OnChanged="HandleCaptureSwitchChanged" />
+                  <SwitchCell x:Name="DeveloperSwitch" Text="Developer Mode" OnChanged="DeveloperModeChanged"/>
+                  <ViewCell x:Name="LoadTestData">
+                    <StackLayout Orientation="Horizontal" Margin="0,4">
+                      <Label Text="Load Trail Visit Test Data" FontSize="Small" VerticalOptions="Center" Margin="15,0"/>
+                      <Button x:Name="LoadTestDataBtn" Text="Load" WidthRequest="80" HorizontalOptions="EndAndExpand" Margin="5,0" Clicked="LoadTestDataBtn_Clicked"/>
+                    </StackLayout>
+                  </ViewCell>
+                  <ViewCell x:Name="TestIISHost">
+                    <StackLayout Orientation="Horizontal" Margin="0,4">
+                      <Label Text="Test IIS:" Margin="15,0" FontSize="Small" VerticalOptions="Center"/>
+                      <Entry x:Name="hostNameEntry" Placeholder="IP Address" WidthRequest="150" FontSize="Small"  Margin="5,0" />
+                      <Button x:Name="setHostNameBtn" Text="Set Host" WidthRequest="80" HorizontalOptions="EndAndExpand" Margin="5,0" Clicked="setHostNameBtn_Clicked" />
+                    </StackLayout>                    
+                  </ViewCell>
+                </TableSection>
+              </TableRoot>
+            </TableView>
+          
+            <!--<StackLayout Grid.Row="1" Orientation="Vertical" Margin="0,5" >
+                <StackLayout x:Name="RecoverPanel" Orientation="Vertical" Margin="0,5" IsVisible="False">
+                    <Label x:Name="TimestampLabel" FontSize="Micro" HorizontalOptions="Center" />
+                    <Button Text="Recover Trail Visits" x:Name="RecoverWaypointsBtn" Clicked="RecoverWaypointsBtn_Clicked" Margin="0,5" />
+                </StackLayout>
+                <Button Text="Reset Trail Waypoint Visits" x:Name="ResetWaypointsBtn" Clicked="ResetWaypointsBtn_Clicked" />
+            </StackLayout> -->
+
+        <!--</StackLayout>-->
+    </ScrollView>
+</localViews:BasePage>

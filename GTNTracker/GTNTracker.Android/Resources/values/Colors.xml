@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <!--<color name="primary">#03A9F4</color>-->
+  <!--<color name="accent">#FFC107</color>-->
+  <!--<color name="accent">#65a312</color>-->
+  <!--<color name="window_background">#F5F5F5</color>-->
+  
+  <!-- Gray Set-->
+  <color name="primary">#424242</color>
+  <color name="primaryDark">#000000</color>
+  <color name="accent">#1B5E20</color>
+  <!--<color name="window_background">#BDBDBD</color>-->
+  <color name="window_background">#E0E0E0</color>
+
+  <color name="splash_background">#FFFFFF</color>
+  <color name="highlight_color">#66BB6A</color>
+  
+  <!-- Green Set -->
+  <!--<color name="primary">#33691E</color>
+  <color name="primaryDark">#1976D2</color>
+  <color name="accent">#65a312</color>
+  <color name="window_background">#7CB342</color>-->
+  
+</resources>

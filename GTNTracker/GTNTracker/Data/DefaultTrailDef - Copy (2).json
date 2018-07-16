@@ -1,0 +1,148 @@
+[
+  {
+    "Identifier": "GrotonPlace",
+    "Name": "Groton Place",
+    "Description": "The Groton Place is a well loved property that follows the Nashua River. With many intertwined loops these trails are optimal for everyone, whether you are an experienced hiker or just looking for a relaxing stroll. This property has stunning features scattered throughout its network of trails.",
+    "Regions": [
+      {
+        "Identifier": "GrotonPlace1",
+        "TrailIdentifier": "GrotonPlace",
+        "Name": "Trail Start",
+        "Description": null,
+        "ImageName": "https://www.grotontrails.org/images/groton-place-rhododendron-trail.jpg",
+        "IsImageNameURI": true,
+        "Center": {
+          "Latitude": 42.603786,
+          "Longitude": -71.596655
+        }
+      },
+      {
+        "Identifier": "GrotonPlace2",
+        "TrailIdentifier": "GrotonPlace",
+        "Name": "First Fork",
+        "Description": null,
+        "ImageName": null,
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.603301,
+          "Longitude": -71.596631
+        }
+      },
+      {
+        "Identifier": "GrotonPlace3",
+        "TrailIdentifier": "GrotonPlace",
+        "Name": "Trail Bench",
+        "Description": "Taking a well-deserved break",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp3.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60169,
+          "Longitude": -71.59655
+        }
+      },
+      {
+        "Identifier": "GrotonPlace4",
+        "TrailIdentifier": "GrotonPlace",
+        "Name": "River Intersection",
+        "Description": null,
+        "ImageName": null,
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.601466,
+          "Longitude": -71.598563
+        }
+      },
+      {
+        "Identifier": "GrotonPlace5",
+        "TrailIdentifier": "GrotonPlace",
+        "Name": "Dumaine Memorial",
+        "Description": null,
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp5.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.602225,
+          "Longitude": -71.599272
+        }
+      },
+      {
+        "Identifier": "GrotonPlace6",
+        "TrailIdentifier": "GrotonPlace",
+        "Name": "End of Loop",
+        "Description": "End of the trail!",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp6.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.604058,
+          "Longitude": -71.59802
+        }
+      }
+    ]
+  },
+  {
+    "Identifier": "MattyTest",
+    "Name": "Matt's Test Track",
+    "Description": "Test Track Around PatridgeBerry Woods",
+    "Regions": [
+      {
+        "Identifier": "MattyTT1",
+        "TrailIdentifier": "MattyTest",
+        "Name": "Bus Stop",
+        "Description": "A wonderful place to wait for Bus #14",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt1.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.610582,
+          "Longitude": -71.596157
+        }
+      },
+      {
+        "Identifier": "MattyTT2",
+        "TrailIdentifier": "MattyTest",
+        "Name": "My Hydrant",
+        "Description": "A fun place on Riverbend Drive",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt2.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.612639,
+          "Longitude": -71.599458
+        }
+      },
+      {
+        "Identifier": "MattyTT3",
+        "TrailIdentifier": "MattyTest",
+        "Name": "Hickory Drive Intersection",
+        "Description": "Just a way to duck out towards the Groton Fairground",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt3.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.614780,
+          "Longitude": -71.596819
+        }
+      },
+      {
+        "Identifier": "MattyTT4",
+        "TrailIdentifier": "MattyTest",
+        "Name": "Start of Wintergreen Lane",
+        "Description": "Onto our home's street",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt4.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.612318,
+          "Longitude": -71.591156
+        }
+      },
+      {
+        "Identifier": "MattyTT5",
+        "TrailIdentifier": "MattyTest",
+        "Name": "Ranch House on Wintergreen",
+        "Description": "A nice single floor ranch house.",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt5.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.612154,
+          "Longitude": -71.594682
+        }
+      }
+    ]
+  }
+]

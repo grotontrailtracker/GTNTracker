@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:converters="clr-namespace:GTNTracker.Converters;assembly=GTNTracker"
+             x:Class="GTNTracker.Views.EditCapture">
+  <pages:PopupPage.Resources>
+    <ResourceDictionary>
+      <converters:TimeConverter x:Key="TimeConverter" />
+      <Style x:Key="GridLblStyle"  TargetType="Label">
+          <Setter Property="TextColor" Value="#313131" />
+          <Setter Property="FontSize" Value="Small" />
+          <Setter Property="Margin" Value="0" />
+          <Setter Property="VerticalOptions" Value="Center" />
+          <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+      </Style>
+    </ResourceDictionary>
+  </pages:PopupPage.Resources>
+  <ScrollView>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20, 5, 20, 5" >
+        <StackLayout Orientation="Vertical" BackgroundColor="#F5F5F5">
+            <StackLayout BackgroundColor="#424242">
+                <Label Text="Edit/Email Waypoint" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="0,5" TextColor="White"/>
+            </StackLayout>
+
+            <Grid Margin="5,0" BackgroundColor="#E0E0E0" Padding="5,5">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Row="0" Grid.Column="0" Text="Longitude:" HorizontalOptions="Start" FontSize="Micro"/>
+              <Label Grid.Row="1" Grid.Column="0" Text="Latitude:" HorizontalOptions="Start" FontSize="Micro"/>
+              <Label Grid.Row="2" Grid.Column="0" Text="Accuracy:" HorizontalOptions="Start" FontSize="Micro"/>
+              <Label Grid.Row="0" Grid.Column="1" Text="{Binding Longitude}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Micro"/>
+              <Label Grid.Row="1" Grid.Column="1" Text="{Binding Latitude}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Micro"/>
+              <Label Grid.Row="2" Grid.Column="1" Text="{Binding Accuracy}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Micro"/>
+              <Label Grid.Row="2" Grid.Column="2" Text="{Binding CapturedTime, StringFormat=' Captured: {0}', Converter={StaticResource TimeConverter}}"
+                     HorizontalOptions="EndAndExpand" FontSize="Micro" VerticalOptions="Center"/>
+            </Grid>
+
+            <Entry x:Name="TrailNameEntry" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" Text="{Binding TrailName}"
+                   Placeholder="Trail Name" FontSize="Small" Margin="5,0" />
+            <Entry x:Name="WaypointNameEntry" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" Text="{Binding WaypointName}"
+                   Placeholder="Waypoint Name" FontSize="Small" Margin="5,0"/>
+            <Label Text="Description:" FontSize="Micro" Margin="5,2"/>
+            <Editor x:Name="WaypointDescriptionEntry" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" Text="{Binding Description}"
+                    FontSize="Small" HeightRequest="80" Margin="5,0"/>
+          
+            <ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0"
+                WidthRequest="150" HeightRequest="150"
+                DownsampleToViewSize="true"
+                LoadingPlaceholder="loading.gif"
+                ErrorPlaceholder="error404.png"
+                Source = "{Binding Image}" />
+
+            <Grid HorizontalOptions="FillAndExpand" Margin="2,2" >
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button Grid.Column="0" Text="Cancel" Clicked="OnCancelButtonTapped" />
+              <Button Grid.Column="1" Text="Update" Clicked="OnSaveButtonTapped"  />
+              <Button Grid.Column="2" Text="Email" Clicked="OnCloseButtonTapped" />
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</pages:PopupPage>

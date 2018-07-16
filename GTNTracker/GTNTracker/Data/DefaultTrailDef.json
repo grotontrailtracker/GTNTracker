@@ -1,0 +1,560 @@
+[
+  {
+    "Identifier": "TownForest",
+    "Name": "Town Forest",
+    "Description": "",
+    "Regions": null
+  },
+  {
+    "Identifier": "SurrendenFarm",
+    "Name": "Surrenden Farms / General Field",
+    "Description": "",
+    "Regions": null
+  },
+  {
+    "Identifier": "BertozziWildlife",
+    "Name": "Bertozzi Wildlife",
+    "Description": "Peter E. Bertozzi Conservation Area. This is a beautiful riverside property that includes wide dirt trails through the forest and a well loved swimming hole. A camping area on the river near a swimming hole.",
+    "Regions": [
+      {
+        "Identifier": "BW1",
+        "TrailIdentifier": "BertozziWildlife",
+        "Name": "Trail Start",
+        "Description": "Information kiosk at trail start.",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw1.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.63628376,
+          "Longitude": -71.65015495
+        }
+      },
+      {
+        "Identifier": "BW2",
+        "TrailIdentifier": "BertozziWildlife",
+        "Name": "Bertozzi / Squannacook Memorial",
+        "Description": "Peter Bertozzi and Squannacook River Wildlife Management Area Memorial",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw2.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.63568705,
+          "Longitude": -71.65108972
+        }
+      },
+      {
+        "Identifier": "BW8",
+        "TrailIdentifier": "BertozziWildlife",
+        "Name": "Midway To River",
+        "Description": "You're halfway to the Squannacook River from the Trail start.",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw8.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.63416897,
+          "Longitude": -71.65521277
+        }
+      },
+      {
+        "Identifier": "BW3",
+        "TrailIdentifier": "BertozziWildlife",
+        "Name": "Swimming Hole",
+        "Description": "Enjoy a refreshing swim!",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw10.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.63448865,
+          "Longitude": -71.65772242
+        }
+      },
+      {
+        "Identifier": "BW9",
+        "TrailIdentifier": "BertozziWildlife",
+        "Name": "Soil Conservation Project",
+        "Description": "A soil errosion prevention project by Chris Brown of Troop 1 West Groton.",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw9.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.63453254,
+          "Longitude": -71.65792807
+        }
+      },
+      {
+        "Identifier": "BW12",
+        "TrailIdentifier": "BertozziWildlife",
+        "Name": "Rope Swing",
+        "Description": "One of the great Bertozzi Area attractions, the top is only for the brave!",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw12.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.63483335,
+          "Longitude": -71.65799407
+        }
+      },
+      {
+        "Identifier": "BW4",
+        "TrailIdentifier": "BertozziWildlife",
+        "Name": "USGS Gauging Station",
+        "Description": "This is a gauging station measuring discharge and height of the Squannacook River. You can see the data for station #01096000 at waterdata.usgs.gov",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw4.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.63405279,
+          "Longitude": -71.65787638
+        }
+      },
+      {
+        "Identifier": "BW5",
+        "TrailIdentifier": "BertozziWildlife",
+        "Name": "Groton Leatherboard Memorial / Camping Site",
+        "Description": "Groton Leatherboard Memorial. A scenic campsite by the Squannacook River, fall asleep to the sounds of the river flowing by.",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw5.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.63349496,
+          "Longitude": -71.65726563
+        }
+      },
+      {
+        "Identifier": "BW6",
+        "TrailIdentifier": "BertozziWildlife",
+        "Name": "Scenic Squannacook River",
+        "Description": "Take a moment and enjoy the view of the Squannacook River!",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw6.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.63310719,
+          "Longitude": -71.65721922
+        }
+      },
+      {
+        "Identifier": "BW13",
+        "TrailIdentifier": "BertozziWildlife",
+        "Name": "Bertozzi Memorial",
+        "Description": "A memorial errected by the Town of Groton in honor of Peter E. Bertozzi, Conservationist.",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw13.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.63337766,
+          "Longitude": -71.65583017
+        }
+      }
+    ]
+  },
+  {
+    "Identifier": "ForestBells",
+    "Name": "The Forest Bells",
+    "Description": "A short walk to the Forest Bells by Paul Matisse. Six aluminum organ shaped chimes to ring through the woods. Make sure to ring the bells and listen to them bounce through the forest. And definitly make sure to bring the entire family, so you can compose music with the different bell's notes.",
+    "Regions": [
+      {
+        "Identifier": "FB4",
+        "TrailIdentifier": "ForestBells",
+        "Name": "Sign To Trail Start",
+        "Description": "This sign is across from the dirt road on Indian Hill Road leading up to the trail start.",
+        "ImageName": "GTNTracker.Images.ForBells.fb4.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.58552283,
+          "Longitude": -71.554703
+        }
+      },
+      {
+        "Identifier": "FB8",
+        "TrailIdentifier": "ForestBells",
+        "Name": "Road Before Trail Start",
+        "Description": "Dirt road at very end of Indian Hill Road.",
+        "ImageName": "GTNTracker.Images.ForBells.fb8.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.58497365,
+          "Longitude": -71.55347442
+        }
+      },
+      {
+        "Identifier": "FB5",
+        "TrailIdentifier": "ForestBells",
+        "Name": "Trail Start",
+        "Description": "Start of the trail to the forest bells.",
+        "ImageName": "GTNTracker.Images.ForBells.fb5.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.58516837,
+          "Longitude": -71.55332893
+        }
+      },
+      {
+        "Identifier": "FB3",
+        "TrailIdentifier": "ForestBells",
+        "Name": "Under Power Lines",
+        "Description": "You'll pass under these powerlines as you walk the trail to the bells.",
+        "ImageName": "GTNTracker.Images.ForBells.fb3.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.58543886,
+          "Longitude": -71.55046444
+        }
+      },
+      {
+        "Identifier": "FB1",
+        "TrailIdentifier": "ForestBells",
+        "Name": "Fork In Trail",
+        "Description": "Turn sharp left from the main path towards the forest bells.",
+        "ImageName": "GTNTracker.Images.ForBells.fb1.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.58575189,
+          "Longitude": -71.54811882
+        }
+      },
+      {
+        "Identifier": "FB2",
+        "TrailIdentifier": "ForestBells",
+        "Name": "Old Fallen Tree Area",
+        "Description": "This is where there was a group of fallen trees barring an old road. Follow the road up the hill.",
+        "ImageName": "GTNTracker.Images.ForBells.fb2.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.58624411,
+          "Longitude": -71.5479799
+        }
+      },
+      {
+        "Identifier": "FB6",
+        "TrailIdentifier": "ForestBells",
+        "Name": "Forest Bells",
+        "Description": "Paul Matisse's Forest Bells, commissioned by The Artists Valentine Project and dedicated to the students at Indian Hill Arts.",
+        "ImageName": "GTNTracker.Images.ForBells.fb6.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.58767835,
+          "Longitude": -71.54559217
+        }
+      }
+    ]
+  },
+  {
+    "Identifier": "GibbetHill",
+    "Name": "Gibbet Hill",
+    "Description": "The route is simple to follow. The castle and vista are worth the climb.",
+    "Regions": [
+      {
+        "Identifier": "GIB1",
+        "TrailIdentifier": "GibbetHill",
+        "Name": "Trail Start",
+        "Description": "Two stone pillars mark the entrance of the trail.",
+        "ImageName": "GTNTracker.Images.Gibbet.gib1a.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60663037,
+          "Longitude": -71.55991478
+        }
+      },
+      {
+        "Identifier": "GIB2",
+        "TrailIdentifier": "GibbetHill",
+        "Name": "Lower Castle",
+        "Description": "Large remnants of a stone castle still stand on the hill. This is the lower floor.",
+        "ImageName": "GTNTracker.Images.Gibbet.gib2a.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60827187,
+          "Longitude": -71.55974182
+        }
+      },
+      {
+        "Identifier": "GIB3",
+        "TrailIdentifier": "GibbetHill",
+        "Name": "Bancroft Castle",
+        "Description": "Large stone tower still stands on top of Gibbet Hill.",
+        "ImageName": "GTNTracker.Images.Gibbet.gib3a.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60851569,
+          "Longitude": -71.56006648
+        }
+      },
+      {
+        "Identifier": "GIB4",
+        "TrailIdentifier": "GibbetHill",
+        "Name": "Top of Gibbet Hill",
+        "Description": "A spectacular view of Groton.",
+        "ImageName": "GTNTracker.Images.Gibbet.gib4a.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.61054256,
+          "Longitude": -71.56055776
+        }
+      },
+      {
+        "Identifier": "GIB5",
+        "TrailIdentifier": "GibbetHill",
+        "Name": "Trail Marker",
+        "Description": "Trail goes back down.",
+        "ImageName": "GTNTracker.Images.Gibbet.gib5a.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.61061091,
+          "Longitude": -71.55988859
+        }
+      },
+      {
+        "Identifier": "GIB6",
+        "TrailIdentifier": "GibbetHill",
+        "Name": "Valley",
+        "Description": "Small Valley off the hill.",
+        "ImageName": "GTNTracker.Images.Gibbet.gib6a.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.61048531,
+          "Longitude": -71.55855477
+        }
+      }
+    ]
+  },
+  {
+    "Identifier": "GrotonPlace1",
+    "Name": "Groton Place / Sabine Woods",
+    "Description": "The Groton Place is a well loved property that follows the Nashua River. With many intertwined loops these trails are optimal for everyone, whether you are an experienced hiker or just looking for a relaxing stroll. This property has stunning features scattered throughout its network of trails.",
+    "Regions": [
+      {
+        "Identifier": "GP1",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Groton Place Entrance",
+        "Description": "This magnificent gate leads opens into Groton Place",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp1.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.6047786,
+          "Longitude": -71.59616713
+        },
+        "Radius": {
+          "TotalKilometers": 0.015
+        }
+      },
+      {
+        "Identifier": "GP2",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Trail Start",
+        "Description": "The Welcome Kiosk has plenty of information on Groton Place and other places to visit.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp2.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60435997,
+          "Longitude": -71.59622755
+        },
+        "Radius": {
+          "TotalKilometers": 0.015
+        }
+      },
+      {
+        "Identifier": "GP3",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Groton Hunt Monument",
+        "Description": "A memorial to the fox hunts held on the grounds of the Dumaine Family estate.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp3.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60403062,
+          "Longitude": -71.59659856
+        }
+      },
+      {
+        "Identifier": "GP19",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Pine Isle",
+        "Description": "Enjoy the view of the tall pines from two stone benches to rest on.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp19.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60420141,
+          "Longitude": -71.59905753
+        }
+      },
+      {
+        "Identifier": "GP5",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Dumaine Memorial",
+        "Description": "A memorial to Frederic 'Buck' Dumaine, an avid sportsman and businessman who owned the estate which is now Groton Place.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp5.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60191115,
+          "Longitude": -71.59921784
+        }
+      },
+      {
+        "Identifier": "GP7",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Along the Nashua River",
+        "Description": "This part of the Sabine River Trail follows along the Nashua River. It's irresistable to dogs looking for a swim!",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp7.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.5986607,
+          "Longitude": -71.59805854
+        }
+      },
+      {
+        "Identifier": "GP8",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Groton School Boathouse",
+        "Description": "Robert W. Bingham Boathouse. Home to one of the school's most popular and successful sports.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp8.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.59493248,
+          "Longitude": -71.59965941
+        }
+      },
+      {
+        "Identifier": "GP12",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Sabine Woods Trail",
+        "Description": "Continue West to Groton School Boathouse or continue East to East Trail.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp12.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.59321064,
+          "Longitude": -71.59683142
+        }
+      },
+      {
+        "Identifier": "GP13",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Fork To East Trail Or Joy Ln",
+        "Description": "Turn North to head to the East Trail Start or South to Joy Lane",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp13.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.59178126,
+          "Longitude": -71.59040856
+        }
+      },
+      {
+        "Identifier": "GP15",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Bridge Near East Trail",
+        "Description": "Cross the bridge North will get you to the start of the East Trail.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp15.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.59390136,
+          "Longitude": -71.59061355
+        }
+      },
+      {
+        "Identifier": "GP16",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "East Trail Start",
+        "Description": "The start of the East Trail, this wide maintained trail goes through Sabine Woods into Groton Place.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp16.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.59479939,
+          "Longitude": -71.59032046
+        }
+      },
+      {
+        "Identifier": "GP17",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "On the East Trail in Sabine Woods",
+        "Description": "You can continue on the East Trail or follow the fork to explore the Sabine Memorial Woods.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp17.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.5986628,
+          "Longitude": -71.59111024
+        }
+      },
+      {
+        "Identifier": "GP18",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Groton Place / Sabine Woods Boundry",
+        "Description": "This is where the East Trail crosses between these two areas.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp18.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60162154,
+          "Longitude": -71.59413203
+        }
+      },
+      {
+        "Identifier": "GP4",
+        "TrailIdentifier": "GrotonPlace1",
+        "Name": "Rhododendron Trail",
+        "Description": "A beautiful path lined with rhododendrons planted long ago by the Dumaine Family.",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp4.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.60258854,
+          "Longitude": -71.59659833
+        }
+      }
+    ]
+  },
+  {
+    "Identifier": "MattyTest",
+    "Name": "Matt's Test Track",
+    "Description": "Test Track Around PatridgeBerry Woods",
+    "DeveloperMode": true,
+    "Regions": [
+      {
+        "Identifier": "MattyTT1",
+        "TrailIdentifier": "MattyTest",
+        "Name": "Bus Stop",
+        "Description": "A wonderful place to wait for Bus #14",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt1.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.610582,
+          "Longitude": -71.596157
+        }
+      },
+      {
+        "Identifier": "MattyTT2",
+        "TrailIdentifier": "MattyTest",
+        "Name": "My Hydrant",
+        "Description": "A fun place on Riverbend Drive",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt2.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.612639,
+          "Longitude": -71.599458
+        }
+      },
+      {
+        "Identifier": "MattyTT3",
+        "TrailIdentifier": "MattyTest",
+        "Name": "Hickory Drive Intersection",
+        "Description": "Just a way to duck out towards the Groton Fairground",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt3.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.614780,
+          "Longitude": -71.596819
+        }
+      },
+      {
+        "Identifier": "MattyTT4",
+        "TrailIdentifier": "MattyTest",
+        "Name": "Start of Wintergreen Lane",
+        "Description": "Onto our home's street",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt4.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.612318,
+          "Longitude": -71.591156
+        }
+      },
+      {
+        "Identifier": "MattyTT5",
+        "TrailIdentifier": "MattyTest",
+        "Name": "Ranch House on Wintergreen",
+        "Description": "A nice single floor ranch house.",
+        "ImageName": "GTNTracker.Images.MattTestTrack.mt5.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.612154,
+          "Longitude": -71.594682
+        }
+      }
+    ]
+  }
+]

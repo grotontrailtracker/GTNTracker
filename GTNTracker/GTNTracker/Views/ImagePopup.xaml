@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:GTNTracker.Views"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="GTNTracker.Views.ImagePopup">
+    <pages:PopupPage.Content>
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#F5F5F5">
+            <!--<ContentView>
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer
+                 Tapped="OnTapGestureRecognizerTapped" NumberOfTapsRequired="1" />              
+                </ContentView.GestureRecognizers>
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                x:Name="ImageLoader"
+                DownsampleToViewSize="true"
+                LoadingPlaceholder="loading.gif"
+                ErrorPlaceholder="error404.png"
+                Source = "{Binding ImageData}" >
+            </ffimageloading:CachedImage>
+            </ContentView>-->
+            <views:ZoomImage x:Name="zoomImage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                             LoadingPlaceholder="loading.gif"
+                             ErrorPlaceholder="error404.png"
+                             Source="{Binding ImageData}" />
+        </Grid>
+    </pages:PopupPage.Content>
+</pages:PopupPage>

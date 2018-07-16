@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GTNTracker"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="GTNTracker.Views.AppMasterPage"
+             Icon="hamburger.png"
+             Title="GTN TT">
+
+    <StackLayout>
+        <ListView x:Name="ListViewMenuItems"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+            <ListView.Header>
+                <Grid BackgroundColor="#616161">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15"/>
+                        <!--<RowDefinition Height="80"/>-->
+                        <RowDefinition Height="65"/>
+                        <!--<RowDefinition Height="Auto"/>-->
+                        <RowDefinition Height="5"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                        <Image HeightRequest="65" WidthRequest="65" HorizontalOptions="Start" VerticalOptions="Center">
+                            <Image.Source>
+                                <OnPlatform x:TypeArguments="ImageSource">
+                                    <OnPlatform.iOS>
+                                        <FileImageSource File="gtn_logo2.png"/>
+                                    </OnPlatform.iOS>
+                                    <OnPlatform.Android>
+                                        <FileImageSource File="gtn_logo2.png"/>
+                                    </OnPlatform.Android>
+                                    <OnPlatform.WinPhone>
+                                        <FileImageSource File="Icon.png"/>
+                                    </OnPlatform.WinPhone>
+                                </OnPlatform>
+                            </Image.Source>
+                        </Image>
+                        <Label Text="Groton Trail Tracker" VerticalOptions="Center" HorizontalOptions="Start" 
+                   TextColor="White" FontSize="Medium" Margin="5,0" />
+                    </StackLayout>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="15,5" HorizontalOptions="FillAndExpand" >
+                            <Grid.Triggers>
+                                <DataTrigger TargetType="Grid" Binding="{Binding IsAvailable}" Value="False" >
+                                    <Setter Property="Opacity" Value="0.3" />
+                                    <Setter Property="IsEnabled" Value="False" />
+                                </DataTrigger>
+                            </Grid.Triggers>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <ffimageloading:CachedImage Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                        WidthRequest="30" HeightRequest="30" Margin="0,0,0,0" IsVisible="{Binding ShowImage}"
+                        DownsampleToViewSize="true"
+                        LoadingPlaceholder="loading.gif"
+                        ErrorPlaceholder="error404.png"
+                        Source = "{Binding IconImage}" />
+                            <Label Grid.Column="1" VerticalOptions="FillAndExpand" 
+                        VerticalTextAlignment="Center" 
+                        Text="{Binding MenuTitle}" 
+                        FontSize="24"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

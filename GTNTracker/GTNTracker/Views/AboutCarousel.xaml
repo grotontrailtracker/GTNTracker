@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GTNTracker"
+             x:Class="GTNTracker.Views.AboutCarousel">
+    <ContentPage>
+        <ContentPage.Content>
+            <Grid  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" 
+                       Source="{local:ImageResource GTNTracker.Images.badge-photo.jpg}" 
+                       Grid.Row="0" Grid.Column="0" Grid.RowSpan="4"/>
+                <BoxView Grid.Row="0" Grid.RowSpan="4" BackgroundColor="#CDEEEEEE" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+
+                <StackLayout Grid.Row="0" Orientation="Vertical" VerticalOptions="StartAndExpand" Margin="5,3,0,0">
+                    <Label Text="Welcome to the Groton Trail Tracker Application!" TextColor="#1B5E20" FontSize="Medium" HorizontalOptions="Center" />
+                </StackLayout>
+                <StackLayout Grid.Row="1" HorizontalOptions="StartAndExpand" Spacing="0" Margin="5,5" Orientation="Vertical">
+                    <Label x:Name="AboutText"
+                           HorizontalOptions="Start" TextColor="#212121" FontSize="Small" />
+                    <Label Text="How To Use The Trail Tracker:" Margin="0,5,0,0"
+                           HorizontalOptions="Start" TextColor="#1B5E20" FontSize="Medium" />
+                    <Label x:Name="Instruction1" Margin="0,5,0,0"
+                           HorizontalOptions="Start" TextColor="#212121" FontSize="Small" />
+                    <Label x:Name="Instruction2" Margin="0,5,0,0"
+                           HorizontalOptions="Start" TextColor="#212121" FontSize="Small" />
+                    <Label x:Name="Instruction3" Margin="0,5,0,0"
+                           HorizontalOptions="Start" TextColor="#212121" FontSize="Small" />
+                </StackLayout>
+                <Label Grid.Row="3" Text="Page 1 of 2" VerticalOptions="EndAndExpand" FontSize="Small" HorizontalOptions="Center" Margin="2" TextColor="#212121" />
+            </Grid>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage>
+        <ContentPage.Content>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" 
+                       Source="{local:ImageResource GTNTracker.Images.badge-photo.jpg}" 
+                       Grid.Row="0" Grid.Column="0" Grid.RowSpan="5"/>
+                <BoxView Grid.Row="0" Grid.RowSpan="5" BackgroundColor="#CDEEEEEE" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+
+                <Grid Grid.Row="0" Margin="5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Here are some of the Icons you'll see in the app:" FontSize="Small" HorizontalOptions="Start" />
+                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Toolbar Icons" FontSize="Small" HorizontalOptions="Start" />
+                    <Image Grid.Column="0" Grid.Row="2"
+                                           Source="{local:ImageResource GTNTracker.Images.compass.png}" 
+                                           HeightRequest="30" WidthRequest="30" Margin="5,0"/>
+                    <Label Grid.Column="1" Grid.Row="2" 
+                               Text="Displays a popup with information on current location with direction and distance to trail waypoints." 
+                               FontSize="Small" HorizontalOptions="Start"/>
+                    <Image Grid.Column="0" Grid.Row="3"
+                                           Source="{local:ImageResource GTNTracker.Images.map.png}" 
+                                           HeightRequest="30" WidthRequest="30" Margin="5,0"/>
+                    <Label Grid.Column="1" Grid.Row="3" 
+                               Text="Takes you to the Trail Map page and shows your current trail." FontSize="Small" HorizontalOptions="Start"/>
+                    <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="Notification Area Icons" 
+                           FontSize="Small" HorizontalOptions="Start" IsVisible="{Binding IsAndroid}" />
+                    <Image Grid.Column="0" Grid.Row="5"
+                                           Source="{local:ImageResource GTNTracker.Images.hiker.png}" 
+                                           IsVisible="{Binding IsAndroid}"
+                                           HeightRequest="30" WidthRequest="30" Margin="5,0"/>
+                    <Label Grid.Column="1" Grid.Row="5" IsVisible="{Binding IsAndroid}"
+                               Text="Indicates that the app is actively GPS trail tracking your waypoints." FontSize="Small" HorizontalOptions="Start"/>
+                    <Image Grid.Column="0" Grid.Row="6"
+                                           Source="{local:ImageResource GTNTracker.Images.gtn.png}" 
+                                           IsVisible="{Binding IsAndroid}"
+                                           HeightRequest="30" WidthRequest="30" Margin="5,0"/>
+                    <Label Grid.Column="1" Grid.Row="6" IsVisible="{Binding IsAndroid}"
+                               Text="Indicates you've reached a waypoint on the trail you've started tracking on." FontSize="Small" HorizontalOptions="Start"/>
+                </Grid>
+                <StackLayout Grid.Row="2" HorizontalOptions="StartAndExpand" Spacing="0" Margin="5,5">
+                    <Label x:Name="ThankYouText"
+                           HorizontalOptions="Start" TextColor="#212121" FontSize="Small" />
+                </StackLayout>
+                <StackLayout Grid.Row="3" HorizontalOptions="StartAndExpand" Spacing="0" Margin="5,5">
+                    <Label Text="Thanks for trying the app. Happy Hiking!"  HorizontalOptions="Start" FontSize="Small" TextColor="#212121" Margin="0" />
+                    <Label Text="Matt W." HorizontalOptions="Start" FontSize="Small" TextColor="#212121" Margin="0"/>
+                    <Label Text="Troop 1 West Groton" HorizontalOptions="Start" FontSize="Small" TextColor="#212121" Margin="0"/>
+                </StackLayout>
+                <Label Grid.Row="4" Text="Page 2 of 2" VerticalOptions="EndAndExpand" FontSize="Small" HorizontalOptions="Center" Margin="2" TextColor="#212121" />
+            </Grid>
+        </ContentPage.Content>
+    </ContentPage>
+</CarouselPage>

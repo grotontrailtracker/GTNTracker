@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard1.0\Xamarin.Forms.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40B328F6-F274-4386-B47F-52F48338F97E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GTNTracker</RootNamespace>
+    <AssemblyName>GTNTracker</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\DateTimeConverter.cs" />
+    <Compile Include="Converters\IsFalseConverter.cs" />
+    <Compile Include="Converters\IsStartedConverter.cs" />
+    <Compile Include="Converters\TimeConverter.cs" />
+    <Compile Include="EventArguments\GeofenceEventArgs.cs" />
+    <Compile Include="EventArguments\NotificationEventArgs.cs" />
+    <Compile Include="EventArguments\PositionEventArgs,cs.cs" />
+    <Compile Include="ImageResourceExtensions.cs" />
+    <Compile Include="Interfaces\IEmailService.cs" />
+    <Compile Include="Interfaces\IGeofenceManager.cs" />
+    <Compile Include="Interfaces\IUtilityService.cs" />
+    <Compile Include="Interfaces\MsgCenterInterfaces.cs" />
+    <Compile Include="Models\AppSettings.cs" />
+    <Compile Include="Models\WaypointCaptureData.cs" />
+    <Compile Include="Services\AppSettingsService.cs" />
+    <Compile Include="Services\AppStateService.cs" />
+    <Compile Include="Services\WayPointCaptureService.cs" />
+    <Compile Include="Types\Distance.cs" />
+    <Compile Include="Types\GeofenceRegion.cs" />
+    <Compile Include="Types\GeofenceState.cs" />
+    <Compile Include="Types\GeofenceStatus.cs" />
+    <Compile Include="Types\Position.cs" />
+    <Compile Include="ViewModels\AppMenuVM.cs" />
+    <Compile Include="ViewModels\AppMenuItemVM.cs" />
+    <Compile Include="ViewModels\CaptureManagerVM.cs" />
+    <Compile Include="ViewModels\CongratsViewModel.cs" />
+    <Compile Include="ViewModels\CurrentLocationVM.cs" />
+    <Compile Include="EventArguments\DialogEventArgs.cs" />
+    <Compile Include="ViewModels\EditCaptureVM.cs" />
+    <Compile Include="ViewModels\ImageVM.cs" />
+    <Compile Include="ViewModels\NotifyViewModel.cs" />
+    <Compile Include="ViewModels\PasswordVM.cs" />
+    <Compile Include="ViewModels\RegionListVM.cs" />
+    <Compile Include="ViewModels\RegionSelectVM.cs" />
+    <Compile Include="ViewModels\StatusViewModel.cs" />
+    <Compile Include="ViewModels\TrailCompleteViewModel.cs" />
+    <Compile Include="ViewModels\TrailListViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="ViewModels\WaypointCaptureDataVM.cs" />
+    <Compile Include="ViewModels\WaypointCaptureVM.cs" />
+    <Compile Include="ViewModels\WelcomeVM.cs" />
+    <Compile Include="Views\AboutCarousel.xaml.cs">
+      <DependentUpon>AboutCarousel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BasePage.cs" />
+    <Compile Include="Views\CaptureManager.xaml.cs">
+      <DependentUpon>CaptureManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CongratsPage.xaml.cs">
+      <DependentUpon>CongratsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CurrentStatusPopup.xaml.cs">
+      <DependentUpon>CurrentStatusPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditCapture.xaml.cs" />
+    <Compile Include="Views\GeoWebView.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Views\ImagePopup.xaml.cs">
+      <DependentUpon>ImagePopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NotifyPage.xaml.cs">
+      <DependentUpon>NotifyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GeoFenceService.cs" />
+    <Compile Include="Services\CoreGeofenceMgr.cs" />
+    <Compile Include="Services\NotificationService.cs" />
+    <Compile Include="Services\TrailDefService.cs" />
+    <Compile Include="Services\TrailVisitService.cs" />
+    <Compile Include="Views\PageManager.cs" />
+    <Compile Include="Views\Password.xaml.cs" />
+    <Compile Include="Views\RegionPopup.xaml.cs" />
+    <Compile Include="Views\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Status.xaml.cs">
+      <DependentUpon>Status.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrailCompletePage.xaml.cs">
+      <DependentUpon>TrailCompletePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrailContentPage.xaml.cs">
+      <DependentUpon>TrailContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrailList.xaml.cs">
+      <DependentUpon>TrailList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrailMap.xaml.cs">
+      <DependentUpon>TrailMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrailStatus.xaml.cs">
+      <DependentUpon>TrailStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnderConstruction.xaml.cs">
+      <DependentUpon>UnderConstruction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\TrailContentViewModel.cs" />
+    <Compile Include="Models\TrailDefModel.cs" />
+    <Compile Include="ViewModels\TrailListItemVM.cs" />
+    <Compile Include="Models\TrailRegionVisit.cs" />
+    <Compile Include="ViewModels\TrailRegionVM.cs" />
+    <Compile Include="Views\AppRootPage.xaml.cs">
+      <DependentUpon>AppRootPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppDetailPage.xaml.cs">
+      <DependentUpon>AppDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppMasterPage.xaml.cs">
+      <DependentUpon>AppMasterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaypointCapture.xaml.cs">
+      <DependentUpon>WaypointCapture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ZoomImage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FFImageLoading, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.2.11\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Forms.2.2.11\lib\portable-net45+win8+wpa81+wp8+netstandard1.0\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.2.11\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Compass, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Compass.3.0.1\lib\netstandard1.0\Plugin.Compass.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Compass.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Compass.3.0.1\lib\netstandard1.0\Plugin.Compass.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Geolocator.4.2.0\lib\netstandard1.0\Plugin.Geolocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator.Abstractions, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Geolocator.4.2.0\lib\netstandard1.0\Plugin.Geolocator.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media, Version=3.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Media.3.1.3\lib\netstandard1.0\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions, Version=3.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Media.3.1.3\lib\netstandard1.0\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Permissions.2.2.1\lib\netstandard1.0\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions.Abstractions, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Permissions.2.2.1\lib\netstandard1.0\Plugin.Permissions.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.3.0.1\lib\netstandard1.0\Plugin.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.3.0.1\lib\netstandard1.0\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\portable-win+net45+wp8+win8+wpa81\Rg.Plugins.Popup.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\portable-win+net45+wp8+win8+wpa81\Rg.Plugins.Popup.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.4.118.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\sqlite-net-pcl.1.4.118\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SQLitePCLRaw.core.1.1.5\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.3.0.0.446417\lib\netstandard1.0\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core.Design, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.3.0.0.446417\lib\netstandard1.0\Design\Xamarin.Forms.Core.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.3.0.0.446417\lib\netstandard1.0\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.3.0.0.446417\lib\netstandard1.0\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml.Design, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.3.0.0.446417\lib\netstandard1.0\Design\Xamarin.Forms.Xaml.Design.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EmbeddedResource Include="Data\DefaultTrailDef.json" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TrailMap.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TrailList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Welcome.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\NotifyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\UnderConstruct.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Status.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TrailContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\badge-photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\UnderConstruction.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TrailCompletePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AppRootPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AppDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AppMasterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\trailStarted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\checkCircleBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\GrotonPlace\gp3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\waypoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CongratsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\welldone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CurrentStatusPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\gtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\less.png" />
+    <EmbeddedResource Include="Images\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\MattTestTrack\mt1.jpg" />
+    <EmbeddedResource Include="Images\MattTestTrack\mt2.jpg" />
+    <EmbeddedResource Include="Images\MattTestTrack\mt3.jpg" />
+    <EmbeddedResource Include="Images\MattTestTrack\mt4.jpg" />
+    <EmbeddedResource Include="Images\MattTestTrack\mt5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TrailStatus.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\RegionPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\compass.png" />
+    <EmbeddedResource Include="Images\hiker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\info.png" />
+    <EmbeddedResource Include="Images\terrain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Settings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\WaypointCapture.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CaptureManager.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\collections.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Password.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\EditCapture.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AboutCarousel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Gibbet\gib1a.png" />
+    <EmbeddedResource Include="Images\Gibbet\gib2a.png" />
+    <EmbeddedResource Include="Images\Gibbet\gib3a.png" />
+    <EmbeddedResource Include="Images\Gibbet\gib4a.png" />
+    <EmbeddedResource Include="Images\Gibbet\gib5a.png" />
+    <EmbeddedResource Include="Images\Gibbet\gib6a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\GrotonPlace\gp12.png" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp13.png" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp15.png" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp16.png" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp17.png" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp18.png" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp19.png" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp2.png" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp4.png" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp7.png" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\GrotonPlace\gp5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\GrotonPlace\gp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ImagePopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ForBells\fb1.png" />
+    <EmbeddedResource Include="Images\ForBells\fb2.png" />
+    <EmbeddedResource Include="Images\ForBells\fb3.png" />
+    <EmbeddedResource Include="Images\ForBells\fb4.png" />
+    <EmbeddedResource Include="Images\ForBells\fb5.png" />
+    <EmbeddedResource Include="Images\ForBells\fb6.png" />
+    <EmbeddedResource Include="Images\ForBells\fb8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Bertozzi\bw1.png" />
+    <EmbeddedResource Include="Images\Bertozzi\bw2.png" />
+    <EmbeddedResource Include="Images\Bertozzi\bw4.png" />
+    <EmbeddedResource Include="Images\Bertozzi\bw5.png" />
+    <EmbeddedResource Include="Images\Bertozzi\bw6.png" />
+    <EmbeddedResource Include="Images\Bertozzi\bw8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Bertozzi\bw10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Bertozzi\bw12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Bertozzi\bw9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Bertozzi\bw13.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard1.0\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard1.0\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard1.0\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard1.0\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard1.0\Xamarin.Forms.targets')" />
+</Project>

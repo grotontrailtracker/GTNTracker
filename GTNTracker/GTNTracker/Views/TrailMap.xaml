@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localViews:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localViews="clr-namespace:GTNTracker.Views"
+             xmlns:local="clr-namespace:GTNTracker.Views"
+             x:Class="GTNTracker.Views.TrailMap" >
+    <localViews:BasePage.CustomToolbar>
+        <localViews:CustomToolbarItem x:Name="StartTrailBtn" Order="Primary" Icon="exploreWhite.png" Text="Item 1" Priority="0"  
+                                      Activated="StartTrailBtn_Activated"/>
+    </localViews:BasePage.CustomToolbar>
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <!--<RowDefinition Height="Auto" />-->
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <!--<Button Grid.Row="0" Text="Goto Map" Clicked="Button_Clicked" Margin="5"/>-->
+            <!--<WebView x:Name="webview" Source="https://www.grotontrails.org/Interactive_Maps.html" Grid.Row="1"/>-->
+            <!--<local:GeoWebView x:Name="webView" Source="https://www.grotontrails.org/Interactive_Maps.html" Grid.Row="0"/-->
+          <ContentView Grid.Row="0">
+            <OnPlatform x:TypeArguments="View">
+              <OnPlatform.iOS>
+                <local:IOSWebView x:Name="webViewIOS" />
+              </OnPlatform.iOS>
+              <OnPlatform.Android>
+                <local:GeoWebView x:Name="webView" Grid.Row="0"/>
+              </OnPlatform.Android>
+            </OnPlatform>
+          </ContentView>
+            <!--<local:GeoWebView x:Name="webView" Grid.Row="0"/>-->
+        </Grid>
+    </ScrollView>
+</localViews:BasePage>

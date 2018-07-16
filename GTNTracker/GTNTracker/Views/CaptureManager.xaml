@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localViews:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:GTNTracker.Converters;assembly=GTNTracker"
+             xmlns:local="clr-namespace:GTNTracker"
+             xmlns:localViews="clr-namespace:GTNTracker.Views"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             BackgroundColor="#F5F5F5"
+             x:Class="GTNTracker.Views.CaptureManager">
+    <localViews:BasePage.Resources>
+        <ResourceDictionary>
+            <converters:DateTimeConverter x:Key="DateTimeConverter" />
+            <converters:IsStartedConverter x:Key="IsStartedConverter" />
+            <converters:IsFalseConverter x:Key="IsFalseConverter" />
+        </ResourceDictionary>
+    </localViews:BasePage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListView x:Name="WaypointList" Grid.Row="0" Margin="2,2"
+              SeparatorVisibility="Default" ItemTapped="WaypointList_ItemTapped"
+              HasUnevenRows="True"
+              ItemsSource="{Binding Waypoints}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="{Binding IsEmailed, Converter={StaticResource IsStartedConverter}}" Margin="2" 
+                              IsEnabled="True">
+                            <BoxView BackgroundColor="#424242" IsVisible="{Binding IsEmailed}" />
+                            <Grid BackgroundColor="{Binding IsEmailed, Converter={StaticResource IsStartedConverter}}" Margin="3" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="1" />
+                                </Grid.RowDefinitions>
+                                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" 
+                                       Source="{local:ImageResource GTNTracker.Images.checkCircleBlack.png}" 
+                                       IsVisible="{Binding IsEmailed}"
+                                       HeightRequest="30" WidthRequest="30" Margin="5,0">
+                                </Image>
+                                <Label Grid.Column="1" Grid.Row="0" VerticalOptions="FillAndExpand" 
+                                        VerticalTextAlignment="Center"
+                                        Text="{Binding WaypointName}" 
+                                        FontSize="Medium"/>
+                                <Label Grid.Column="1" Grid.Row="1" VerticalOptions="FillAndExpand" 
+                                        VerticalTextAlignment="Center" 
+                                        Text="{Binding DateCaptured, Converter={StaticResource DateTimeConverter}}"
+                                        FontSize="Micro"/>
+                                <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"
+                                    WidthRequest="45" HeightRequest="45" Margin="0,0,5,0"
+                                    DownsampleToViewSize="true"
+                                    LoadingPlaceholder="loading.gif"
+                                    ErrorPlaceholder="error404.png"
+                                    Source = "{Binding Image}" >
+                                </ffimageloading:CachedImage>
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="1" Text="Delete All Captures" Image="trash.png" Command="{Binding DeleteAllWaypoints}" Margin="5,5,0,10"/>
+    </Grid>
+    
+</localViews:BasePage>

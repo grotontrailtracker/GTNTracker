@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localViews:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:GTNTracker.Converters;assembly=GTNTracker"
+             xmlns:local="clr-namespace:GTNTracker"
+             xmlns:localViews="clr-namespace:GTNTracker.Views"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             BackgroundColor="#F5F5F5" Appearing="Handle_ContentAppearing"
+             Title="{Binding TrailName}"
+             x:Class="GTNTracker.Views.TrailContentPage">
+    <localViews:BasePage.Resources>
+        <ResourceDictionary>
+            <converters:DateTimeConverter x:Key="DateTimeConverter" />
+        </ResourceDictionary>
+    </localViews:BasePage.Resources>
+    <localViews:BasePage.CustomToolbar>
+      <localViews:CustomToolbarItem x:Name="TrackingBtn" Order="Primary" Icon="exploreWhite.png" Text="Item 1" Priority="0"
+                                      Activated="TrailStatusBtn_Activated"/>
+        <localViews:CustomToolbarItem x:Name="TrailInfoBtn" Order="Primary" Icon="ic_map_white.png" Text="Item 2" Priority="3" Activated="TrailInfoBtn_Activated"/>
+    </localViews:BasePage.CustomToolbar>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--Old button color: #33691E -->
+        <StackLayout x:Name="StartStopLayout" Grid.Row="1" Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,-20,0,-5"
+                     IsVisible="{Binding EnableStartStopTracking}">
+          <Button Text="Start Trail Tracking" Margin="2,0"  x:Name="StartTrailBtn"
+                  Image="ic_directions_walk_white.png"
+                  Clicked="StartTrailBtn_Activated">
+            <Button.Triggers>
+              <MultiTrigger TargetType="Button">
+                <MultiTrigger.Conditions>
+                  <BindingCondition Binding="{Binding IsStarted}" Value="False"/>
+                  <BindingCondition Binding="{Binding IsTrailListComplete}" Value="False"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="IsVisible" Value="True" />
+              </MultiTrigger>
+              <DataTrigger TargetType="Button" Binding="{Binding IsStarted}" Value="True">
+                <Setter Property="IsVisible" Value="False" />
+              </DataTrigger>
+              <DataTrigger TargetType="Button" Binding="{Binding IsTrailListComplete}" Value="True">
+                <Setter Property="IsVisible" Value="False" />
+              </DataTrigger>
+            </Button.Triggers>
+          </Button>
+          <Button Text="Stop Trail Tracking" Margin="2,0"  x:Name="StopTrailBtn" IsVisible="{Binding IsStarted}" 
+                  Image="ic_cancel_white.png"
+                  Clicked="StopTrailBtn_Activated"/>
+        </StackLayout>
+
+        <Grid Grid.Row="0" Margin="5,5,5,0" HorizontalOptions="FillAndExpand" >
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Button Grid.Row="1" Grid.Column="1" x:Name="MoreBtn" Text="" HeightRequest="30" WidthRequest="30" VerticalOptions="Start" HorizontalOptions="End" Margin="0,-11,0,0"
+                  Image="more.png" Clicked="HandleMoreBtn"/>
+          <Button  Grid.Row="1" Grid.Column="1" x:Name="LessBtn" Text="" HeightRequest="30" WidthRequest="30" VerticalOptions="Start" HorizontalOptions="End" Margin="0,-11,0,0"
+                  Image="less.png" Clicked="HandleLessBtn" IsVisible="False"/>
+          <ScrollView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="DescriptionScroll" Padding="0,2" BackgroundColor="#EEEEEE">
+            <Label FontSize="Small" Margin="5,0,5,0" Text="{Binding TrailDescription}" />
+          </ScrollView>
+        </Grid>
+      
+        <Label Grid.Row="2" Margin="2,2"  FontSize="Medium" Text="Congratulations, All Waypoints Visited!" 
+               HorizontalOptions="CenterAndExpand"
+               TextColor="#33691E" IsVisible="{Binding IsTrailListComplete}">
+        </Label>
+        <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+          <Image Source="{local:ImageResource GTNTracker.Images.waypoint.png}"
+                                   HeightRequest="24" WidthRequest="24" Margin="2,0"></Image>
+          <Label FontSize="Medium" Text="Trail Waypoints" HorizontalOptions="Start"/>
+          <StackLayout Orientation="Horizontal" Margin="0,0" >
+              <Label Text="{Binding NumberDestinations, StringFormat=' ({0})'}" FontSize="Medium" Margin="0,0"/>       
+          </StackLayout>
+        </StackLayout>
+        <ListView x:Name="TrailRegionListView" Grid.Row="4" Margin="2,2"
+              SeparatorVisibility="Default" ItemTapped="TrailRegionListView_ItemTapped"
+              HasUnevenRows="True"
+              ItemsSource="{Binding RegionList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="#BDBDBD" Margin="2,2" >
+                            <Grid.ColumnDefinitions>
+                              <ColumnDefinition Width="45" />
+                              <ColumnDefinition Width="*" />
+                              <ColumnDefinition Width="40" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="1" />
+                            </Grid.RowDefinitions>
+                            <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                WidthRequest="45" HeightRequest="45" Margin="0,0,5,0" IsVisible="{Binding ShowImage}"
+                                DownsampleToViewSize="true"
+                                LoadingPlaceholder="loading.gif"
+                                ErrorPlaceholder="error404.png"
+                                Source = "{Binding TrailImage}" >
+                            </ffimageloading:CachedImage>
+                            <Label Grid.Column="1" Grid.Row="0" VerticalOptions="FillAndExpand" 
+                                VerticalTextAlignment="Center"
+                                Text="{Binding RegionName}" 
+                                FontSize="Medium"/>
+                            <Label Grid.Column="1" Grid.Row="1" VerticalOptions="FillAndExpand"
+                                VerticalTextAlignment="Center" 
+                                Text="{Binding DateCompleted, Converter={StaticResource DateTimeConverter}}" 
+                                FontSize="Micro"/>
+                            <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Source="{local:ImageResource GTNTracker.Images.checkCircleBlack.png}" 
+                                   IsVisible="{Binding Entered}"
+                                   HeightRequest="30" WidthRequest="30" Margin="5,0" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</localViews:BasePage>

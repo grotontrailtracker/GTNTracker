@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GTNTracker.Views.Status">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" Margin="2,0">
+            <Label Text="{Binding EditorData}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Micro"/>
+        </ScrollView>
+        <Button Grid.Row="1" Grid.Column="0" Text="Chk Geo Status" x:Name="GeoCheckBtn" Margin="2,0" FontSize="Small"
+                Clicked="GeoCheckBtn_Clicked" IsEnabled="True" />
+        <Button Grid.Row="1" Grid.Column="1" Text="Loc Status" x:Name="CheckStatusBtn" Clicked="CheckStatusBtn_Clicked" FontSize="Small"/>
+        <Button Grid.Row="2" Grid.Column="0" Text="Clear Log" Margin="2,0" x:Name="ClearBtn" Clicked="ClearBtn_Clicked" FontSize="Small"/>
+        <Button Grid.Row="2" Grid.Column="1" Text="Photo" Margin="2,0" x:Name="PhotoBtn" Clicked="PhotoBtn_Clicked" FontSize="Small" />
+        <Button Grid.Row="3" Grid.Column="0" Text="Clear Data" Margin="2,0" x:Name="ClearSettingsBtn"  Clicked="ClearSettingsBtn_Clicked" FontSize="Small"/>
+        <Button Grid.Row="3" Grid.Column="1" Text="Load Test Data" Margin="2,0"  x:Name="LoadTestBtn"  Clicked="LoadTestBtn_Clicked" FontSize="Small"/>
+        <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+            <Entry x:Name="IISHostEntry" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" Placeholder="Test IIS Host"/>
+            <Button Text="Set" WidthRequest="75" Clicked="IISButton_Clicked" FontSize="Small" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
