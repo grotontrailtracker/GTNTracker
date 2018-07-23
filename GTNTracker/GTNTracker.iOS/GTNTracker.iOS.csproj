@@ -213,9 +213,6 @@
     <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\gtnLogo1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Media.xcassets\AppIcons.appiconset\gtnLogo120.png">
       <Visible>false</Visible>
     </ImageAsset>
@@ -384,6 +381,7 @@
     <ImageAsset Include="Media.xcassets\error404.imageset\error404.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\appStore1024.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Media.xcassets\hamburger.imageset\" />
