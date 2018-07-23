@@ -89,7 +89,7 @@ namespace GTNTracker.Views
             string subject = string.Empty;
             
             string bodyHtml = string.Empty;
-            recipients.Add("grotontrailtracker@gmail.com");
+            recipients.Add(AppStateService.Instance.EmailAddress);
             subject = "GTT Completed Trails";
 
             DependencyService.Get<IEmailService>().CreateEmail(recipients, ccs, subject, body, bodyHtml);

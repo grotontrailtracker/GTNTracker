@@ -14,6 +14,7 @@ namespace GTNTracker.Services
         private string _activeTrailIdTrack;
         private double _declination = -14.5;
         private double _bubbleRadiusKilometers = 0.025; //0.05;
+        private string _emailAddress = "grotontrailtracker@gmail.com";
 
         public static AppStateService Instance => _instance ?? (_instance = new AppStateService());
 
@@ -48,5 +49,7 @@ namespace GTNTracker.Services
         {
             get; set;
         }
+
+        public string EmailAddress => _emailAddress;
     }
 }

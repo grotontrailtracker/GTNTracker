@@ -13,6 +13,7 @@ using Android.Views;
 using Android.Widget;
 using GTNTracker.Droid;
 using GTNTracker.Interfaces;
+using GTNTracker.Services;
 using Plugin.CurrentActivity;
 using Xamarin.Forms;
 
@@ -51,12 +52,11 @@ namespace GTNTracker.Droid
         {
             var email = new Intent(Android.Content.Intent.ActionSend);
             List<string> address = new List<string>();
-            address.Add("grotontrailtracker@gmail.com");
+            address.Add(AppStateService.Instance.EmailAddress);
             email.PutExtra(Android.Content.Intent.ExtraEmail, address.ToArray());
             email.PutExtra(Android.Content.Intent.ExtraSubject, "Waypoint");
             email.PutExtra(Android.Content.Intent.ExtraText, waypointData);
             var file = new Java.IO.File(filePath);
-            //var uri = FileProvider.GetUriForFile(Forms.Context.ApplicationContext, "org.grotontrails.GrotonTrailTracker.fileprovider", file);
             var uri = FileProvider.GetUriForFile(Android.App.Application.Context, "org.grotontrails.GrotonTrailTracker.fileprovider", file);
 
             email.PutExtra(Intent.ExtraStream, uri);
