@@ -6,8 +6,14 @@
     "Regions": null
   },
   {
+    "Identifier": "GeneralField",
+    "Name": "The General Field",
+    "Description": "",
+    "Regions": null
+  },
+  {
     "Identifier": "SurrendenFarm",
-    "Name": "Surrenden Farms / General Field",
+    "Name": "Surrenden Farms",
     "Description": "",
     "Regions": null
   },
@@ -56,36 +62,12 @@
         "Identifier": "BW3",
         "TrailIdentifier": "BertozziWildlife",
         "Name": "Swimming Hole",
-        "Description": "Enjoy a refreshing swim!",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw10.png",
+        "Description": "Enjoy a refreshing swim! And if you're adventurous, swim across and use the rope swing!",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw12.png",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.634661,
           "Longitude": -71.657825
-        }
-      },
-      {
-        "Identifier": "BW9",
-        "TrailIdentifier": "BertozziWildlife",
-        "Name": "Soil Conservation Project",
-        "Description": "A soil errosion prevention project by Chris Brown of Troop 1 West Groton.",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw9.png",
-        "IsImageNameURI": false,
-        "Center": {
-          "Latitude": 42.63453254,
-          "Longitude": -71.65792807
-        }
-      },
-      {
-        "Identifier": "BW12",
-        "TrailIdentifier": "BertozziWildlife",
-        "Name": "Rope Swing",
-        "Description": "One of the great Bertozzi Area attractions, the top is only for the brave!",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw12.png",
-        "IsImageNameURI": false,
-        "Center": {
-          "Latitude": 42.63483335,
-          "Longitude": -71.65799407
         }
       },
       {
@@ -132,8 +114,8 @@
         "ImageName": "GTNTracker.Images.Bertozzi.bw13.png",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.63337766,
-          "Longitude": -71.65583017
+          "Latitude": 42.633281,
+          "Longitude": -71.655981
         }
       }
     ]
@@ -485,6 +467,25 @@
         "Center": {
           "Latitude": 42.60258854,
           "Longitude": -71.59659833
+        }
+      }
+    ]
+  },
+  {
+    "Identifier": "Throne",
+    "Name": "Throne Hill",
+    "Description": "The Throne is a conservation area owned by Groton Conservation Trust and one of largest contiguous undeveloped parcels in the area. It provides habitat for deer, bears, porcupines, fishers, moose, and beavers. It features upland forest and interesting wetlands.",
+    "Regions": [
+      {
+        "Identifier": "TR1",
+        "TrailIdentifier": "Throne",
+        "Name": "Castle Drive Parking",
+        "Description": "Castle Dr. Parking.  Room for several vehicles to park along the cul-de-sac.  Trail entrance on cul-de-sac.  To get to the actual trail, walk up the right side of the driveway, staying between the two houses.  The trailhead is at the top of the driveway",
+        "ImageName": "GTNTracker.Images.UnderConstruct.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.625918,
+          "Longitude": -71.617191
         }
       }
     ]

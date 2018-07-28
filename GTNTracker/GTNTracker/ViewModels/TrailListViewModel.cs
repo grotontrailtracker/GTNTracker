@@ -16,6 +16,7 @@ namespace GTNTracker.ViewModels
         private bool _areAllCompleted;
         private DateTime? _completeTime;
         private int _numberTrails;
+        private int _numberDisplayableTrails;
 
         public TrailListViewModel()
         {
@@ -32,6 +33,12 @@ namespace GTNTracker.ViewModels
             set => SetProperty(ref _areAllCompleted, value);
         }
 
+        public int NumberTrailsDisplay
+        {
+            get => _numberDisplayableTrails;
+            set => SetProperty(ref _numberDisplayableTrails, value);
+        }
+
         public ObservableCollection<TrailListItemVM> TrailList
         {
             get => _trailList;
@@ -43,8 +50,16 @@ namespace GTNTracker.ViewModels
             var visitService = TrailVisitService.Instance;
             var trailDefService = TrailDefService.Instance;
             _numberTrails = trailDefService.TrailDefinitions.Count();
+            if (!AppSettingsService.Instance.AppSettings.DeveloperMode)
+            {
+                NumberTrailsDisplay = trailDefService.TrailDefinitions.Count(t => !t.DeveloperMode);
+            }
+            else
+            {
+                NumberTrailsDisplay = _numberTrails;
+            }
 
-            foreach (var trailDef in trailDefService.TrailDefinitions)
+            foreach (var trailDef in trailDefService.TrailDefinitions.OrderBy(t => t.Identifier))
             {
                 if (trailDef.DeveloperMode && !AppSettingsService.Instance.AppSettings.DeveloperMode)
                 {

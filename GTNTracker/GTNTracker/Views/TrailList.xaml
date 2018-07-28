@@ -52,8 +52,12 @@
                 Source = "Balloons.png" />
           </Grid>
         </StackLayout>
-        <Label Grid.Row="1" VerticalTextAlignment="Center" Text="Trails to Visit" 
-               FontSize="Medium" Margin="10,2" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="10,2">
+          <Label VerticalTextAlignment="Center" Text="Trails to Visit" FontSize="Medium"/>
+          <Label Text="{Binding NumberTrailsDisplay, StringFormat=' ({0})'}" FontSize="Medium" Margin="0,0"/>
+        </StackLayout>
+        <!--<Label Grid.Row="1" VerticalTextAlignment="Center" Text="Trails to Visit" 
+               FontSize="Medium" Margin="10,2" HorizontalOptions="CenterAndExpand"/>-->
         <ListView x:Name="TrailListView" Grid.Row="2" Margin="2,2"
               SeparatorVisibility="Default" ItemTapped="TrailListItem_ItemTapped"
               HasUnevenRows="True"
