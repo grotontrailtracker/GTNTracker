@@ -23,7 +23,7 @@ namespace GTNTracker.Views
 
             var source = new UrlWebViewSource
             {
-                Url = "https://www.grotontrails.org/Interactive_Maps.html"
+                Url = "http://www.grotontrails.org/Interactive_Maps.html"
             };
 
             if (Device.RuntimePlatform == Device.Android)
@@ -122,7 +122,7 @@ namespace GTNTracker.Views
 
             // Note that we are trying to use the special waypoint handling that could be added to this page
             // so that from here we show our own GTT waypoints.
-            rtn = string.Format("https://www.grotontrails.org/Interactive_Maps.html#map=16/{0}/{1}/GTT", lat, longitude);
+            rtn = string.Format("http://www.grotontrails.org/Interactive_Maps.html#map=16/{0}/{1}/GTT", lat, longitude);
             return rtn;
         }
 
