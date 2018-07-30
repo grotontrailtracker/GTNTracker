@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using GTNTracker.EventArguments;
 using GTNTracker.Services;
 using GTNTracker.ViewModels;
@@ -20,12 +21,14 @@ namespace GTNTracker.Views
             vm.Initialize();
 
             BindingContext = vm;
+            versionLbl.Text = string.Format("Version: {0}", AppStateService.Instance.AppVersion);
 
             var notifyService = NotificationService.Instance;
             notifyService.RegionUpdated += HandleNotifyRegionUpdate;
             notifyService.TrailComplete += HandleTrailComplete;
 
             NotificationService.Instance.Tracking += HandleTrackingChange;
+            notifyService.DevModeGeoServiceState += HandleDevModeGeoServiceState;
         }
 
         private void HandleTrackingChange(object sender, TrackingEventArgs e)
@@ -49,6 +52,20 @@ namespace GTNTracker.Views
                 // disable stop option
                 listItem.IsAvailable = false;
             }
+        }
+
+        private void HandleDevModeGeoServiceState(object sender, DevModeGeoFenceStateArgs args)
+        {
+            var vm = BindingContext as AppMenuVM;
+            if (vm == null)
+            {
+                return;
+            }
+
+            // The menu list has an option for stopping the trail tracking, need to activate it only
+            // when a trail is being actively monitored.
+            var listItem = vm.MenuItems.FirstOrDefault(m => m.Id == PageManager.StopGeoService);
+            listItem.IsAvailable = args.Enabled;
         }
 
         private async void HandleNotifyRegionUpdate(object sender, GeofenceRegionUpdatedArgs args)
@@ -97,6 +114,38 @@ namespace GTNTracker.Views
             notifyPageVM.ImageData = ImageSource.FromResource(imgNameToUse);
             var notifyPage = new TrailCompletePage();
             notifyPage.BindingContext = notifyPageVM;
+        }
+
+        private async void OnTapGestureRecognizerTapped(object sender, EventArgs args)
+        {
+            var vm = new PasswordVM()
+            {
+                Title = "Password Required",
+                Prompt = "Enter Password:"
+            };
+            var passwordDlg = new Password();
+            passwordDlg.DialogClosed += HandlePasswordDialogClosed;
+            passwordDlg.BindingContext = vm;
+            await Navigation.PushPopupAsync(passwordDlg);
+        }
+
+        private async void HandlePasswordDialogClosed(object sender, PasswordEventArgs args)
+        {
+            var vm = args.ViewModel;
+            if (vm.Cancelled)
+            {
+                return;
+            }
+            if (vm.Password != "Troop1")
+            {
+                await DisplayAlert("Error", "Incorrect Password!", "OK");
+                return;
+            }
+
+            await this.DisplayAlert("Developer Mode", "Developer mode has been enabled", "OK");
+            var appSettings = AppSettingsService.Instance.AppSettings;
+            appSettings.DeveloperMode = true;
+            AppSettingsService.Instance.UpdateAppSettings(appSettings);
         }
     }
 }

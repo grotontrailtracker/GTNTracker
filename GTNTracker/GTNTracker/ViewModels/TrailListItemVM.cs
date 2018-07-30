@@ -15,6 +15,8 @@ namespace GTNTracker.ViewModels
         TrailContentViewModel _viewModel;
         bool _isStarted;
         double _progress;
+        ImageSource _trailImage;
+        bool _showImage;
 
         public string Name
         {
@@ -36,7 +38,16 @@ namespace GTNTracker.ViewModels
         public bool Completed
         {
             get => _isCompleted;
-            set => SetProperty(ref _isCompleted, value);
+            set
+            {
+                SetProperty(ref _isCompleted, value);
+                NotifyPropertyChanged("InProgress");
+            }
+        }
+
+        public bool InProgress
+        {
+            get => !_isCompleted;
         }
 
         public double Progress
@@ -61,6 +72,18 @@ namespace GTNTracker.ViewModels
         {
             get => _numberEntered;
             set => SetProperty(ref _numberEntered, value);
+        }
+
+        public ImageSource Image
+        {
+            get => _trailImage;
+            set => SetProperty(ref _trailImage, value);
+        }
+
+        public bool ShowImage
+        {
+            get => _showImage;
+            set => SetProperty(ref _showImage, value);
         }
 
         public ContentPage TrailPage { get; set; }

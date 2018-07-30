@@ -190,6 +190,13 @@ namespace GTNTracker
             RegisterOtherServices();
             RegisterViewModels();
 
+            // tell the trail list it should build itself.
+            var trailsVM = ViewModelLocator.Instance.TrailListViewModel;
+
+            // Go to the first page which is the trail list
+            trailsVM.BuildTrailListItems();
+            NotificationService.Instance.NotifyNavigateToPage(PageManager.TrailListPageId, typeof(TrailList));
+
             // just for testing
             //AppStateService.Instance.ActiveTrailId = "GrotonPlace";
             CheckIfResumeMonitoringNeeded();

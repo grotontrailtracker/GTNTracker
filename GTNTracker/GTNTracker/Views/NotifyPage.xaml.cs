@@ -34,7 +34,7 @@ namespace GTNTracker.Views
 
         private async void CloseAllPopup()
         {
-            await Navigation.PopAllPopupAsync();
+            await Navigation.PopPopupAsync(); //.PopAllPopupAsync();
         }
 
         private void HandleMoreBtn(object sender, EventArgs e)

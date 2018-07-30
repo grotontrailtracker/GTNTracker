@@ -27,6 +27,7 @@ namespace GTNTracker.Views
         public static int StopTrackingId = 75;
         public static int WaypointCaptureId = 40;
         public static int ManageCapturesId = 45;
+        public static int StopGeoService = 42;
 
         public static PageManager Instance => _instance ?? (_instance = new PageManager());
  

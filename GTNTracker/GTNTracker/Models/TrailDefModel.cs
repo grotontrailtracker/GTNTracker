@@ -12,6 +12,8 @@ namespace GTNTracker.Models
 
         public bool DeveloperMode { get; set; }
 
+        public string ImageName { get; set; }
+
         public List<GeofenceRegion> Regions { get; set; }
     }
 }

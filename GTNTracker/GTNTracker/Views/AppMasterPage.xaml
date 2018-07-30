@@ -41,6 +41,11 @@
                                     </OnPlatform.WinPhone>
                                 </OnPlatform>
                             </Image.Source>
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="OnTapGestureRecognizerTapped"
+                                    NumberOfTapsRequired="2" />
+                            </Image.GestureRecognizers>
                         </Image>
                         <Label Text="Groton Trail Tracker" VerticalOptions="Center" HorizontalOptions="Start" 
                    TextColor="White" FontSize="Medium" Margin="5,0" />
@@ -76,5 +81,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <Label x:Name="versionLbl" VerticalOptions="EndAndExpand" FontSize="Micro" HorizontalOptions="Center" Margin="2,20" />
     </StackLayout>
 </ContentPage>

@@ -172,15 +172,18 @@ namespace GTNTracker.Droid
 
             if (_builder == null)
             {
-                var launchIntent = Android.App.Application.Context.PackageManager.GetLaunchIntentForPackage(Android.App.Application.Context.PackageName);
-                launchIntent.SetFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask);
-                var currNotification = _currNotifications.Last();
-                launchIntent.PutExtra("NotificationRegion", currNotification.RegionId);
+                // Take out the launch intent, this could cause an exception coming back
+                // into the App and it really doesn't add value... plus iOS doesn't do this
+                //
+                //var launchIntent = Android.App.Application.Context.PackageManager.GetLaunchIntentForPackage(Android.App.Application.Context.PackageName);
+                //launchIntent.SetFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask);
+                //var currNotification = _currNotifications.Last();
+                //launchIntent.PutExtra("NotificationRegion", currNotification.RegionId);
 
-                var pendingIntent = Android.App.TaskStackBuilder
-                        .Create(Android.App.Application.Context)
-                        .AddNextIntent(launchIntent)
-                        .GetPendingIntent(_notificationId, PendingIntentFlags.OneShot);
+                //var pendingIntent = Android.App.TaskStackBuilder
+                //        .Create(Android.App.Application.Context)
+                //        .AddNextIntent(launchIntent)
+                //        .GetPendingIntent(_notificationId, PendingIntentFlags.OneShot);
 
                 _inboxStyle = new Notification.InboxStyle();
                 _inboxStyle.AddLine(inboxMsg);
@@ -190,7 +193,7 @@ namespace GTNTracker.Droid
                 _builder.SetOngoing(false);
                 _builder.SetSmallIcon(Resource.Drawable.notifyIcon);
                 _builder.SetAutoCancel(true);
-                _builder.SetContentIntent(pendingIntent);
+                //_builder.SetContentIntent(pendingIntent);
                 _builder.SetStyle(_inboxStyle);
 
                 if (Android.OS.Build.VERSION.SdkInt < Android.OS.BuildVersionCodes.O)

@@ -13,14 +13,14 @@ namespace GTNTracker.Views
         public Welcome()
         {
             InitializeComponent();
-            var vm = ViewModelLocator.Instance.WelcomeVM;  //new WelcomeVM();
-            BindingContext = vm;
-            vm.PropertyChanged += ViewModel_PropertyChanged;
+            //var vm = ViewModelLocator.Instance.WelcomeVM;  //new WelcomeVM();
+            //BindingContext = vm;
+            //vm.PropertyChanged += ViewModel_PropertyChanged;
 
             welcomeImage.Source = ImageSource.FromResource("GTNTracker.Images.badge-photo.jpg");
             versionLbl.Text = string.Format("Version: {0}", AppStateService.Instance.AppVersion);
-            TrackingBtn.IsVisible = vm.IsTracking;
-            UpdateToolbar();
+            //TrackingBtn.IsVisible = vm.IsTracking;
+            //UpdateToolbar();
         }
 
         private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

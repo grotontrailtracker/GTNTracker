@@ -24,20 +24,20 @@ namespace GTNTracker.ViewModels
 
         public void Initialize()
         {
-            MenuItems.Add(new AppMenuItemVM()
-            {
-                Id = PageManager.WelcomePageId,
-                MenuTitle = "Welcome",
-                Title = "Groton Trail Tracker",
-                TargetType = typeof(Welcome),
-                ShowImage = true,
-                IconImage = ImageSource.FromResource("GTNTracker.Images.gtn.png")
-            });
+            //MenuItems.Add(new AppMenuItemVM()
+            //{
+            //    Id = PageManager.WelcomePageId,
+            //    MenuTitle = "Welcome",
+            //    Title = "Groton Trail Tracker",
+            //    TargetType = typeof(Welcome),
+            //    ShowImage = true,
+            //    IconImage = ImageSource.FromResource("GTNTracker.Images.gtn.png")
+            //});
             MenuItems.Add(new AppMenuItemVM()
             {
                 Id = PageManager.TrailListPageId,
                 MenuTitle = "Trails List",
-                Title = "Trails List",
+                Title = "Groton Trails",
                 TargetType = typeof(TrailList),
                 ShowImage = true,
                 IconImage = ImageSource.FromResource("GTNTracker.Images.terrain.png")
@@ -121,6 +121,16 @@ namespace GTNTracker.ViewModels
             });
             MenuItems.Add(new AppMenuItemVM()
             {
+                Id = PageManager.StopGeoService,
+                MenuTitle = "Stop GeoService",
+                Title = "Stop GeoService",
+                TargetType = typeof(AppDetailPage),
+                IconImage = ImageSource.FromResource("GTNTracker.Images.cancel.png"),
+                ShowImage = true,
+                IsAvailable = false
+            });
+            MenuItems.Add(new AppMenuItemVM()
+            {
                 Id = PageManager.ManageCapturesId,
                 MenuTitle = "Manage Captures",
                 Title = "Manage Captures",
@@ -130,6 +140,7 @@ namespace GTNTracker.ViewModels
             });
 
             PageManager.Instance.RegisterPageTitle(PageManager.WaypointCaptureId, "Waypoint Capture");
+            PageManager.Instance.RegisterPageTitle(PageManager.StopGeoService, "Stop GeoService");
             PageManager.Instance.RegisterPageTitle(PageManager.ManageCapturesId, "Manage Captures");
         }
 

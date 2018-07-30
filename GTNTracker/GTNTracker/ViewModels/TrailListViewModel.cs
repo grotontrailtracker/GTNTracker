@@ -20,7 +20,8 @@ namespace GTNTracker.ViewModels
 
         public TrailListViewModel()
         {
-            BuildTrailListItems();
+            //BuildTrailListItems();
+            TrailList = _trailList;
             NotificationService.Instance.ResumeMonitoring += HandleResumeTrailMonitoring;
 
             MessagingCenter.Subscribe<UIStopAllMonitoringRegions>(this, UIStopAllMonitoringRegions.MessageString,
@@ -45,7 +46,7 @@ namespace GTNTracker.ViewModels
             set => SetProperty(ref _trailList, value);
         }
 
-        private void BuildTrailListItems()
+        public void BuildTrailListItems()
         {
             var visitService = TrailVisitService.Instance;
             var trailDefService = TrailDefService.Instance;
@@ -73,12 +74,15 @@ namespace GTNTracker.ViewModels
                     var vm = new TrailContentViewModel();
                     vm.TrailDescription = trailDef.Description;
                     vm.Initialize(trailDef.Identifier, trailDef.Name, TrailDefService.Instance.GetRegionDefinition(trailDef.Identifier), visits);
+                    var imgNameToUse = !string.IsNullOrEmpty(trailDef.ImageName) ? trailDef.ImageName : "GTNTracker.Images.UnderConstruct.jpg";
                     item = new TrailListItemVM()
                     {
                         Name = trailDef.Name,
                         TrailId = trailDef.Identifier,
                         Completed = false,
                         TrailPage = new TrailContentPage(),
+                        Image = ImageSource.FromResource(imgNameToUse),
+                        ShowImage = true,
                         ViewModel = vm
                     };
                     item.PropertyChanged += TrailContentPropertyChanged;
@@ -100,6 +104,8 @@ namespace GTNTracker.ViewModels
                         Completed = true,
                         DateCompleted = DateTime.Now,
                         TrailPage = new UnderConstruction(),
+                        Image = ImageSource.FromResource("GTNTracker.Images.UnderConstruct.jpg"),
+                        ShowImage = false,
                         ViewModel = null
                     };
                     item.TrailPage.Title = trailDef.Name;
@@ -133,9 +139,15 @@ namespace GTNTracker.ViewModels
 
         private void HandleUIStopAllMonitoringRegions()
         {
-            var trailVM = _trailList.FirstOrDefault(t => t.IsStarted);
-            var contentVM = trailVM.ViewModel;
-            contentVM.Stop();
+            if (_trailList != null)
+            {
+                var trailVM = _trailList.FirstOrDefault(t => t.IsStarted);
+                if (trailVM != null)
+                {
+                    var contentVM = trailVM.ViewModel;
+                    contentVM.Stop();
+                }
+            }
         }
 
         private void HandleResumeTrailMonitoring(object sender, ResumeTrailMonitoringArgs e)

@@ -20,6 +20,7 @@ namespace GTNTracker.Services
         public EventHandler<ResumeTrailMonitoringArgs> ResumeMonitoring;
         public EventHandler NavigatePrior;
         public EventHandler<AllowCaptureModeArgs> AllowWaypointCaptureMode;
+        public EventHandler<DevModeGeoFenceStateArgs> DevModeGeoServiceState;
 
         public NotificationService()
         {
@@ -74,6 +75,11 @@ namespace GTNTracker.Services
         public void NotifyAllowWaypointCapture(bool enabled)
         {
             AllowWaypointCaptureMode?.Invoke(this, new AllowCaptureModeArgs(enabled));
+        }
+
+        public void NotifyDevModeGeoServiceState(bool state)
+        {
+            DevModeGeoServiceState?.Invoke(this, new DevModeGeoFenceStateArgs(state));
         }
 
         public void ClearAllTracking()

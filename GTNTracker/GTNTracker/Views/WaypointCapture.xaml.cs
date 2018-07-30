@@ -1,4 +1,5 @@
-﻿using GTNTracker.Services;
+﻿using GTNTracker.Interfaces;
+using GTNTracker.Services;
 using GTNTracker.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,13 @@ namespace GTNTracker.Views
 
         protected override void OnAppearing()
         {
+            var isRunning = GeoFenceService.IsRunning();
+            if (!isRunning)
+            {
+                MessagingCenter.Send(new StartGeofencing(), StartGeofencing.MessageString);
+                NotificationService.Instance.NotifyDevModeGeoServiceState(true);
+            }
+
             var vm = BindingContext as WaypointCaptureVM;
             if (vm != null)
             {

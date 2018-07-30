@@ -21,6 +21,7 @@
     "Identifier": "BertozziWildlife",
     "Name": "Bertozzi Wildlife",
     "Description": "Peter E. Bertozzi Conservation Area. This is a beautiful riverside property that includes wide dirt trails through the forest and a well loved swimming hole. A camping area on the river near a swimming hole.",
+    "ImageName": "GTNTracker.Images.Bertozzi.bw12.png",
     "Regions": [
       {
         "Identifier": "BW1",
@@ -124,6 +125,7 @@
     "Identifier": "ForestBells",
     "Name": "The Forest Bells",
     "Description": "A short walk to the Forest Bells by Paul Matisse. Six aluminum organ shaped chimes to ring through the woods. Make sure to ring the bells and listen to them bounce through the forest. And definitly make sure to bring the entire family, so you can compose music with the different bell's notes.",
+    "ImageName": "GTNTracker.Images.ForBells.fb6.png",
     "Regions": [
       {
         "Identifier": "FB4",
@@ -215,6 +217,7 @@
     "Identifier": "GibbetHill",
     "Name": "Gibbet Hill",
     "Description": "The route is simple to follow. The castle and vista are worth the climb.",
+    "ImageName": "GTNTracker.Images.Gibbet.gib3a.png",
     "Regions": [
       {
         "Identifier": "GIB1",
@@ -294,6 +297,7 @@
     "Identifier": "GrotonPlace1",
     "Name": "Groton Place / Sabine Woods",
     "Description": "The Groton Place is a well loved property that follows the Nashua River. With many intertwined loops these trails are optimal for everyone, whether you are an experienced hiker or just looking for a relaxing stroll. This property has stunning features scattered throughout its network of trails.",
+    "ImageName": "GTNTracker.Images.GrotonPlace.gp1.png",
     "Regions": [
       {
         "Identifier": "GP1",
@@ -495,6 +499,7 @@
     "Name": "Matt's Test Track",
     "Description": "Test Track Around PatridgeBerry Woods",
     "DeveloperMode": true,
+    "ImageName": "GTNTracker.Images.MattTestTrack.mt2.jpg",
     "Regions": [
       {
         "Identifier": "MattyTT1",

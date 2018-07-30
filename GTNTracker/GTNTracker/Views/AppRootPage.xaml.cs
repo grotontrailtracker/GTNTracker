@@ -13,10 +13,8 @@ namespace GTNTracker.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppRootPage : MasterDetailPage
     {
-        //private string _currentPageTitle;
         private int _currentPageId;
         private int _priorPageId;
-        //private string _priorPageTitle;
 
         public AppRootPage()
         {
@@ -24,9 +22,7 @@ namespace GTNTracker.Views
             TheMasterPage.ListView.ItemSelected += ListView_ItemSelected;
             NotificationService.Instance.NavigateToPage += HandlePageNavigate;
             NotificationService.Instance.NavigatePrior += HandlePriorPageNavigate;
-            //_currentPageTitle = "Groton Trail Tracker";
-            _currentPageId = PageManager.WelcomePageId;
-            //_priorPageTitle = string.Empty;
+            _currentPageId = PageManager.TrailListPageId; //PageManager.WelcomePageId;
             _priorPageId = -1;
             
         }
@@ -53,10 +49,8 @@ namespace GTNTracker.Views
                 PageManager.Instance.NavPageCache[pageId] = navPage;
             }
 
-            //_priorPageTitle = _currentPageTitle;
             _priorPageId = _currentPageId;
             _currentPageId = pageId;
-            //_currentPageTitle = pageTitle;
             Detail = navPage;
             IsPresented = false;
         }
@@ -70,25 +64,33 @@ namespace GTNTracker.Views
             }
             else
             {
-                if (PageManager.Instance.NavPageCache.ContainsKey(PageManager.WelcomePageId))
+                //if (PageManager.Instance.NavPageCache.ContainsKey(PageManager.WelcomePageId))
+                //{
+                //    navPage = PageManager.Instance.NavPageCache[PageManager.WelcomePageId];
+                //}
+                //else
+                //{
+                //    var page = (Page)Activator.CreateInstance(typeof(Welcome));
+                //    page.Title = PageManager.Instance.GetPageTitle(PageManager.WelcomePageId);
+                //    navPage = new NavigationPage(page);
+                //    PageManager.Instance.NavPageCache[PageManager.WelcomePageId] = navPage;
+                //}
+                if (PageManager.Instance.NavPageCache.ContainsKey(PageManager.TrailListPageId))
                 {
-                    navPage = PageManager.Instance.NavPageCache[PageManager.WelcomePageId];
+                    navPage = PageManager.Instance.NavPageCache[PageManager.TrailListPageId];
                 }
                 else
                 {
-                    var page = (Page)Activator.CreateInstance(typeof(Welcome));
-                    page.Title = PageManager.Instance.GetPageTitle(PageManager.WelcomePageId);
+                    var page = (Page)Activator.CreateInstance(typeof(TrailList));
+                    page.Title = PageManager.Instance.GetPageTitle(PageManager.TrailListPageId);
                     navPage = new NavigationPage(page);
-                    PageManager.Instance.NavPageCache[PageManager.WelcomePageId] = navPage;
+                    PageManager.Instance.NavPageCache[PageManager.TrailListPageId] = navPage;
                 }
             }
 
-            //var tmp = _currentPageTitle;
             var tmpId = _currentPageId;
             _currentPageId = _priorPageId;
             _priorPageId = tmpId;
-            //_currentPageTitle = _priorPageTitle;
-            //_priorPageTitle = tmp;
 
             Detail = navPage;
             IsPresented = false;
@@ -127,6 +129,29 @@ namespace GTNTracker.Views
                 return;
             }
 
+            if (item.Id == PageManager.StopGeoService)
+            {
+                //if (Device.RuntimePlatform == Device.Android)
+                //{
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    if (GeoFenceService.IsRunning())
+                    {
+                        var result = await DisplayAlert("Stop GPS Service?", "Do you want to stop GPS Service?", "OK", "Cancel");
+                        if (result)
+                        {
+                            // do something to go away.
+                            MessagingCenter.Send(new StopGeofencing(), StopGeofencing.MessageString, new StopGeofencingArgs(false));
+                            NotificationService.Instance.NotifyDevModeGeoServiceState(false);
+                        }
+                    }
+                });
+
+                TheMasterPage.ListView.SelectedItem = null;
+                IsPresented = false;
+                return;
+            }
+
             var titleKey = item.Title;
             var pageId = item.Id;
             Page navPage = null;
@@ -151,8 +176,6 @@ namespace GTNTracker.Views
 
             _priorPageId = _currentPageId;
             _currentPageId = pageId;
-            //_priorPageTitle = _currentPageTitle;
-            //_currentPageTitle = titleKey;
 
             navPage.Parent = null;
             Detail = navPage; //new NavigationPage(page);

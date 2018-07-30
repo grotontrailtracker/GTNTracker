@@ -81,4 +81,11 @@ namespace GTNTracker.EventArguments
 
         public bool Enabled { get; set; }
     }
+
+    public class DevModeGeoFenceStateArgs : EventArgs
+    {
+        public DevModeGeoFenceStateArgs(bool enabled) => Enabled = enabled;
+
+        public bool Enabled { get; set; }
+    }
 }

@@ -38,6 +38,11 @@ namespace GTNTracker.ViewModels
         private bool _waitingForGPSRefresh;
         private bool _overrideClosestRegion;
 
+        private GeofenceRegion _currentRegion;
+        private bool _isInCurrentRegion;
+        private ImageSource _currentRegionImage;
+        private string _currentRegionName;
+
         public CurrentLocationVM()
         {
             MessagingCenter.Subscribe<GeoPositionChanged, GeoPositionChangedArgs>(this, GeoPositionChanged.MessageString,
@@ -178,6 +183,30 @@ namespace GTNTracker.ViewModels
         {
             get => _refreshCommand;
             set => SetProperty(ref _refreshCommand, value);
+        }
+
+        public GeofenceRegion CurrentRegion
+        {
+            get => _currentRegion;
+            set => SetProperty(ref _currentRegion, value);
+        }
+
+        public string CurrentRegionName
+        {
+            get => _currentRegionName;
+            set => SetProperty(ref _currentRegionName, value);
+        }
+
+        public ImageSource CurrentRegionImage
+        {
+            get => _currentRegionImage;
+            set => SetProperty(ref _currentRegionImage, value);
+        }
+
+        public bool IsCurrentRegion
+        {
+            get => _isInCurrentRegion;
+            set => SetProperty(ref _isInCurrentRegion, value);
         }
 
         public void UpdateCurrentPosition(bool resetData = false)
@@ -437,6 +466,9 @@ namespace GTNTracker.ViewModels
                     GeofenceRegion closestRegion = null;
                     PriorRegion = _nextRegion;
                     Distance closestDistance = Distance.FromMeters(0);
+                    IsCurrentRegion = false;
+                    CurrentRegion = null;
+                    CurrentRegionName = string.Empty;
 
                     if (!_overrideClosestRegion)
                     {
@@ -455,6 +487,15 @@ namespace GTNTracker.ViewModels
                                     closestDistance = distance;
                                     _nextRegion = region;
                                 }
+                            }
+
+                            if (inRegion)
+                            {
+                                // we now want to display the current region so setup binding variables
+                                IsCurrentRegion = true;
+                                CurrentRegion = region;
+                                CurrentRegionName = region.Name;
+                                ProcessCurrentRegionImage(region);
                             }
 
                             var msg = string.Format("region: {0}, lat: {1}, lng: {2}, loc?: {3}, dist: {4:F2} meters",
@@ -561,6 +602,19 @@ namespace GTNTracker.ViewModels
             else
             {
                 TrailImage = ImageSource.FromResource(imgNameToUse);
+            }
+        }
+        private void ProcessCurrentRegionImage(GeofenceRegion region)
+        {
+            var imgNameToUse = !string.IsNullOrEmpty(region.ImageName) ? region.ImageName : "GTNTracker.Images.UnderConstruct.jpg";
+
+            if (region.IsImageNameURI)
+            {
+                CurrentRegionImage = ImageSource.FromUri(new System.Uri(region.ImageName));
+            }
+            else
+            {
+                CurrentRegionImage = ImageSource.FromResource(imgNameToUse);
             }
         }
     }

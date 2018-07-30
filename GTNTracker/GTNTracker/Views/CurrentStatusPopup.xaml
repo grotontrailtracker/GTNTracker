@@ -49,7 +49,12 @@
                     Command="{Binding RefreshGPSCommand}"  VerticalOptions="End" HorizontalOptions="End"/>
                     </Grid>-->
                     <StackLayout Orientation="Horizontal" Margin="5,0" HorizontalOptions="FillAndExpand">
-                        <Label Text="Current GPS Location" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Small" />
+                        <Label Text="Current Location" HorizontalOptions="Start" VerticalOptions="Center"
+                               IsVisible="{Binding IsCurrentRegion, Converter={StaticResource IsFalseConverter}}"
+                               FontSize="Small" />
+                        <Label Text="{Binding CurrentRegionName, StringFormat='Current Waypoint: {0}'}"
+                               HorizontalOptions="Start" VerticalOptions="Center" 
+                               FontSize="Small" IsVisible="{Binding IsCurrentRegion}" />
                     </StackLayout>
                     <Grid Margin="5,0" BackgroundColor="#E0E0E0" Padding="5,5">
                         <Grid.RowDefinitions>
@@ -58,24 +63,32 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Row="0" Grid.Column="0" Text="Longitude:" HorizontalOptions="Start" FontSize="Micro"/>
-                        <Label Grid.Row="1" Grid.Column="0" Text="Latitude:" HorizontalOptions="Start" FontSize="Micro"/>
-                        <Label Grid.Row="2" Grid.Column="0" Text="Accuracy:" HorizontalOptions="Start" FontSize="Micro"/>
-                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Longitude}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Micro"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Latitude}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Micro"/>
-                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Accuracy}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Micro"/>
-                        <Label Grid.Row="2" Grid.Column="2" Text="{Binding LastUpdate, StringFormat=' Last Updated: {0}', Converter={StaticResource TimeConverter}}"
-                            HorizontalOptions="EndAndExpand" FontSize="Micro" VerticalOptions="Center"/>
+                        <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                            WidthRequest="100" HeightRequest="100" Margin="0,0,5,0" IsVisible="{Binding IsCurrentRegion}"
+                            DownsampleToViewSize="true"
+                            LoadingPlaceholder="loading.gif"
+                            ErrorPlaceholder="error404.png"
+                            Source = "{Binding CurrentRegionImage}" >
+                        </ffimageloading:CachedImage>
+                        <Label Grid.Row="0" Grid.Column="1" Text="Longitude:" HorizontalOptions="Start" FontSize="Small"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="Latitude:" HorizontalOptions="Start" FontSize="Small"/>
+                        <Label Grid.Row="2" Grid.Column="1" Text="Accuracy:" HorizontalOptions="Start" FontSize="Small"/>
+                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding Longitude}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Small"/>
+                        <Label Grid.Row="1" Grid.Column="2" Text="{Binding Latitude}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Small"/>
+                        <Label Grid.Row="2" Grid.Column="2" Text="{Binding Accuracy}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Small"/>
+                        <!--<Label Grid.Row="2" Grid.Column="3" Text="{Binding LastUpdate, StringFormat=' Last Updated: {0}', Converter={StaticResource TimeConverter}}"
+                            HorizontalOptions="EndAndExpand" FontSize="Micro" VerticalOptions="Center"/>-->
                     </Grid>
 
-                    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="5,0">
-                        <Label Text="{Binding LastUpdate, StringFormat=' Last Updated: {0}', Converter={StaticResource TimeConverter}}"
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="5,0">
+                        <Label Text="{Binding LastUpdate, StringFormat=' Last Update: {0}', Converter={StaticResource TimeConverter}}"
                        HorizontalOptions="EndAndExpand" FontSize="Micro" VerticalOptions="Center"/>
-                    </StackLayout>-->
+                    </StackLayout>
 
                     <StackLayout Orientation="Vertical" Margin="5,2" IsVisible="{Binding IsActiveTrailAvailable}" >
                         <!--<Label Text="Next Waypoint To Visit" Margin="0" FontSize="Small" VerticalOptions="Center" />-->
@@ -88,13 +101,14 @@
                           <Button Grid.Column="1" Text="Change" Image="waypoint.png" VerticalOptions="End" HorizontalOptions="End" Clicked="HandleChangeRegion"
                                   WidthRequest="150"/>
                         </Grid>-->
-                        <Button Text="Select Next Waypoint" Image="waypoint.png" Clicked="HandleChangeRegion" IsEnabled="{Binding IsClosestRegionAvailable}"/>
-                      
+                        <!--<Button Text="Select Next Waypoint" Image="waypoint.png" Clicked="HandleChangeRegion" IsEnabled="{Binding IsClosestRegionAvailable}"/>-->
+                        <Label Text="Next Waypoint" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Small" />                     
                         <Grid Margin="0,2" BackgroundColor="#E0E0E0" Padding="5,5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100" />
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
@@ -103,9 +117,9 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource GridLblStyle}" Text="Waypoint:" />
-                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding ClosestRegionName}" Style="{StaticResource GridLblStyle}" Margin="5,0"/>
+                            <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding ClosestRegionName}" Style="{StaticResource GridLblStyle}" Margin="5,0"/>
                             <Label Grid.Row="1" Grid.Column="1" Text="Distance:" Style="{StaticResource GridLblStyle}" />
-                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding DistanceToClosestRegion}" Style="{StaticResource GridLblStyle}" Margin="5,0"/>
+                            <Label Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding DistanceToClosestRegion}" Style="{StaticResource GridLblStyle}" Margin="5,0"/>
                             <Label Grid.Row="2" Grid.Column="1" Text="Bearing:" Style="{StaticResource GridLblStyle}" />
                             <Label Grid.Row="2" Grid.Column="2" Text="{Binding Bearing, StringFormat='{0}°'}" Style="{StaticResource GridLblStyle}" Margin="5,0"/>
                             <Label Grid.Row="3" Grid.Column="1" Text="Direction:" Style="{StaticResource GridLblStyle}" />
@@ -124,6 +138,7 @@
                                   Source="{Binding TrailImage}" >
                             </ffimageloading:CachedImage>
                             </ContentView>
+                          <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" WidthRequest="120" Text="Change" Image="waypoint.png" Clicked="HandleChangeRegion" IsEnabled="{Binding IsClosestRegionAvailable}"/>
                         </Grid>
                     </StackLayout>
 
@@ -161,10 +176,10 @@
                     </StackLayout>
 
                   <StackLayout HorizontalOptions="FillAndExpand"  Margin="5,2" IsVisible="{Binding IsClosestRegionAvailable}">
-                    <Label Text="Direction To Waypoint" FontSize="Small" HorizontalOptions="Start" Margin="0" VerticalOptions="Center"/>
+                    <Label Text="Direction To Next Waypoint" FontSize="Small" HorizontalOptions="Start" Margin="0" VerticalOptions="Center"/>
                     <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#E0E0E0" >
                       <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5,5" Margin="0,2" >
-                        <ffimageloading:CachedImage Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"
+                        <ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center"
                             WidthRequest="50" HeightRequest="50" Margin="15,0,5,0"
                             DownsampleToViewSize="true"
                             LoadingPlaceholder="loading.gif"
