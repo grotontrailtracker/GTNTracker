@@ -32,10 +32,11 @@
 	<array>
 		<string>arm64</string>
 	</array>
-	<key>NSAppTransportSecurity</key>  
- 	<dict>  
-      	<key>NSAllowsArbitraryLoads</key><true/>  
- 	</dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>CFBundleName</key>
 	<string>Trail Tracker</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
