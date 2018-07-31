@@ -42,6 +42,8 @@ namespace GTNTracker.ViewModels
         private bool _isInCurrentRegion;
         private ImageSource _currentRegionImage;
         private string _currentRegionName;
+        private double _currentRegionImageHeight;
+        private double _currentRegionImageWidth;
 
         public CurrentLocationVM()
         {
@@ -201,6 +203,18 @@ namespace GTNTracker.ViewModels
         {
             get => _currentRegionImage;
             set => SetProperty(ref _currentRegionImage, value);
+        }
+
+        public double CurrentRegionImageHeight
+        {
+            get => _currentRegionImageHeight;
+            set => SetProperty(ref _currentRegionImageHeight, value);
+        }
+
+        public double CurrentRegionImageWidth
+        {
+            get => _currentRegionImageWidth;
+            set => SetProperty(ref _currentRegionImageWidth, value);
         }
 
         public bool IsCurrentRegion
@@ -520,6 +534,14 @@ namespace GTNTracker.ViewModels
                         ShowImage = false;
                     }
                 }
+
+                if (!IsCurrentRegion)
+                {
+                    //CurrentRegionImage = ImageSource.FromFile("badgephoto.png");
+                    CurrentRegionImage = ImageSource.FromResource("GTNTracker.Images.hiker.png");
+                    CurrentRegionImageWidth = 60.0;
+                    CurrentRegionImageHeight = 60.0;
+                }
             }
             else
             {
@@ -616,6 +638,8 @@ namespace GTNTracker.ViewModels
             {
                 CurrentRegionImage = ImageSource.FromResource(imgNameToUse);
             }
+            CurrentRegionImageHeight = 100.0;
+            CurrentRegionImageWidth = 100.0;
         }
     }
 }

@@ -93,6 +93,7 @@ namespace GTNTracker.Views
         {
             var imageVM = ViewModelLocator.Instance.ImageVM;
             var myContext = BindingContext as CurrentLocationVM;
+ 
             if (myContext != null)
             {
                 imageVM.ImageData = myContext.TrailImage;
@@ -109,6 +110,11 @@ namespace GTNTracker.Views
             var myContext = BindingContext as CurrentLocationVM;
             if (myContext != null)
             {
+                if (!myContext.IsCurrentRegion)
+                {
+                    return;
+                }
+
                 imageVM.ImageData = myContext.CurrentRegionImage;
                 var popup = PageManager.Instance.ImagePopup;
                 popup.Initialize();

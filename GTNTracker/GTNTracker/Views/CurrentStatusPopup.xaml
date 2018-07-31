@@ -73,12 +73,12 @@
                           <TapGestureRecognizer
                              Tapped="OnCurrentWaypointImageTapped" NumberOfTapsRequired="1" />
                         </ContentView.GestureRecognizers>
-                        <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-                            WidthRequest="100" HeightRequest="100" Margin="0,0,5,0" IsVisible="{Binding IsCurrentRegion}"
+                        <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                            WidthRequest="{Binding CurrentRegionImageWidth}" HeightRequest="{Binding CurrentRegionImageHeight}" Margin="0,0,5,0"
                             DownsampleToViewSize="true"
                             LoadingPlaceholder="loading.gif"
                             ErrorPlaceholder="error404.png"
-                            Source = "{Binding CurrentRegionImage}" >
+                            Source="{Binding CurrentRegionImage}" >
                         </ffimageloading:CachedImage>
                       </ContentView>
                         <Label Grid.Row="0" Grid.Column="1" Text="Longitude:" HorizontalOptions="Start" FontSize="Small"/>
@@ -127,9 +127,9 @@
                             <Label Grid.Row="1" Grid.Column="1" Text="Distance:" Style="{StaticResource GridLblStyle}" />
                             <Label Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding DistanceToClosestRegion}" Style="{StaticResource GridLblStyle}" Margin="5,0"/>
                             <Label Grid.Row="2" Grid.Column="1" Text="Bearing:" Style="{StaticResource GridLblStyle}" />
-                            <Label Grid.Row="2" Grid.Column="2" Text="{Binding Bearing, StringFormat='{0}°'}" Style="{StaticResource GridLblStyle}" Margin="5,0"/>
+                            <Label Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding Bearing, StringFormat='{0}°'}" Style="{StaticResource GridLblStyle}" Margin="5,0"/>
                             <Label Grid.Row="3" Grid.Column="1" Text="Direction:" Style="{StaticResource GridLblStyle}" />
-                            <Label Grid.Row="3" Grid.Column="2" Text="{Binding DirectionToClosest}" Style="{StaticResource GridLblStyle}" Margin="5,0"/>
+                            <Label Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding DirectionToClosest}" Style="{StaticResource GridLblStyle}" Margin="5,0"/>
                             <ContentView Grid.Row="0" Grid.RowSpan="4" Grid.Column="0">
                               <ContentView.GestureRecognizers>
                                 <TapGestureRecognizer
@@ -144,7 +144,7 @@
                                   Source="{Binding TrailImage}" >
                             </ffimageloading:CachedImage>
                             </ContentView>
-                          <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" WidthRequest="120" Text="Change" Image="waypoint.png" Clicked="HandleChangeRegion" IsEnabled="{Binding IsClosestRegionAvailable}"/>
+                          <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" WidthRequest="90" Text="Set" Image="waypoint.png" Clicked="HandleChangeRegion" IsEnabled="{Binding IsClosestRegionAvailable}"/>
                         </Grid>
                     </StackLayout>
 
