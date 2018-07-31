@@ -479,13 +479,14 @@
     "Identifier": "Throne",
     "Name": "Throne Hill",
     "Description": "The Throne is a conservation area owned by Groton Conservation Trust and one of largest contiguous undeveloped parcels in the area. It provides habitat for deer, bears, porcupines, fishers, moose, and beavers. It features upland forest and interesting wetlands.",
+    "ImageName":  "GTNTracker.Images.Throne.throne1.png",
     "Regions": [
       {
         "Identifier": "TR1",
         "TrailIdentifier": "Throne",
         "Name": "Castle Drive Parking",
         "Description": "Castle Dr. Parking.  Room for several vehicles to park along the cul-de-sac.  Trail entrance on cul-de-sac.  To get to the actual trail, walk up the right side of the driveway, staying between the two houses.  The trailhead is at the top of the driveway",
-        "ImageName": "GTNTracker.Images.UnderConstruct.jpg",
+        "ImageName": "GTNTracker.Images.Throne.throne1.png",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.625918,

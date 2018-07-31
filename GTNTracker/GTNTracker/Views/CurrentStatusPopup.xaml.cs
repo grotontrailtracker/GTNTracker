@@ -89,13 +89,27 @@ namespace GTNTracker.Views
             }
         }
 
-        private async void OnTapGestureRecognizerTapped(object sender, EventArgs args)
+        private async void OnNextWaypointImageTapped(object sender, EventArgs args)
         {
             var imageVM = ViewModelLocator.Instance.ImageVM;
             var myContext = BindingContext as CurrentLocationVM;
             if (myContext != null)
             {
                 imageVM.ImageData = myContext.TrailImage;
+                var popup = PageManager.Instance.ImagePopup;
+                popup.Initialize();
+                popup.BindingContext = imageVM;
+                await Navigation.PushPopupAsync(popup);
+            }
+        }
+
+        private async void OnCurrentWaypointImageTapped(object sender, EventArgs args)
+        {
+            var imageVM = ViewModelLocator.Instance.ImageVM;
+            var myContext = BindingContext as CurrentLocationVM;
+            if (myContext != null)
+            {
+                imageVM.ImageData = myContext.CurrentRegionImage;
                 var popup = PageManager.Instance.ImagePopup;
                 popup.Initialize();
                 popup.BindingContext = imageVM;

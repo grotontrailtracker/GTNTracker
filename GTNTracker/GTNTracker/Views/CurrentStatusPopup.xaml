@@ -68,6 +68,11 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+                      <ContentView Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <ContentView.GestureRecognizers>
+                          <TapGestureRecognizer
+                             Tapped="OnCurrentWaypointImageTapped" NumberOfTapsRequired="1" />
+                        </ContentView.GestureRecognizers>
                         <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                             WidthRequest="100" HeightRequest="100" Margin="0,0,5,0" IsVisible="{Binding IsCurrentRegion}"
                             DownsampleToViewSize="true"
@@ -75,6 +80,7 @@
                             ErrorPlaceholder="error404.png"
                             Source = "{Binding CurrentRegionImage}" >
                         </ffimageloading:CachedImage>
+                      </ContentView>
                         <Label Grid.Row="0" Grid.Column="1" Text="Longitude:" HorizontalOptions="Start" FontSize="Small"/>
                         <Label Grid.Row="1" Grid.Column="1" Text="Latitude:" HorizontalOptions="Start" FontSize="Small"/>
                         <Label Grid.Row="2" Grid.Column="1" Text="Accuracy:" HorizontalOptions="Start" FontSize="Small"/>
@@ -127,7 +133,7 @@
                             <ContentView Grid.Row="0" Grid.RowSpan="4" Grid.Column="0">
                               <ContentView.GestureRecognizers>
                                 <TapGestureRecognizer
-                                   Tapped="OnTapGestureRecognizerTapped" NumberOfTapsRequired="1" />
+                                   Tapped="OnNextWaypointImageTapped" NumberOfTapsRequired="1" />
                               </ContentView.GestureRecognizers>
                               <ffimageloading:CachedImage  HorizontalOptions="Center" VerticalOptions="Center"
                                   WidthRequest="100" HeightRequest="100" Margin="0,0,5,0" IsVisible="{Binding ShowImage}"
