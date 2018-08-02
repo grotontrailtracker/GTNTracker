@@ -503,7 +503,19 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\Bertozzi\bw13.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Throne\throne11.png" />
+    <EmbeddedResource Include="Images\Throne\throne13.png" />
+    <EmbeddedResource Include="Images\Throne\throne14.png" />
+    <EmbeddedResource Include="Images\Throne\throne15.png" />
+    <EmbeddedResource Include="Images\Throne\throne17.png" />
+    <EmbeddedResource Include="Images\Throne\throne18.png" />
+    <EmbeddedResource Include="Images\Throne\throne2.png" />
+    <EmbeddedResource Include="Images\Throne\throne5.png" />
+    <EmbeddedResource Include="Images\Throne\throne6.png" />
+    <EmbeddedResource Include="Images\Throne\throne7.png" />
+    <EmbeddedResource Include="Images\Throne\throne9.png" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\Throne\throne1.png" />
   </ItemGroup>

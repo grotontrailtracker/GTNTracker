@@ -482,15 +482,147 @@
     "ImageName":  "GTNTracker.Images.Throne.throne1.png",
     "Regions": [
       {
-        "Identifier": "TR1",
+        "Identifier": "TH1",
         "TrailIdentifier": "Throne",
         "Name": "Castle Drive Parking",
         "Description": "Castle Dr. Parking.  Room for several vehicles to park along the cul-de-sac.  Trail entrance on cul-de-sac.  To get to the actual trail, walk up the right side of the driveway, staying between the two houses.  The trailhead is at the top of the driveway",
         "ImageName": "GTNTracker.Images.Throne.throne1.png",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.625918,
-          "Longitude": -71.617191
+          "Latitude": 42.6260,
+          "Longitude": -71.61721
+        }
+      },
+      {
+        "Identifier": "TH2",
+        "TrailIdentifier": "Throne",
+        "Name": "Trail Head",
+        "Description": "Trail Start from Castle Drive.",
+        "ImageName": "GTNTracker.Images.Throne.throne2.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.62487142,
+          "Longitude": -71.62099227
+        }
+      },
+      {
+        "Identifier": "TH18",
+        "TrailIdentifier": "Throne",
+        "Name": "Trail Bridge",
+        "Description": "Eagle Scout Bridge Project.",
+        "ImageName": "GTNTracker.Images.Throne.throne18.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.6250462,
+          "Longitude": -71.62439385
+        }
+      },
+      {
+        "Identifier": "TH17",
+        "TrailIdentifier": "Throne",
+        "Name": "Waypoint #4",
+        "Description": "Follow the trail on your outbound loop segment.",
+        "ImageName": "GTNTracker.Images.Throne.throne17.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.62606045,
+          "Longitude": -71.62662651
+        }
+      },
+      {
+        "Identifier": "TH5",
+        "TrailIdentifier": "Throne",
+        "Name": "Loop Trail Fork",
+        "Description": "Loop Trail Fork, Straight West To Rockwood Lane, follow the Loop Trail to the south west.",
+        "ImageName": "GTNTracker.Images.Throne.throne5.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.62727957,
+          "Longitude": -71.62881815
+        }
+      },
+      {
+        "Identifier": "TH6",
+        "TrailIdentifier": "Throne",
+        "Name": "Waypoint #6",
+        "Description": "Take either fork, you'll merge back on the same path soon!",
+        "ImageName": "GTNTracker.Images.Throne.throne6.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.62544181,
+          "Longitude": -71.62978413
+        }
+      },
+      {
+        "Identifier": "TH7",
+        "TrailIdentifier": "Throne",
+        "Name": "Waypoint #7",
+        "Description": "Back together again!",
+        "ImageName": "GTNTracker.Images.Throne.throne7.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.62370802,
+          "Longitude": -71.62922518
+        }
+      },
+      {
+        "Identifier": "TH15",
+        "TrailIdentifier": "Throne",
+        "Name": "Waypoint #8",
+        "Description": "Keep heading south, it's almost snack time!",
+        "ImageName": "GTNTracker.Images.Throne.throne15.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.62214601,
+          "Longitude": -71.62958853
+        }
+      },
+      {
+        "Identifier": "TH14",
+        "TrailIdentifier": "Throne",
+        "Name": "Concord Grapes",
+        "Description": "Visit in September for a taste of the grapes!",
+        "ImageName": "GTNTracker.Images.Throne.throne14.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.62080365,
+          "Longitude": -71.63021624
+        }
+      },
+      {
+        "Identifier": "TH13",
+        "TrailIdentifier": "Throne",
+        "Name": "Waypoint #10",
+        "Description": "Old beaver home, find some tree stumps.",
+        "ImageName": "GTNTracker.Images.Throne.throne13.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.62024219,
+          "Longitude": -71.62940844
+        }
+      },
+      {
+        "Identifier": "TH11",
+        "TrailIdentifier": "Throne",
+        "Name": "Common Reeds",
+        "Description": "Example of how the Phragmites australis is invasively taking over the natural cattails in the wetlands",
+        "ImageName": "GTNTracker.Images.Throne.throne11.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.62016252,
+          "Longitude": -71.62803357
+        }
+      },
+      {
+        "Identifier": "TH9",
+        "TrailIdentifier": "Throne",
+        "Name": "Loop Trail merge",
+        "Description": "Back onto the Loop trail, heading homeward towards the Trail Start!",
+        "ImageName": "GTNTracker.Images.Throne.throne9.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.62187913,
+          "Longitude": -71.6267051
         }
       }
     ]

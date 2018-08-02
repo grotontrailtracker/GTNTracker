@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="org.grotontrails.GrotonTrailTracker" android:versionName="1.0.0" android:versionCode="9">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="org.grotontrails.GrotonTrailTracker" android:versionName="1.0.0" android:versionCode="10">
 	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27" />
 	<application android:label="Groton Trail Tracker" android:icon="@drawable/ic_gtnRound" android:theme="@style/MyTheme">
 		<provider android:name="android.support.v4.content.FileProvider" android:authorities="org.grotontrails.GrotonTrailTracker.fileprovider" android:exported="false" android:grantUriPermissions="true">
