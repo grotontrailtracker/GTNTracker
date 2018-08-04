@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GTNTracker.Types;
+using Xamarin.Forms;
 
 namespace GTNTracker.EventArguments
 {
@@ -87,5 +88,12 @@ namespace GTNTracker.EventArguments
         public DevModeGeoFenceStateArgs(bool enabled) => Enabled = enabled;
 
         public bool Enabled { get; set; }
+    }
+
+    public class ZoomImageEventArgs : EventArgs
+    {
+        public ZoomImageEventArgs(ImageSource image) => Image = image;
+
+        public ImageSource Image { get; set; }
     }
 }

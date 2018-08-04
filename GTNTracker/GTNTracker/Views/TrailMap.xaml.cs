@@ -168,12 +168,15 @@ namespace GTNTracker.Views
 
         private async void StartTrailBtn_Activated(object sender, EventArgs e)
         {
-            var statusPage = PageManager.Instance.CurrentStatusPopup; //new CurrentStatusPage();
+            //var statusPage = PageManager.Instance.CurrentStatusPopup; //new CurrentStatusPage();
             var vm = ViewModelLocator.Instance.CurrentLocationVM;
             vm.UpdateCurrentPosition();
-            statusPage.BindingContext = vm;
+            //statusPage.BindingContext = vm;
+            var trailStatus = PageManager.Instance.TrailStatus;
+            trailStatus.BindingContext = vm;
+            await Navigation.PushAsync(trailStatus);
 
-            await Navigation.PushPopupAsync(statusPage);
+            //await Navigation.PushPopupAsync(statusPage);
             //NotificationService.Instance.NotifyNavigateToPage("Trail Tracking Status", typeof(TrailStatus));
         }
     }

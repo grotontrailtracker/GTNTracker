@@ -145,7 +145,11 @@ namespace GTNTracker.Views
             vm.UpdateCurrentPosition();
             statusPage.BindingContext = vm;
 
-            await Navigation.PushPopupAsync(statusPage);
+            var trailStatus = PageManager.Instance.TrailStatus;
+            trailStatus.BindingContext = vm;
+            await Navigation.PushAsync(trailStatus);
+
+            //await Navigation.PushPopupAsync(statusPage);
             //NotificationService.Instance.NotifyNavigateToPage("Trail Tracking Status", typeof(TrailStatus));
         }
 

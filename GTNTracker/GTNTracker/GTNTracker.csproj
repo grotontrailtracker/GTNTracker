@@ -14,7 +14,8 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,6 +41,7 @@
     <Compile Include="Converters\DateTimeConverter.cs" />
     <Compile Include="Converters\IsFalseConverter.cs" />
     <Compile Include="Converters\IsStartedConverter.cs" />
+    <Compile Include="Converters\IsVisibleConverter.cs" />
     <Compile Include="Converters\TimeConverter.cs" />
     <Compile Include="EventArguments\GeofenceEventArgs.cs" />
     <Compile Include="EventArguments\NotificationEventArgs.cs" />
@@ -516,6 +518,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\Throne\throne1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\gtnCompass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ic_gtnRound.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

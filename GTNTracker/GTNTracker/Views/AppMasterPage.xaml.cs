@@ -26,6 +26,7 @@ namespace GTNTracker.Views
             var notifyService = NotificationService.Instance;
             notifyService.RegionUpdated += HandleNotifyRegionUpdate;
             notifyService.TrailComplete += HandleTrailComplete;
+            notifyService.ZoomImage += HandleZoomImage;
 
             NotificationService.Instance.Tracking += HandleTrackingChange;
             notifyService.DevModeGeoServiceState += HandleDevModeGeoServiceState;
@@ -114,6 +115,16 @@ namespace GTNTracker.Views
             notifyPageVM.ImageData = ImageSource.FromResource(imgNameToUse);
             var notifyPage = new TrailCompletePage();
             notifyPage.BindingContext = notifyPageVM;
+        }
+
+        private async void HandleZoomImage(object sender, ZoomImageEventArgs args)
+        {
+            var imageVM = ViewModelLocator.Instance.ImageVM;
+            imageVM.ImageData = args.Image;
+            var popup = PageManager.Instance.ImagePopup;
+            popup.Initialize();
+            popup.BindingContext = imageVM;
+            await Navigation.PushPopupAsync(popup);
         }
 
         private async void OnTapGestureRecognizerTapped(object sender, EventArgs args)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using GTNTracker.EventArguments;
 using GTNTracker.Types;
+using Xamarin.Forms;
 
 namespace GTNTracker.Services
 {
@@ -21,6 +22,7 @@ namespace GTNTracker.Services
         public EventHandler NavigatePrior;
         public EventHandler<AllowCaptureModeArgs> AllowWaypointCaptureMode;
         public EventHandler<DevModeGeoFenceStateArgs> DevModeGeoServiceState;
+        public EventHandler<ZoomImageEventArgs> ZoomImage;
 
         public NotificationService()
         {
@@ -44,6 +46,11 @@ namespace GTNTracker.Services
         public void NotifyWebMap(double lat, double lng)
         {
             WebMap?.Invoke(this, new WebMapEventArgs(lat, lng));
+        }
+
+        public void NotifyZoomImage(ImageSource image)
+        {
+            ZoomImage?.Invoke(this, new ZoomImageEventArgs(image));
         }
 
         public void NotifyTracking(string trailId, bool monitoring)

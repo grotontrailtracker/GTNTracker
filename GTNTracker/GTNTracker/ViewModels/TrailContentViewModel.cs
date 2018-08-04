@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using GTNTracker.EventArguments;
 using GTNTracker.Interfaces;
 using GTNTracker.Models;
 using GTNTracker.Services;
@@ -23,6 +24,7 @@ namespace GTNTracker.ViewModels
         private bool _allowStart = true;
         private bool _allowStop;
         private bool _enableStartStopTracking;
+        private bool _isViewable = true;
 
         private IEnumerable<GeofenceRegion> _trailGeoRegions;
         private List<string> _destinationsEntered = new List<string>();
@@ -33,8 +35,27 @@ namespace GTNTracker.ViewModels
             var visitService = TrailVisitService.Instance;
             visitService.VisitsUpdated += VisitService_visitsUpdated;
 
+            NotificationService.Instance.Tracking += HandleTrackingChange;
+
             MessagingCenter.Subscribe<GeofenceUpdated, GeofenceUpdatedArgs>(this, GeofenceUpdated.MessageString,
                                 (sender, args) => { HandleGeofenceUpdatedMessage(args); });
+            IsViewable = true;
+        }
+
+        public bool IsViewable
+        {
+            get => _isViewable;
+            set => SetProperty(ref _isViewable, value);
+        }
+
+        private void HandleTrackingChange(object sender, TrackingEventArgs e)
+        {
+            CheckIsViewable(e.MonitoringState);
+        }
+
+        private void CheckIsViewable(bool monitoring)
+        {
+            IsViewable = IsStarted || (!monitoring && !IsStarted);
         }
 
         public void Start()
@@ -51,11 +72,12 @@ namespace GTNTracker.ViewModels
                 MessagingCenter.Send(new StartGeofencing(), StartGeofencing.MessageString);
                 MessagingCenter.Send(new RegisterMonitoringRegions(), RegisterMonitoringRegions.MessageString,
                                     new RegisterMonitoringRegionsArgs(_trailGeoRegions.ToList()));
-
-                IsStarted = true;
+              
                 NotificationService.Instance.NotifyTracking(TrailId, true);
                 AppStateService.Instance.ActiveTrailId = TrailId;
                 ViewModelLocator.Instance.ActiveTrailContentVM = this;
+                IsStarted = true;
+                CheckIsViewable(true);
             }
         }
 
@@ -159,7 +181,10 @@ namespace GTNTracker.ViewModels
         public bool IsStarted
         {
             get => _isStarted;
-            set => SetProperty(ref _isStarted, value);
+            set
+            {
+                SetProperty(ref _isStarted, value);
+            }
         }
 
         public string TrailName

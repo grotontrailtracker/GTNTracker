@@ -13,6 +13,7 @@
             <converters:DateTimeConverter x:Key="DateTimeConverter" />
             <converters:IsStartedConverter x:Key="IsStartedConverter" />
             <converters:IsFalseConverter x:Key="IsFalseConverter" />
+            <converters:IsVisibleConverter x:Key="IsVisibleConverter" />
         </ResourceDictionary>
     </localViews:BasePage.Resources>
     <localViews:BasePage.CustomToolbar>
@@ -65,7 +66,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid BackgroundColor="{Binding IsStarted, Converter={StaticResource IsStartedConverter}}" Margin="2">
+                        <Grid BackgroundColor="{Binding IsStarted, Converter={StaticResource IsStartedConverter}}" 
+                              Opacity="{Binding IsViewable, Converter={StaticResource IsVisibleConverter}}"
+                              IsEnabled="{Binding IsViewable}"
+                              Margin="2">
                             <BoxView BackgroundColor="#424242" IsVisible="{Binding IsStarted}"/>
                             <Grid BackgroundColor="{Binding IsStarted, Converter={StaticResource IsStartedConverter}}" Margin="3" >
                                 <Grid.ColumnDefinitions>
@@ -79,6 +83,12 @@
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="1" />
                                 </Grid.RowDefinitions>
+                                <ContentView  Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" 
+                                              HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                  <ContentView.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                       Command="{Binding TapCommand}" NumberOfTapsRequired="1" />
+                                  </ContentView.GestureRecognizers>
                                 <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                                     Margin="1,1" IsVisible="{Binding ShowImage}"
                                     DownsampleToViewSize="true"
@@ -86,6 +96,7 @@
                                     ErrorPlaceholder="error404.png"
                                     Source="{Binding Image}" >
                                 </ffimageloading:CachedImage>
+                                </ContentView>
                                 <Image Grid.Column="3" Grid.Row="0" Grid.RowSpan="3" 
                                        Source="{local:ImageResource GTNTracker.Images.checkCircleBlack.png}" 
                                        IsVisible="{Binding Completed}"

@@ -16,6 +16,7 @@ namespace GTNTracker.Views
         private ImagePopup _imagePopup;
         private Dictionary<int, Page> _pageCache = new Dictionary<int, Page>();
         private Dictionary<int, string> _pageTitle = new Dictionary<int, string>();
+        private TrailStatus _trailStatus;
 
         // every BasePage needs a page id for reference
         public static int WelcomePageId = 0;
@@ -38,6 +39,8 @@ namespace GTNTracker.Views
         public CurrentStatusPopup CurrentStatusPopup => _statusPage ?? (_statusPage = new CurrentStatusPopup());
 
         public ImagePopup ImagePopup => _imagePopup ?? (_imagePopup = new ImagePopup());
+
+        public TrailStatus TrailStatus => _trailStatus ?? (_trailStatus = new TrailStatus());
 
         public Dictionary<int, Page> NavPageCache => _pageCache;
 

@@ -3,19 +3,58 @@
     "Identifier": "TownForest",
     "Name": "Town Forest",
     "Description": "",
-    "Regions": null
+    "Regions": [
+      {
+        "Identifier": "TF1",
+        "TrailIdentifier": "TownForest",
+        "Name": "Trail Start",
+        "Description": "Information kiosk at trail start.",
+        "ImageName": "GTNTracker.Images.UnderConstruct.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.597601,
+          "Longitude": -71.604848
+        }
+      }
+    ]
   },
   {
     "Identifier": "GeneralField",
     "Name": "The General Field",
     "Description": "",
-    "Regions": null
+    "Regions": [
+      {
+        "Identifier": "GF1",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Trail Start",
+        "Description": "Information kiosk at trail start.",
+        "ImageName": "GTNTracker.Images.UnderConstruct.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.586992,
+          "Longitude": -71.585378
+        }
+      }
+    ]
   },
   {
     "Identifier": "SurrendenFarm",
     "Name": "Surrenden Farms",
     "Description": "",
-    "Regions": null
+    "Regions": [
+      {
+        "Identifier": "SF1",
+        "TrailIdentifier": "SurrendenFarm",
+        "Name": "Trail Start",
+        "Description": "Information kiosk at trail start.",
+        "ImageName": "GTNTracker.Images.UnderConstruct.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.586538,
+          "Longitude": -71.594728
+        }
+      }
+    ]
   },
   {
     "Identifier": "BertozziWildlife",

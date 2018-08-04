@@ -13,8 +13,8 @@ namespace GTNTracker.Views
         public TrailStatus()
         {
             InitializeComponent();
-            BindingContext = ViewModelLocator.Instance.CurrentLocationVM;
-            NotificationService.Instance.Tracking += HandleTrackingChange;
+            //BindingContext = ViewModelLocator.Instance.CurrentLocationVM;
+            //NotificationService.Instance.Tracking += HandleTrackingChange;
         }
 
         protected override void OnAppearing()
@@ -37,6 +37,12 @@ namespace GTNTracker.Views
             }
 
             base.OnDisappearing();
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Navigation.PopAsync();
+            return true;
         }
 
         private void HandleTrackingChange(object sender, TrackingEventArgs e)
@@ -92,6 +98,40 @@ namespace GTNTracker.Views
                         }
                     }
                 }
+            }
+        }
+
+        private async void OnNextWaypointImageTapped(object sender, EventArgs args)
+        {
+            var imageVM = ViewModelLocator.Instance.ImageVM;
+            var myContext = BindingContext as CurrentLocationVM;
+
+            if (myContext != null)
+            {
+                imageVM.ImageData = myContext.TrailImage;
+                var popup = PageManager.Instance.ImagePopup;
+                popup.Initialize();
+                popup.BindingContext = imageVM;
+                await Navigation.PushPopupAsync(popup);
+            }
+        }
+
+        private async void OnCurrentWaypointImageTapped(object sender, EventArgs args)
+        {
+            var imageVM = ViewModelLocator.Instance.ImageVM;
+            var myContext = BindingContext as CurrentLocationVM;
+            if (myContext != null)
+            {
+                if (!myContext.IsCurrentRegion)
+                {
+                    return;
+                }
+
+                imageVM.ImageData = myContext.CurrentRegionImage;
+                var popup = PageManager.Instance.ImagePopup;
+                popup.Initialize();
+                popup.BindingContext = imageVM;
+                await Navigation.PushPopupAsync(popup);
             }
         }
     }

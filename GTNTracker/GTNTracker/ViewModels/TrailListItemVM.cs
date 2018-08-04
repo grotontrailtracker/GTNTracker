@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Windows.Input;
+using GTNTracker.Services;
 using Xamarin.Forms;
 
 namespace GTNTracker.ViewModels
@@ -17,7 +19,19 @@ namespace GTNTracker.ViewModels
         double _progress;
         ImageSource _trailImage;
         bool _showImage;
+        bool _isViewable = true;
+        ICommand _tapCommand;
 
+        public TrailListItemVM()
+        {
+            TapCommand = new Command(HandleTapCommand);
+        }
+
+        public ICommand TapCommand
+        {
+            get => _tapCommand;
+            set => SetProperty(ref _tapCommand, value);
+        }
         public string Name
         {
             get => _name;
@@ -35,6 +49,13 @@ namespace GTNTracker.ViewModels
             get => _isStarted;
             set => SetProperty(ref _isStarted, value);
         }
+
+        public bool IsViewable
+        {
+            get => _isViewable;
+            set => SetProperty(ref _isViewable, value);
+        }
+
         public bool Completed
         {
             get => _isCompleted;
@@ -121,6 +142,14 @@ namespace GTNTracker.ViewModels
             }
         }
 
+        private void HandleTapCommand()
+        {
+            if (Image != null)
+            {
+                NotificationService.Instance.NotifyZoomImage(Image);
+            }
+        }
+
         private void _viewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             var propName = e.PropertyName;
@@ -142,6 +171,9 @@ namespace GTNTracker.ViewModels
                     break;
                 case "IsStarted":
                     IsStarted = _viewModel.IsStarted;
+                    break;
+                case "IsViewable":
+                    IsViewable = _viewModel.IsViewable;
                     break;
                 default:
                     break;

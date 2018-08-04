@@ -39,10 +39,11 @@ namespace GTNTracker.Views
             var selectedItem = e.Item as TrailListItemVM;
             if (selectedItem != null)
             {
+                var anotherActive = false;
                 var vm = selectedItem.TrailPage.BindingContext as TrailContentViewModel;
                 if (vm != null)
                 {
-                    var anotherActive = false;
+                    
                     var activeTrail = AppStateService.Instance.ActiveTrailId;
                     if (!string.IsNullOrEmpty(activeTrail) && vm.TrailId != activeTrail || (vm.IsTrailListComplete && !vm.IsStarted))
                     {
@@ -52,8 +53,16 @@ namespace GTNTracker.Views
                     vm.EnableStartStopTracking = !anotherActive;
                 }
 
-                await Navigation.PushAsync(selectedItem.TrailPage);
-                TrailListView.SelectedItem = null;
+                if (!anotherActive)
+                {
+                    await Navigation.PushAsync(selectedItem.TrailPage);
+                    TrailListView.SelectedItem = null;
+                }
+                else
+                {
+                    //await DisplayAlert("Warning", "Cannot look at another trail while tracking!", "OK");
+                    TrailListView.SelectedItem = null;
+                }
             }
         }
 
@@ -106,12 +115,15 @@ namespace GTNTracker.Views
 
         private async void TrackingStatusBtn_Activated(object sender, EventArgs e)
         {
-            var statusPage = PageManager.Instance.CurrentStatusPopup;  //new CurrentStatusPage();
+            //var statusPage = PageManager.Instance.CurrentStatusPopup;  //new CurrentStatusPage();
             var vm = ViewModelLocator.Instance.CurrentLocationVM;
             vm.UpdateCurrentPosition();
-            statusPage.BindingContext = vm;
+            //statusPage.BindingContext = vm;
+            var trailStatus = PageManager.Instance.TrailStatus;
+            trailStatus.BindingContext = vm;
+            await Navigation.PushAsync(trailStatus);
 
-            await Navigation.PushPopupAsync(statusPage);
+            //await Navigation.PushPopupAsync(statusPage);
             //NotificationService.Instance.NotifyNavigateToPage("Trail Tracking Status", typeof(TrailStatus));
         }
 
