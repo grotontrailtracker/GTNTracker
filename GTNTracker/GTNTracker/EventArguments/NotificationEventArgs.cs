@@ -21,17 +21,21 @@ namespace GTNTracker.EventArguments
 
     public class GeofenceRegionUpdatedArgs : EventArgs
     {
-        public GeofenceRegionUpdatedArgs(GeofenceRegion region, bool useDialog, bool alert)
+        public GeofenceRegionUpdatedArgs(GeofenceRegion region, bool isFullScreen = false, string prompt = null)
         {
             Region = region;
-            Alert = alert;
-            UseDialog = useDialog;
+            IsFullScreen = isFullScreen;
+            Prompt = prompt;
         }
-        public GeofenceRegion Region { get; set; }
-        public bool Alert { get; set; }
 
-        public bool UseDialog { get; set; }
+        public GeofenceRegion Region { get; set; }
+
+        public bool IsFullScreen { get; set; }
+
+        public string Prompt { get; set; }
     }
+
+
 
     public class NavigateEventArgs : EventArgs
     {

@@ -79,7 +79,13 @@ namespace GTNTracker.Views
 
             var notifyPageVM = new NotifyViewModel();
             var region = args.Region;
+            notifyPageVM.IsFullScreen = args.IsFullScreen;
             notifyPageVM.Title = !string.IsNullOrEmpty(region.Name) ? region.Name : region.Identifier;
+            if (!notifyPageVM.IsFullScreen)
+            {
+                notifyPageVM.SecondaryTitle = notifyPageVM.Title;
+                notifyPageVM.Title = args.Prompt;
+            }
             notifyPageVM.Description = !string.IsNullOrEmpty(region.Description) ? region.Description : "<To Be Added>";
             var imgNameToUse = !string.IsNullOrEmpty(region.ImageName) ? region.ImageName : "GTNTracker.Images.UnderConstruct.jpg";
             if (string.IsNullOrEmpty(region.ImageName))
@@ -97,6 +103,7 @@ namespace GTNTracker.Views
             }
             var notifyPage = new NotifyPage();
             notifyPage.BindingContext = notifyPageVM;
+            notifyPage.SetupContentView(notifyPageVM.IsFullScreen, notifyPageVM.ImageData);
 
             if (AppStateService.Instance.IsAppAwake)
             {

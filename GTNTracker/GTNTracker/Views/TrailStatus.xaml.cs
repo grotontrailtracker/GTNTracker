@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using GTNTracker.EventArguments;
 using GTNTracker.Services;
 using GTNTracker.ViewModels;
@@ -13,8 +16,6 @@ namespace GTNTracker.Views
         public TrailStatus()
         {
             InitializeComponent();
-            //BindingContext = ViewModelLocator.Instance.CurrentLocationVM;
-            //NotificationService.Instance.Tracking += HandleTrackingChange;
         }
 
         protected override void OnAppearing()
@@ -66,12 +67,17 @@ namespace GTNTracker.Views
             var locVM = BindingContext as CurrentLocationVM;
             if (currActiveVM != null)
             {
+                var tmpList = new List<RegionSelectVM>();
                 foreach (var reg in currActiveVM.RegionList)
                 {
                     var regionVM = new RegionSelectVM(reg);
-                    regionVM.Distance = locVM.FindDistance(reg.RegionIdentifier);
-                    vm.RegionList.Add(regionVM);
+                    var value = locVM.FindDistance(reg.RegionIdentifier);
+                    regionVM.DisplayDistance = value.Item2;
+                    regionVM.DistanceValue = value.Item1;
+                    tmpList.Add(regionVM);
                 }
+                tmpList = tmpList.OrderBy(r => r.DistanceValue).ToList();
+                vm.RegionList = new ObservableCollection<RegionSelectVM>(tmpList);
             }
 
             vm.PropertyChanged += ViewModel_PropertyChanged;

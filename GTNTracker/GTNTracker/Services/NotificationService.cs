@@ -28,9 +28,11 @@ namespace GTNTracker.Services
         {
         }
 
-        public void NotifyRegion(GeofenceRegion region, bool useDialog = false, bool alert = true)
+        public void NotifyRegion(GeofenceRegion region, 
+                                 bool isFullScreen = false,
+                                 string prompt = null)
         {
-            RegionUpdated?.Invoke(this, new GeofenceRegionUpdatedArgs(region, useDialog, alert));
+            RegionUpdated?.Invoke(this, new GeofenceRegionUpdatedArgs(region, isFullScreen, prompt));
         }
 
         public void NotifyTrailComplete(string trailName, bool alert = true)

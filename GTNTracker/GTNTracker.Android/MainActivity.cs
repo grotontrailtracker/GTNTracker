@@ -3,6 +3,7 @@ using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
+using FFImageLoading.Forms;
 using FFImageLoading.Forms.Droid;
 using GTNTracker.Interfaces;
 using GTNTracker.Services;
@@ -53,6 +54,7 @@ namespace GTNTracker.Droid
             //LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.notifyIcon;
             //Plugin.Notifications.NotificationsImpl.AppIconResourceId = Resource.Drawable.notifyIcon;
             CachedImageRenderer.Init();
+            CachedImage.FixedOnMeasureBehavior = true;
 
             var service = TrailVisitService.Instance;
 

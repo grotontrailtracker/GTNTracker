@@ -57,7 +57,7 @@ namespace GTNTracker.Views
                 foreach (var reg in currActiveVM.RegionList)
                 {
                     var regionVM = new RegionSelectVM(reg);
-                    regionVM.Distance = currLocVM.FindDistance(regionVM.RegionIdentifier);
+                    regionVM.DisplayDistance = (currLocVM.FindDistance(regionVM.RegionIdentifier)).Item2;
                     vm.RegionList.Add(regionVM);
                 }
             }

@@ -32,6 +32,14 @@ namespace GTNTracker.Views
             }
 
             NotificationService.Instance.Tracking += HandleTrackingChange;
+
+            SizeChanged += TrailList_SizeChanged;
+        }
+
+        private void TrailList_SizeChanged(object sender, EventArgs e)
+        {
+            AppStateService.Instance.WindowHeight = Height;
+            AppStateService.Instance.WindowWidth = Width;
         }
 
         private async void TrailListItem_ItemTapped(object sender, ItemTappedEventArgs e)

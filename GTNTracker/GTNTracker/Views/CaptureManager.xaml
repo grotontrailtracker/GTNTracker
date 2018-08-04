@@ -21,7 +21,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <ListView x:Name="WaypointList" Grid.Row="0" Margin="2,2"
-              SeparatorVisibility="Default" ItemTapped="WaypointList_ItemTapped"
+              SeparatorVisibility="None" ItemTapped="WaypointList_ItemTapped"
               HasUnevenRows="True"
               ItemsSource="{Binding Waypoints}">
             <ListView.ItemTemplate>

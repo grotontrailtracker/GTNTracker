@@ -112,7 +112,8 @@ namespace GTNTracker.Views
                     {
                         if (GeoFenceService.IsRunning())
                         {
-                            var result = await DisplayAlert("Stop Tracking?", "Do you really want to stop waypoint tracking?", "OK", "Cancel");
+                            var result = await DisplayAlert("Stop Trail Tracking?",
+                                "GPS Location Service will stop monitoring waypoints.", "Yes", "No");
                             if (result)
                             {
                                 // do something to go away.

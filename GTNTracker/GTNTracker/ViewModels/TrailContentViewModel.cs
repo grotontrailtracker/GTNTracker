@@ -312,7 +312,7 @@ namespace GTNTracker.ViewModels
                             {
                                 Device.BeginInvokeOnMainThread(() =>
                                 {
-                                    NotificationService.Instance.NotifyRegion(region, true, true);
+                                    NotificationService.Instance.NotifyRegion(region, false, "Waypoint Reached");
                                 });
                             }
 

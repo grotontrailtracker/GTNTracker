@@ -42,6 +42,7 @@
     <Compile Include="Converters\IsFalseConverter.cs" />
     <Compile Include="Converters\IsStartedConverter.cs" />
     <Compile Include="Converters\IsVisibleConverter.cs" />
+    <Compile Include="Converters\MarginConverter.cs" />
     <Compile Include="Converters\TimeConverter.cs" />
     <Compile Include="EventArguments\GeofenceEventArgs.cs" />
     <Compile Include="EventArguments\NotificationEventArgs.cs" />
@@ -524,6 +525,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\ic_gtnRound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

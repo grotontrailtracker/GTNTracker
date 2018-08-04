@@ -281,18 +281,20 @@ namespace GTNTracker.ViewModels
             }
         }
 
-        public string FindDistance(string regionIdentifier)
+        public Tuple<double, string> FindDistance(string regionIdentifier)
         {
             string distanceString = string.Empty;
+            double distanceValue = 0;
             var regionService = TrailDefService.Instance;
             var regionDef = regionService.GetRegionDefinition(AppStateService.Instance.ActiveTrailId).FirstOrDefault(r => r.Identifier == regionIdentifier);
             if (regionDef != null)
             {
                 var distance = regionDef.Center.GetDistanceTo(Location);
-                distanceString = ToFormattedString(distance);    
+                distanceString = ToFormattedString(distance);
+                distanceValue = distance.TotalMeters;
             }
 
-            return distanceString;
+            return new Tuple<double, string>(distanceValue, distanceString);
         }
 
         private string ToFormattedString(Distance distance)

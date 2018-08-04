@@ -12,6 +12,9 @@ namespace GTNTracker.ViewModels
         private ImageSource _image;
         private string _descr;
         private string _title;
+        private string _secondaryTitle;
+        private bool _isFullScreen;
+
         public ImageSource ImageData
         {
             get => _image;
@@ -28,6 +31,18 @@ namespace GTNTracker.ViewModels
         {
             get => _title;
             set => SetProperty(ref _title, value);
+        }
+
+        public string SecondaryTitle
+        {
+            get => _secondaryTitle;
+            set => SetProperty(ref _secondaryTitle, value);
+        }
+
+        public bool IsFullScreen
+        {
+            get => _isFullScreen;
+            set => SetProperty(ref _isFullScreen, value);
         }
     }
 }

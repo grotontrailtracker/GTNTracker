@@ -50,6 +50,11 @@ namespace GTNTracker.Services
             get; set;
         }
 
+        public double WindowHeight { set; get; }
+
+        public double WindowWidth { set; get; }
+ 
+
         public string EmailAddress => _emailAddress;
     }
 }

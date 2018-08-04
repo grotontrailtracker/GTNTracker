@@ -76,7 +76,7 @@ namespace GTNTracker.ViewModels
 
             if (regionDef != null)
             {
-                NotificationService.Instance.NotifyRegion(regionDef, true, false);
+                NotificationService.Instance.NotifyRegion(regionDef, true);
             }
         }
     }

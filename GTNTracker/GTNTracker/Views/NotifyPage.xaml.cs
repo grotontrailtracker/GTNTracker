@@ -3,6 +3,7 @@ using System.Diagnostics;
 using GTNTracker.ViewModels;
 using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace GTNTracker.Views
@@ -10,82 +11,71 @@ namespace GTNTracker.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotifyPage : PopupPage
     {
-        private double _ScrollerMaxHeight = 150.0;
-        private double _ScrollerDefaultMinHeight = 50.0;
-        private double _scrollerContentFullSize;
-        private bool _firstSizingDone = false;
-
         public NotifyPage()
         {
             InitializeComponent();
         }
 
+        // we need to use this method since we want to control whether we use a standard image
+        // when it's for a notification (non-full screen) or allow the user to go and use the
+        // zoom image directly by creating a ZoomImage.
+        public void SetupContentView(bool isFullScreen, ImageSource image)
+        {
+            if (!isFullScreen)
+            {
+                var imageViewer = new FFImageLoading.Forms.CachedImage
+                {
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    DownsampleToViewSize = true,
+                    BindingContext = this.BindingContext,
+                    LoadingPlaceholder = ImageSource.FromFile("loading.gif"),
+                    ErrorPlaceholder = ImageSource.FromFile("error404.png"),
+                    Source = image
+                };
+                this.ImageContentView.Content = imageViewer;
+                var gesture = new TapGestureRecognizer();
+                gesture.Tapped += (sender, e) =>
+                {
+                    OnTapGestureRecognizerTapped(this, null);
+                };
+                this.ImageContentView.GestureRecognizers.Add(gesture);
+            }
+            else
+            {
+                var zoomViewer = new ZoomImage
+                {
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    DownsampleToViewSize = true,
+                    BindingContext = this.BindingContext,
+                    LoadingPlaceholder = ImageSource.FromFile("loading.gif"),
+                    ErrorPlaceholder = ImageSource.FromFile("error404.png"),
+                    Source = image
+                };
+                this.ImageContentView.Content = zoomViewer;
+            }
+        }
+
         private void OnCloseButtonTapped(object sender, EventArgs e)
         {
-            CloseAllPopup();
+            ClosePopup();
         }
 
         protected override bool OnBackgroundClicked()
         {
-            CloseAllPopup();
+            //ClosePopup();
 
             return false;
         }
 
-        private async void CloseAllPopup()
+        private async void ClosePopup()
         {
             await Navigation.PopPopupAsync(); //.PopAllPopupAsync();
         }
 
-        private void HandleMoreBtn(object sender, EventArgs e)
-        {
-            double heightToUse = _scrollerContentFullSize;
-            if (heightToUse > _ScrollerMaxHeight)
-            {
-                heightToUse = _ScrollerMaxHeight;
-            }
-            this.DescriptionScroll.HeightRequest = heightToUse;
-            MoreBtn.IsVisible = false;
-            LessBtn.IsVisible = true;
-        }
-
-        private void HandleLessBtn(object sender, EventArgs e)
-        {
-            this.DescriptionScroll.HeightRequest = 50;
-            MoreBtn.IsVisible = true;
-            LessBtn.IsVisible = false;
-        }
-
-        private void Handle_ContentAppearing(object sender, EventArgs e)
-        {
-            if (!_firstSizingDone)
-            {
-                var scroller = DescriptionScroll;
-                var size = DescriptionScroll.ContentSize;
-                _scrollerContentFullSize = size.Height;
-                // let's be a bit smart
-                if (_scrollerContentFullSize < _ScrollerDefaultMinHeight)
-                {
-                    // don't bother with the buttons, resize to fit
-                    MoreBtn.IsVisible = false;
-                    scroller.HeightRequest = _scrollerContentFullSize; // + 5.0;    // add some padding
-                    if (scroller.HeightRequest == 0)
-                    {
-                        scroller.HeightRequest = _ScrollerDefaultMinHeight;
-                    }
-                }
-                else
-                {
-                    scroller.HeightRequest = _ScrollerDefaultMinHeight;
-                }
-
-                _firstSizingDone = true;
-            }
-        }
-
         private async void OnTapGestureRecognizerTapped(object sender, EventArgs args)
         {
-            Debug.WriteLine("Here I am!");
             var imageVM = ViewModelLocator.Instance.ImageVM;
             var myContext = BindingContext as NotifyViewModel;
             if (myContext != null)

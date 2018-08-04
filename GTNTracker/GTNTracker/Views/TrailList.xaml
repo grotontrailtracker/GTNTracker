@@ -60,7 +60,7 @@
         <!--<Label Grid.Row="1" VerticalTextAlignment="Center" Text="Trails to Visit" 
                FontSize="Medium" Margin="10,2" HorizontalOptions="CenterAndExpand"/>-->
         <ListView x:Name="TrailListView" Grid.Row="2" Margin="2,2"
-              SeparatorVisibility="Default" ItemTapped="TrailListItem_ItemTapped"
+              SeparatorVisibility="None" ItemTapped="TrailListItem_ItemTapped"
               HasUnevenRows="True"
               ItemsSource="{Binding TrailList}">
             <ListView.ItemTemplate>

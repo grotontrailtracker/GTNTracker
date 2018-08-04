@@ -68,7 +68,8 @@ namespace GTNTracker.Views
 
         private async void StartTrailBtn_Activated(object sender, EventArgs e)
         {
-            var answer = await DisplayAlert("Start Trail Tracking?", "Do you want to start trail tracking?", "Yes", "No");
+            var answer = await DisplayAlert("Start Trail Tracking?", 
+                "GPS Location Service will start tracking trail waypoints.", "Yes", "No");
             if (answer)
             {
                 var vm = BindingContext as TrailContentViewModel;
@@ -82,7 +83,8 @@ namespace GTNTracker.Views
 
         private async void StopTrailBtn_Activated(object sender, EventArgs e)
         {
-            var answer = await DisplayAlert("Stop Trail Tracking?", "Do you really want to stop tracking waypoints?", "Yes", "No");
+            var answer = await DisplayAlert("Stop Trail Tracking?", 
+                "GPS Location Service will stop monitoring waypoints.", "Yes", "No");
             if (answer)
             {
                 var vm = BindingContext as TrailContentViewModel;
