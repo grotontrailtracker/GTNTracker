@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using GTNTracker.ViewModels;
 using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
@@ -71,7 +70,22 @@ namespace GTNTracker.Views
 
         private async void ClosePopup()
         {
-            await Navigation.PopPopupAsync(); //.PopAllPopupAsync();
+            var vm = BindingContext as NotifyViewModel;
+            if (vm != null)
+            {
+                if (vm.IsFullScreen)
+                {
+                    await Navigation.PopAllPopupAsync();
+                }
+                else
+                {
+                    await Navigation.PopPopupAsync();
+                }
+            }
+            else
+            {
+                await Navigation.PopPopupAsync();
+            }
         }
 
         private async void OnTapGestureRecognizerTapped(object sender, EventArgs args)

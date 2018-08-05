@@ -60,7 +60,7 @@
         <!--<Label Grid.Row="1" VerticalTextAlignment="Center" Text="Trails to Visit" 
                FontSize="Medium" Margin="10,2" HorizontalOptions="CenterAndExpand"/>-->
         <ListView x:Name="TrailListView" Grid.Row="2" Margin="2,2"
-              SeparatorVisibility="None" ItemTapped="TrailListItem_ItemTapped"
+              SeparatorVisibility="None" ItemSelected="TrailListItem_ItemSelected"
               HasUnevenRows="True"
               ItemsSource="{Binding TrailList}">
             <ListView.ItemTemplate>
@@ -106,7 +106,7 @@
                                        Source="{local:ImageResource GTNTracker.Images.trailStarted.png}" 
                                        IsVisible="{Binding IsStarted}"
                                        HeightRequest="30" WidthRequest="30" Margin="5, 0" />-->
-                                <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" VerticalOptions="FillAndExpand" 
+                                <Label Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" VerticalOptions="FillAndExpand" 
                                         VerticalTextAlignment="Center"
                                         Text="{Binding Name}" 
                                         FontSize="Medium"/>

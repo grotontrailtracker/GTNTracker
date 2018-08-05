@@ -39,7 +39,7 @@ namespace GTNTracker.Views
             //await Navigation.PopAllPopupAsync();
         }
 
-        private void TrailRegionListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void TrailRegionListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             CloseAllPopup();    // ok, the VM has the selected object, we're done here.
         }

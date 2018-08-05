@@ -85,7 +85,7 @@
           </StackLayout>
         </StackLayout>
         <ListView x:Name="TrailRegionListView" Grid.Row="4" Margin="2,2"
-              SeparatorVisibility="None" ItemTapped="TrailRegionListView_ItemTapped"
+              SeparatorVisibility="None" ItemSelected="TrailRegionListView_ItemSelected"
               HasUnevenRows="True"
               ItemsSource="{Binding RegionList}">
             <ListView.ItemTemplate>

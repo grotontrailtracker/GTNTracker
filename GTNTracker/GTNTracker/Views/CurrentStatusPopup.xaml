@@ -6,7 +6,7 @@
              xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:converters="clr-namespace:GTNTracker.Converters;assembly=GTNTracker"
-             x:Class="GTNTracker.Views.CurrentStatusPopup">
+             x:Class="GTNTracker.Views.CurrentStatusPopup" BackgroundColor="Transparent">
     <pages:PopupPage.Resources>
         <ResourceDictionary>
             <converters:TimeConverter x:Key="TimeConverter" />
@@ -20,34 +20,27 @@
             </Style>
         </ResourceDictionary>
     </pages:PopupPage.Resources>
-
-    <ScrollView>
-        <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="10, 15, 10, 15">
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0,0,0,0">
             <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#F5F5F5">
             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical" BackgroundColor="#F5F5F5" Margin="0,0">
-                    <StackLayout BackgroundColor="#424242" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,2">
-                            <ffimageloading:CachedImage Grid.Row="0" Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center"
-                                WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"
-                                DownsampleToViewSize="true"
-                                LoadingPlaceholder="loading.gif"
-                                ErrorPlaceholder="error404.png"
-                                Source="exploreWhite.png" >
-                            </ffimageloading:CachedImage>
-                            <Label Text="Tracking Status" HorizontalOptions="Start" FontSize="Medium" Margin="5,0" TextColor="White" VerticalOptions="Center"/>
-                        </StackLayout>
-                    </StackLayout>
+                  <Grid HorizontalOptions="FillAndExpand" BackgroundColor="#424242">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="Auto" />
+                      <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="{local:ImageResource GTNTracker.Images.close.png}"
+                                           HeightRequest="30" WidthRequest="30" Margin="10,0">
+                      <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCloseButtonTapped" NumberOfTapsRequired="1"/>
+                      </Image.GestureRecognizers>
+                    </Image>
+                    <Label Grid.Column="0" Grid.ColumnSpan="2" Text="Trail Tracking Status" HorizontalOptions="CenterAndExpand"
+                           FontSize="18" Margin="0,15,5,15" TextColor="White"/>
+                  </Grid>
+                  
                     <Label Text="{Binding TrailName, StringFormat=' Trail: {0}'}" HorizontalOptions="CenterAndExpand" FontSize="Medium" />
-                    <!--<Grid Margin="5,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Current GPS Location" HorizontalOptions="Start" VerticalOptions="End" FontSize="Small" />
-                        <Button Grid.Column="1" HeightRequest="35" WidthRequest="35" Image="refreshWhite.png" 
-                    Command="{Binding RefreshGPSCommand}"  VerticalOptions="End" HorizontalOptions="End"/>
-                    </Grid>-->
+
                     <StackLayout Orientation="Horizontal" Margin="5,0" HorizontalOptions="FillAndExpand">
                         <Label Text="Current Location" HorizontalOptions="Start" VerticalOptions="Center"
                                IsVisible="{Binding IsCurrentRegion, Converter={StaticResource IsFalseConverter}}"
@@ -87,8 +80,6 @@
                         <Label Grid.Row="0" Grid.Column="2" Text="{Binding Longitude}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Small"/>
                         <Label Grid.Row="1" Grid.Column="2" Text="{Binding Latitude}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Small"/>
                         <Label Grid.Row="2" Grid.Column="2" Text="{Binding Accuracy}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Small"/>
-                        <!--<Label Grid.Row="2" Grid.Column="3" Text="{Binding LastUpdate, StringFormat=' Last Updated: {0}', Converter={StaticResource TimeConverter}}"
-                            HorizontalOptions="EndAndExpand" FontSize="Micro" VerticalOptions="Center"/>-->
                     </Grid>
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="5,0">
@@ -97,17 +88,6 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" Margin="5,2" IsVisible="{Binding IsActiveTrailAvailable}" >
-                        <!--<Label Text="Next Waypoint To Visit" Margin="0" FontSize="Small" VerticalOptions="Center" />-->
-                        <!--<Grid HorizontalOptions="FillAndExpand">
-                          <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                          </Grid.ColumnDefinitions>
-                          <Label Grid.Column="0" Text="Waypoint" Margin="0" FontSize="Small" VerticalOptions="End" HorizontalOptions="Start" />
-                          <Button Grid.Column="1" Text="Change" Image="waypoint.png" VerticalOptions="End" HorizontalOptions="End" Clicked="HandleChangeRegion"
-                                  WidthRequest="150"/>
-                        </Grid>-->
-                        <!--<Button Text="Select Next Waypoint" Image="waypoint.png" Clicked="HandleChangeRegion" IsEnabled="{Binding IsClosestRegionAvailable}"/>-->
                         <Label Text="Next Waypoint" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Small" />                     
                         <Grid Margin="0,2" BackgroundColor="#E0E0E0" Padding="5,5">
                             <Grid.ColumnDefinitions>
@@ -147,45 +127,29 @@
                           <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" WidthRequest="90" Text="Set" Image="waypoint.png" Clicked="HandleChangeRegion" IsEnabled="{Binding IsClosestRegionAvailable}"/>
                         </Grid>
                     </StackLayout>
-
-                    <StackLayout HorizontalOptions="FillAndExpand"  Margin="5,2" IsVisible="{Binding IsClosestRegionAvailable, Converter={StaticResource IsFalseConverter}}">
-                        <Label Text="Current Heading (True)" FontSize="Small" HorizontalOptions="Start" Margin="0" VerticalOptions="Center"/>
-                        <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#E0E0E0" >
-                            <Grid HorizontalOptions="CenterAndExpand" Padding="5,5" Margin="0,2" >
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-
-                                <StackLayout Grid.Row="0" Grid.Column="0" Padding="5,2" WidthRequest="70" VerticalOptions="Center"
-                                 BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
-                                    <Label Text="{Binding CurrentHeading}" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-                                </StackLayout>
-                                <StackLayout Grid.Row="0" Grid.Column="1" Padding="5,2" WidthRequest="50" VerticalOptions="Center"
-                                 BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
-                                    <Label Text="{Binding CurrentDirection}" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-                                </StackLayout>
-                                <ffimageloading:CachedImage Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"
-                                    WidthRequest="50" HeightRequest="50" Margin="15,0,5,0"
-                                    DownsampleToViewSize="true"
-                                    LoadingPlaceholder="loading.gif"
-                                    ErrorPlaceholder="error404.png"
-                                    Rotation="{Binding CurrentHeadingDeg}"
-                                    Source="{local:ImageResource GTNTracker.Images.gtn.png}" >
-                                </ffimageloading:CachedImage>
-                            </Grid>
-                        </StackLayout>
-                    </StackLayout>
-
-                  <StackLayout HorizontalOptions="FillAndExpand"  Margin="5,2" IsVisible="{Binding IsClosestRegionAvailable}">
-                    <Label Text="Direction To Next Waypoint" FontSize="Small" HorizontalOptions="Start" Margin="0" VerticalOptions="Center"/>
+                  
+                  <StackLayout HorizontalOptions="FillAndExpand"  Margin="5,15,5,2" IsVisible="{Binding IsClosestRegionAvailable, Converter={StaticResource IsFalseConverter}}">
+                    <Label Text="Current Heading (True)" FontSize="Small" HorizontalOptions="Start" Margin="0" VerticalOptions="Center"/>
                     <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#E0E0E0" >
-                      <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5,5" Margin="0,2" >
-                        <ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center"
+                      <Grid HorizontalOptions="CenterAndExpand" Padding="5,5" Margin="0,2" >
+                        <Grid.RowDefinitions>
+                          <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                          <ColumnDefinition Width="Auto" />
+                          <ColumnDefinition Width="Auto" />
+                          <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Grid.Row="0" Grid.Column="0" Padding="5,2" WidthRequest="70" VerticalOptions="Center"
+                         BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
+                          <Label Text="{Binding CurrentHeading}" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="0" Grid.Column="1" Padding="5,2" WidthRequest="50" VerticalOptions="Center"
+                         BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
+                          <Label Text="{Binding CurrentDirection}" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <ffimageloading:CachedImage Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"
                             WidthRequest="50" HeightRequest="50" Margin="15,0,5,0"
                             DownsampleToViewSize="true"
                             LoadingPlaceholder="loading.gif"
@@ -193,36 +157,64 @@
                             Rotation="{Binding CurrentHeadingDeg}"
                             Source="{local:ImageResource GTNTracker.Images.gtn.png}" >
                         </ffimageloading:CachedImage>
-                        <Grid Grid.Row="0" Grid.Column="2" Padding="5,2" Margin="15,0">
-                          <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                          </Grid.RowDefinitions>                    
-                        <Label Grid.Row="0" Text="Heading" FontSize="Micro" HorizontalOptions="CenterAndExpand" />
-                        <StackLayout Grid.Row="1" Padding="5,2" WidthRequest="70" VerticalOptions="Center"
-                         BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
-                          <Label Text="{Binding CurrentHeading}" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-                        </StackLayout>
-                        </Grid>
-                      </StackLayout>
+                      </Grid>
                     </StackLayout>
                   </StackLayout>
 
-                    <!--<Button Text="Locate On Trail Map" Clicked="Locate_Clicked"  
-                    IsVisible="{Binding AllowNavigateWebMap}"
-                    Margin="0,5"/>-->
+                  <StackLayout HorizontalOptions="FillAndExpand"  Margin="5,10,5,2" IsVisible="{Binding IsClosestRegionAvailable}">
+                    <Label Text="Direction To Next Waypoint" FontSize="Small" HorizontalOptions="Start" Margin="0" VerticalOptions="Center"/>
+                    <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#E0E0E0" >
+                      <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5,5" Margin="0,2" >
 
-                    <!--<Button Text="Close" Clicked="OnCloseButtonTapped" Margin="0,5" />-->
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                          <Label Text="Heading" FontSize="Micro" HorizontalOptions="CenterAndExpand" />
+                          <StackLayout WidthRequest="90" VerticalOptions="Center"
+                                  BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
+                            <Label Text="{Binding CurrentHeading}" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                          </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                          <Label Text="Direction" FontSize="Micro" HorizontalOptions="CenterAndExpand" />
+                          <StackLayout HorizontalOptions="Center" VerticalOptions="Center"
+                                       BackgroundColor="#424242">                         
+                            <ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center"
+                                WidthRequest="80" HeightRequest="80" Margin="5,5"
+                                DownsampleToViewSize="true"
+                                LoadingPlaceholder="loading.gif"
+                                ErrorPlaceholder="error404.png"
+                                Rotation="{Binding CurrentHeadingDeg}"
+                                Source="{local:ImageResource GTNTracker.Images.ic_gtnRound.png}" >
+                            </ffimageloading:CachedImage>                         
+                          </StackLayout>
+                        </StackLayout>
+                        
+                        <!--<StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                          <Label Text="Heading" FontSize="Micro" HorizontalOptions="CenterAndExpand" />
+                          <StackLayout WidthRequest="70" VerticalOptions="Center"
+                                  BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
+                            <Label Text="{Binding CurrentHeading}" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                          </StackLayout>
+                        </StackLayout>-->
+                        
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                          <Label Text="Distance" FontSize="Micro" HorizontalOptions="CenterAndExpand" />
+                          <StackLayout WidthRequest="90" VerticalOptions="Center"
+                                  BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
+                            <Label Text="{Binding DistanceToClosestRegion}" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                          </StackLayout>
+                        </StackLayout>
+                        
+                      </StackLayout>
+                    </StackLayout>
+                  </StackLayout>
+                  
                 </StackLayout>
                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Opacity="0.3" BackgroundColor="DarkGray" IsVisible="{Binding WaitingForGPSRefresh}">
                     <ActivityIndicator x:Name="busyCtrl" IsRunning="{Binding WaitingForGPSRefresh}" 
                            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
             </Grid>
-            <Button Text="Close" Clicked="OnCloseButtonTapped" Margin="0,5" />
             </StackLayout>
         </StackLayout>
-    </ScrollView>
-
-
 </pages:PopupPage>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,12 +55,17 @@ namespace GTNTracker.Views
             var currLocVM = BindingContext as CurrentLocationVM;
             if (currActiveVM != null)
             {
+                var tmpList = new List<RegionSelectVM>();
                 foreach (var reg in currActiveVM.RegionList)
                 {
                     var regionVM = new RegionSelectVM(reg);
-                    regionVM.DisplayDistance = (currLocVM.FindDistance(regionVM.RegionIdentifier)).Item2;
-                    vm.RegionList.Add(regionVM);
+                    var value = currLocVM.FindDistance(reg.RegionIdentifier);
+                    regionVM.DisplayDistance = value.Item2;
+                    regionVM.DistanceValue = value.Item1;
+                    tmpList.Add(regionVM);
                 }
+                tmpList = tmpList.OrderBy(r => r.DistanceValue).ToList();
+                vm.RegionList = new ObservableCollection<RegionSelectVM>(tmpList);
             }
 
             vm.PropertyChanged += ViewModel_PropertyChanged;

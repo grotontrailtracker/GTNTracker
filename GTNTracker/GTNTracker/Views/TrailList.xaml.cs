@@ -42,9 +42,10 @@ namespace GTNTracker.Views
             AppStateService.Instance.WindowWidth = Width;
         }
 
-        private async void TrailListItem_ItemTapped(object sender, ItemTappedEventArgs e)
+        //private async void TrailListItem_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void TrailListItem_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var selectedItem = e.Item as TrailListItemVM;
+            var selectedItem = e.SelectedItem as TrailListItemVM; // e.Item as TrailListItemVM;
             if (selectedItem != null)
             {
                 var anotherActive = false;
@@ -123,15 +124,16 @@ namespace GTNTracker.Views
 
         private async void TrackingStatusBtn_Activated(object sender, EventArgs e)
         {
-            //var statusPage = PageManager.Instance.CurrentStatusPopup;  //new CurrentStatusPage();
+            var statusPage = PageManager.Instance.CurrentStatusPopup;
             var vm = ViewModelLocator.Instance.CurrentLocationVM;
             vm.UpdateCurrentPosition();
-            //statusPage.BindingContext = vm;
-            var trailStatus = PageManager.Instance.TrailStatus;
-            trailStatus.BindingContext = vm;
-            await Navigation.PushAsync(trailStatus);
+            statusPage.BindingContext = vm;
 
-            //await Navigation.PushPopupAsync(statusPage);
+            //var trailStatus = PageManager.Instance.TrailStatus;
+            //trailStatus.BindingContext = vm;
+            //await Navigation.PushAsync(trailStatus);
+
+            await Navigation.PushPopupAsync(statusPage);
             //NotificationService.Instance.NotifyNavigateToPage("Trail Tracking Status", typeof(TrailStatus));
         }
 

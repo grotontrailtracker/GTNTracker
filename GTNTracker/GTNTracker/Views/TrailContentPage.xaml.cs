@@ -32,9 +32,9 @@ namespace GTNTracker.Views
             UpdateToolbar();
         }
 
-        private void TrailRegionListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void TrailRegionListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var selectedItem = e.Item as TrailRegionVM;
+            var selectedItem = e.SelectedItem as TrailRegionVM;
             if (selectedItem != null)
             {
                 selectedItem.GetInfoCommand.Execute(null);
@@ -147,11 +147,11 @@ namespace GTNTracker.Views
             vm.UpdateCurrentPosition();
             statusPage.BindingContext = vm;
 
-            var trailStatus = PageManager.Instance.TrailStatus;
-            trailStatus.BindingContext = vm;
-            await Navigation.PushAsync(trailStatus);
+            //var trailStatus = PageManager.Instance.TrailStatus;
+            //trailStatus.BindingContext = vm;
+            //await Navigation.PushAsync(trailStatus);
 
-            //await Navigation.PushPopupAsync(statusPage);
+            await Navigation.PushPopupAsync(statusPage);
             //NotificationService.Instance.NotifyNavigateToPage("Trail Tracking Status", typeof(TrailStatus));
         }
 
