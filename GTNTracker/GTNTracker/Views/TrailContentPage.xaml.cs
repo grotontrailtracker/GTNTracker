@@ -7,6 +7,7 @@ using GTNTracker.ViewModels;
 using Rg.Plugins.Popup.Extensions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace GTNTracker.Views
 {
@@ -22,6 +23,8 @@ namespace GTNTracker.Views
         public TrailContentPage()
         {
             InitializeComponent();
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
+
             NotificationService.Instance.Tracking += HandleTrackingChange;
             foreach (var trail in NotificationService.Instance.CurrentTrackingList)
             {

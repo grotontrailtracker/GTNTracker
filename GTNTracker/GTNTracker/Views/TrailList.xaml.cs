@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace GTNTracker.Views
 {
@@ -19,6 +20,8 @@ namespace GTNTracker.Views
         public TrailList()
         {
             InitializeComponent();
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
+
             var vm = ViewModelLocator.Instance.TrailListViewModel;       
             BindingContext = vm;
 

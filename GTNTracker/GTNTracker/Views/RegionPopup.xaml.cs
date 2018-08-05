@@ -10,6 +10,7 @@ using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace GTNTracker.Views
 {
@@ -18,6 +19,7 @@ namespace GTNTracker.Views
 	{
 		public RegionPopup ()
 		{
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
 			InitializeComponent();
 		}
 
