@@ -2,18 +2,151 @@
   {
     "Identifier": "TownForest",
     "Name": "Town Forest",
-    "Description": "",
+    "Description": "The Groton Memorial Town Forest is one of Groton's largest trail systems with over 16 miles in trails.",
+    "ImageName": "GTNTracker.Images.TownForest.tf8.png",
     "Regions": [
       {
         "Identifier": "TF1",
         "TrailIdentifier": "TownForest",
         "Name": "Trail Start",
         "Description": "Information kiosk at trail start.",
-        "ImageName": "GTNTracker.Images.UnderConstruct.jpg",
+        "ImageName": "GTNTracker.Images.TownForest.tf1.png",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.597601,
-          "Longitude": -71.604848
+          "Latitude": 42.59727259636167,
+          "Longitude": -71.605062726951772
+        }
+      },
+      {
+        "Identifier": "TF2",
+        "TrailIdentifier": "TownForest",
+        "Name": "Town Forest Memorial",
+        "Description": "The Groton Memorial Town Forest was establihed in 1922 to honor those who fought in the Great War.",
+        "ImageName": "GTNTracker.Images.TownForest.tf2.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.597181107888552,
+          "Longitude": -71.605123998663956
+        }
+      },
+      {
+        "Identifier": "TF3",
+        "TrailIdentifier": "TownForest",
+        "Name": "Ames Pond Rd Crossing",
+        "Description": "Continue along Town Forest Rd as part of the 'A' Trail.",
+        "ImageName": "GTNTracker.Images.TownForest.tf3.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.596746170932981,
+          "Longitude": -71.605979036606485
+        }
+      },
+      {
+        "Identifier": "TF4",
+        "TrailIdentifier": "TownForest",
+        "Name": "A1",
+        "Description": "Point 'A1' along the 'A' trail",
+        "ImageName": "GTNTracker.Images.TownForest.tf4.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.59605981879178,
+          "Longitude": -71.606587814233833
+        }
+      },
+      {
+        "Identifier": "TF5",
+        "TrailIdentifier": "TownForest",
+        "Name": "A2",
+        "Description": "Point 'A2' along the 'A' trail",
+        "ImageName": "GTNTracker.Images.TownForest.tf5.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.59533641863856,
+          "Longitude": -71.608009636468822
+        }
+      },
+      {
+        "Identifier": "TF6",
+        "TrailIdentifier": "TownForest",
+        "Name": "Wharton Rd Crossing",
+        "Description": "Intersection with Wharton Rd.",
+        "ImageName": "GTNTracker.Images.TownForest.tf6.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.5944538042346,
+          "Longitude": -71.609195591948563
+        }
+      },
+      {
+        "Identifier": "TF7",
+        "TrailIdentifier": "TownForest",
+        "Name": "A3",
+        "Description": "Point 'A3' along the 'A' trail",
+        "ImageName": "GTNTracker.Images.TownForest.tf7.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.5941160554463,
+          "Longitude": -71.610993761635953
+        }
+      },
+      {
+        "Identifier": "TF8",
+        "TrailIdentifier": "TownForest",
+        "Name": "A5",
+        "Description": "Point 'A5' along the 'A' trail",
+        "ImageName": "GTNTracker.Images.TownForest.tf8.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.594540305475327,
+          "Longitude": -71.611379329181844
+        }
+      },
+      {
+        "Identifier": "TF9",
+        "TrailIdentifier": "TownForest",
+        "Name": "A4",
+        "Description": "Point 'A4' along the 'A' trail",
+        "ImageName": "GTNTracker.Images.TownForest.tf9.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.595099713692996,
+          "Longitude": -71.611958099595839
+        }
+      },
+      {
+        "Identifier": "TF10",
+        "TrailIdentifier": "TownForest",
+        "Name": "A4 On Loop Trail",
+        "Description": "Either follow the 'A' trail or merge onto the Loop Trail",
+        "ImageName": "GTNTracker.Images.TownForest.tf10.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.595439935142728,
+          "Longitude": -71.611977126516038
+        }
+      },
+      {
+        "Identifier": "TF11",
+        "TrailIdentifier": "TownForest",
+        "Name": "Kettle Hole #1",
+        "Description": "Interesting kettle hole along the 'A' Trail.",
+        "ImageName": "GTNTracker.Images.TownForest.tf11.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.595462147186133,
+          "Longitude": -71.61147882237249
+        }
+      },
+      {
+        "Identifier": "TF12",
+        "TrailIdentifier": "TownForest",
+        "Name": "Kettle Hole #2",
+        "Description": "Another kettle hole.",
+        "ImageName": "GTNTracker.Images.TownForest.tf12.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.595561724195811,
+          "Longitude": 71.609235908902818
         }
       }
     ]

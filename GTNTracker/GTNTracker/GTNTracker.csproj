@@ -530,6 +530,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\close.png" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Images\TownForest\tf1.png" />
+    <EmbeddedResource Include="Images\TownForest\tf10.png" />
+    <EmbeddedResource Include="Images\TownForest\tf11.png" />
+    <EmbeddedResource Include="Images\TownForest\tf12.png" />
+    <EmbeddedResource Include="Images\TownForest\tf2.png" />
+    <EmbeddedResource Include="Images\TownForest\tf3.png" />
+    <EmbeddedResource Include="Images\TownForest\tf4.png" />
+    <EmbeddedResource Include="Images\TownForest\tf5.png" />
+    <EmbeddedResource Include="Images\TownForest\tf6.png" />
+    <EmbeddedResource Include="Images\TownForest\tf7.png" />
+    <EmbeddedResource Include="Images\TownForest\tf8.png" />
+    <EmbeddedResource Include="Images\TownForest\tf9.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
