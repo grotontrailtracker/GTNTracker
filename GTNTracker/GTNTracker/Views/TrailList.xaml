@@ -14,6 +14,7 @@
             <converters:IsStartedConverter x:Key="IsStartedConverter" />
             <converters:IsFalseConverter x:Key="IsFalseConverter" />
             <converters:IsVisibleConverter x:Key="IsVisibleConverter" />
+            <converters:ThumbHeightConverter x:Key="ThumbHeightConverter" />
         </ResourceDictionary>
     </localViews:BasePage.Resources>
     <localViews:BasePage.CustomToolbar>
@@ -68,14 +69,15 @@
                     <ViewCell>
                         <Grid BackgroundColor="{Binding IsStarted, Converter={StaticResource IsStartedConverter}}" 
                               Opacity="{Binding IsViewable, Converter={StaticResource IsVisibleConverter}}"
-                              IsEnabled="{Binding IsViewable}"
+                              IsEnabled="{Binding IsViewable}" Padding="0,1" 
                               Margin="2">
                             <BoxView BackgroundColor="#424242" IsVisible="{Binding IsStarted}"/>
-                            <Grid BackgroundColor="{Binding IsStarted, Converter={StaticResource IsStartedConverter}}" Margin="3" >
+                            <Grid BackgroundColor="{Binding IsStarted, Converter={StaticResource IsStartedConverter}}"
+                                   Margin="3" >
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="50" />
                                     <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="35" />
+                                    <ColumnDefinition Width="4*" />
+                                    <!--<ColumnDefinition Width="35" />-->
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
@@ -89,15 +91,16 @@
                                     <TapGestureRecognizer
                                        Command="{Binding TapCommand}" NumberOfTapsRequired="1" />
                                   </ContentView.GestureRecognizers>
-                                <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-                                    Margin="1,1" IsVisible="{Binding ShowImage}"
-                                    DownsampleToViewSize="true"
-                                    LoadingPlaceholder="loading.gif"
-                                    ErrorPlaceholder="error404.png"
-                                    Source="{Binding Image}" >
-                                </ffimageloading:CachedImage>
+                                  <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                      HeightRequest="{Binding Path=., Converter={StaticResource ThumbHeightConverter}}"
+                                      Margin="1,1" IsVisible="{Binding ShowImage}"
+                                      DownsampleToViewSize="true"
+                                      LoadingPlaceholder="loading.gif"
+                                      ErrorPlaceholder="error404.png"
+                                      Source="{Binding Image}" >
+                                  </ffimageloading:CachedImage>
                                 </ContentView>
-                                <Image Grid.Column="3" Grid.Row="0" Grid.RowSpan="3" 
+                                <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" 
                                        Source="{local:ImageResource GTNTracker.Images.checkCircleBlack.png}" 
                                        IsVisible="{Binding Completed}"
                                        HeightRequest="30" WidthRequest="30" Margin="5,0">
@@ -106,7 +109,7 @@
                                        Source="{local:ImageResource GTNTracker.Images.trailStarted.png}" 
                                        IsVisible="{Binding IsStarted}"
                                        HeightRequest="30" WidthRequest="30" Margin="5, 0" />-->
-                                <Label Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" VerticalOptions="FillAndExpand" 
+                                <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" VerticalOptions="FillAndExpand" 
                                         VerticalTextAlignment="Center"
                                         Text="{Binding Name}" 
                                         FontSize="Medium"/>
@@ -115,7 +118,7 @@
                                         Text="{Binding DateCompleted, Converter={StaticResource DateTimeConverter}}"
                                         IsVisible="{Binding Completed}"
                                         FontSize="Micro"/>
-                                <StackLayout Orientation="Vertical" Grid.Column="3" 
+                                <StackLayout Orientation="Vertical" Grid.Column="2" 
                                              Grid.RowSpan="2" Grid.Row="0" 
                                              IsVisible="{Binding InProgress}"
                                              Margin="2,0">
@@ -126,7 +129,7 @@
                                         <Label Text="{Binding NumberDestinations}" FontSize="Small" Margin="0,0"/>
                                     </StackLayout>
                                 </StackLayout>
-                                <ProgressBar Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" 
+                                <ProgressBar Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" 
                                              x:Name="progress" 
                                              Progress="{Binding Progress}"
                                              IsVisible="{Binding Completed, Converter={StaticResource IsFalseConverter}}"

@@ -62,12 +62,12 @@ namespace GTNTracker.ViewModels
         {
             if (!IsStarted)
             {
-                if (IsTrailListComplete)
-                {
-                    return;
-                }
+                //if (IsTrailListComplete)
+                //{
+                //    return;
+                //}
 
-                IsTrailListComplete = false;
+                //IsTrailListComplete = false;
 
                 MessagingCenter.Send(new StartGeofencing(), StartGeofencing.MessageString);
                 MessagingCenter.Send(new RegisterMonitoringRegions(), RegisterMonitoringRegions.MessageString,
@@ -329,8 +329,8 @@ namespace GTNTracker.ViewModels
                                     });
                                 }
 
-                                Stop();
-                                EnableStartStopTracking = false;
+                                //Stop();
+                                //EnableStartStopTracking = false;
                             }
                         }
                     }

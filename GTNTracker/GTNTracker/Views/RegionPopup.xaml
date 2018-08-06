@@ -11,6 +11,7 @@
   <pages:PopupPage.Resources>
     <ResourceDictionary>
       <converters:DateTimeConverter x:Key="DateTimeConverter" />
+      <converters:ThumbHeightConverter x:Key="ThumbHeightConverter" />
     </ResourceDictionary>
   </pages:PopupPage.Resources>
     <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0, 0, 0, 0" >
@@ -29,9 +30,6 @@
             <Label Grid.Column="1" Text="Select Next Waypoint" HorizontalOptions="StartAndExpand"
                    FontSize="18" Margin="0,15,5,15" TextColor="White"/>
           </Grid>
-          <!--<StackLayout BackgroundColor="#616161">
-            <Label Text="Select Waypoint" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="0,10" TextColor="White"/>
-          </StackLayout>-->
           <ListView x:Name="TrailRegionListView" Margin="2,2" VerticalOptions="FillAndExpand"
               SeparatorVisibility="None" ItemSelected="TrailRegionListView_ItemSelected"
               HasUnevenRows="True"
@@ -40,18 +38,17 @@
             <ListView.ItemTemplate>
               <DataTemplate>
                 <ViewCell>
-                  <Grid BackgroundColor="#BDBDBD" Margin="2,2" >
+                  <Grid BackgroundColor="#BDBDBD" Margin="2,2" Padding="0,5">
                     <Grid.ColumnDefinitions>
-                      <ColumnDefinition Width="45" />
                       <ColumnDefinition Width="*" />
-                      <ColumnDefinition Width="40" />
+                      <ColumnDefinition Width="4*" />
+                      <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                       <RowDefinition Height="Auto" />
                       <RowDefinition Height="Auto" />
-                      <RowDefinition Height="1" />
                     </Grid.RowDefinitions>
-                    <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Source="{local:ImageResource GTNTracker.Images.checkCircleBlack.png}" IsVisible="{Binding Entered}"
+                    <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Source="{local:ImageResource GTNTracker.Images.checkCircleBlack.png}" IsVisible="{Binding Entered}"
                            HeightRequest="30" WidthRequest="30" Margin="5,0"></Image>
                     <Label Grid.Column="1" Grid.Row="0" VerticalOptions="FillAndExpand"
                         VerticalTextAlignment="Center"
@@ -61,8 +58,9 @@
                         VerticalTextAlignment="Center"
                         Text="{Binding DisplayDistance, StringFormat=' Distance: {0}'}"
                         FontSize="Small"/>
-                    <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
-                        WidthRequest="45" HeightRequest="45" Margin="0,0,5,0" IsVisible="{Binding ShowImage}"
+                    <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                        HeightRequest="{Binding Path=., Converter={StaticResource ThumbHeightConverter}}" 
+                        Margin="0,0,5,0" IsVisible="{Binding ShowImage}"
                         DownsampleToViewSize="true"
                         LoadingPlaceholder="loading.gif"
                         ErrorPlaceholder="error404.png"

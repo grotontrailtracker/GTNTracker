@@ -20,6 +20,7 @@ namespace GTNTracker.Views
         public TrailList()
         {
             InitializeComponent();
+            Xamarin.Forms.NavigationPage.SetBackButtonTitle(this, string.Empty);
             On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
 
             var vm = ViewModelLocator.Instance.TrailListViewModel;       
@@ -55,9 +56,9 @@ namespace GTNTracker.Views
                 var vm = selectedItem.TrailPage.BindingContext as TrailContentViewModel;
                 if (vm != null)
                 {
-                    
+                    var trackingActive = !string.IsNullOrEmpty(AppStateService.Instance.ActiveTrailId);
                     var activeTrail = AppStateService.Instance.ActiveTrailId;
-                    if (!string.IsNullOrEmpty(activeTrail) && vm.TrailId != activeTrail || (vm.IsTrailListComplete && !vm.IsStarted))
+                    if ((trackingActive && vm.TrailId != activeTrail) || !vm.IsViewable) 
                     {
                         anotherActive = true;
                     }

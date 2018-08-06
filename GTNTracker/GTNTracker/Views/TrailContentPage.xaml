@@ -11,6 +11,7 @@
     <localViews:BasePage.Resources>
         <ResourceDictionary>
             <converters:DateTimeConverter x:Key="DateTimeConverter" />
+            <converters:ThumbHeightConverter x:Key="ThumbHeightConverter" />
         </ResourceDictionary>
     </localViews:BasePage.Resources>
     <localViews:BasePage.CustomToolbar>
@@ -27,26 +28,25 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <!--Old button color: #33691E -->
         <StackLayout x:Name="StartStopLayout" Grid.Row="1" Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,-20,0,-5"
                      IsVisible="{Binding EnableStartStopTracking}">
           <Button Text="Start Trail Tracking" Margin="2,0"  x:Name="StartTrailBtn"
                   Image="ic_directions_walk_white.png"
                   Clicked="StartTrailBtn_Activated">
             <Button.Triggers>
-              <MultiTrigger TargetType="Button">
+              <!--<MultiTrigger TargetType="Button">
                 <MultiTrigger.Conditions>
                   <BindingCondition Binding="{Binding IsStarted}" Value="False"/>
                   <BindingCondition Binding="{Binding IsTrailListComplete}" Value="False"/>
                 </MultiTrigger.Conditions>
                 <Setter Property="IsVisible" Value="True" />
-              </MultiTrigger>
+              </MultiTrigger>-->
               <DataTrigger TargetType="Button" Binding="{Binding IsStarted}" Value="True">
                 <Setter Property="IsVisible" Value="False" />
               </DataTrigger>
-              <DataTrigger TargetType="Button" Binding="{Binding IsTrailListComplete}" Value="True">
+              <!--<DataTrigger TargetType="Button" Binding="{Binding IsTrailListComplete}" Value="True">
                 <Setter Property="IsVisible" Value="False" />
-              </DataTrigger>
+              </DataTrigger>-->
             </Button.Triggers>
           </Button>
           <Button Text="Stop Trail Tracking" Margin="2,0"  x:Name="StopTrailBtn" IsVisible="{Binding IsStarted}" 
@@ -91,19 +91,19 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid BackgroundColor="#BDBDBD" Margin="2,2" >
+                        <Grid BackgroundColor="#BDBDBD" Margin="2,2" Padding="0,5" >
                             <Grid.ColumnDefinitions>
-                              <ColumnDefinition Width="45" />
                               <ColumnDefinition Width="*" />
-                              <ColumnDefinition Width="40" />
+                              <ColumnDefinition Width="4*" />
+                              <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
-                                <RowDefinition Height="1" />
                             </Grid.RowDefinitions>
-                            <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
-                                WidthRequest="45" HeightRequest="45" Margin="0,0,5,0" IsVisible="{Binding ShowImage}"
+                            <ffimageloading:CachedImage Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                Margin="0,0,5,0" IsVisible="{Binding ShowImage}"
+                                HeightRequest="{Binding Path=., Converter={StaticResource ThumbHeightConverter}}"
                                 DownsampleToViewSize="true"
                                 LoadingPlaceholder="loading.gif"
                                 ErrorPlaceholder="error404.png"
@@ -117,7 +117,7 @@
                                 VerticalTextAlignment="Center" 
                                 Text="{Binding DateCompleted, Converter={StaticResource DateTimeConverter}}" 
                                 FontSize="Micro"/>
-                            <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Source="{local:ImageResource GTNTracker.Images.checkCircleBlack.png}" 
+                            <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Source="{local:ImageResource GTNTracker.Images.checkCircleBlack.png}" 
                                    IsVisible="{Binding Entered}"
                                    HeightRequest="30" WidthRequest="30" Margin="5,0" />
                         </Grid>

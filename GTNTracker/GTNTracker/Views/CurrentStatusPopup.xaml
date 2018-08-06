@@ -40,7 +40,8 @@
                   </Grid>
                   
                     <Label Text="{Binding TrailName, StringFormat=' Trail: {0}'}" HorizontalOptions="CenterAndExpand" FontSize="Medium" />
-
+                    <Label  FontSize="Medium" Text="All Waypoints Visited" HorizontalOptions="CenterAndExpand"
+                            TextColor="#33691E" IsVisible="{Binding TrailComplete}" />
                     <StackLayout Orientation="Horizontal" Margin="5,0" HorizontalOptions="FillAndExpand">
                         <Label Text="Current Location" HorizontalOptions="Start" VerticalOptions="Center"
                                IsVisible="{Binding IsCurrentRegion, Converter={StaticResource IsFalseConverter}}"
@@ -49,7 +50,7 @@
                                HorizontalOptions="Start" VerticalOptions="Center" 
                                FontSize="Small" IsVisible="{Binding IsCurrentRegion}" />
                     </StackLayout>
-                    <Grid Margin="5,0" BackgroundColor="#E0E0E0" Padding="5,5">
+                    <Grid Margin="5,-5,0,0" BackgroundColor="#E0E0E0" Padding="5,5">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
@@ -82,14 +83,14 @@
                         <Label Grid.Row="2" Grid.Column="2" Text="{Binding Accuracy}" HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="Small"/>
                     </Grid>
 
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="5,0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="5,-5,5,0">
                         <Label Text="{Binding LastUpdate, StringFormat=' Last Update: {0}', Converter={StaticResource TimeConverter}}"
                        HorizontalOptions="EndAndExpand" FontSize="Micro" VerticalOptions="Center"/>
                     </StackLayout>
 
-                    <StackLayout Orientation="Vertical" Margin="5,2" IsVisible="{Binding IsActiveTrailAvailable}" >
+                    <StackLayout Orientation="Vertical" Margin="5,-5,0,0" IsVisible="{Binding IsActiveTrailAvailable}" >
                         <Label Text="Next Waypoint" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Small" />                     
-                        <Grid Margin="0,2" BackgroundColor="#E0E0E0" Padding="5,5">
+                        <Grid Margin="0,-5,0,2" BackgroundColor="#E0E0E0" Padding="5,5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100" />
                                 <ColumnDefinition Width="Auto" />
@@ -127,43 +128,10 @@
                           <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" WidthRequest="90" Text="Set" Image="waypoint.png" Clicked="HandleChangeRegion" IsEnabled="{Binding IsClosestRegionAvailable}"/>
                         </Grid>
                     </StackLayout>
-                  
-                  <StackLayout HorizontalOptions="FillAndExpand"  Margin="5,15,5,2" IsVisible="{Binding IsClosestRegionAvailable, Converter={StaticResource IsFalseConverter}}">
-                    <Label Text="Current Heading (True)" FontSize="Small" HorizontalOptions="Start" Margin="0" VerticalOptions="Center"/>
-                    <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#E0E0E0" >
-                      <Grid HorizontalOptions="CenterAndExpand" Padding="5,5" Margin="0,2" >
-                        <Grid.RowDefinitions>
-                          <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                          <ColumnDefinition Width="Auto" />
-                          <ColumnDefinition Width="Auto" />
-                          <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
 
-                        <StackLayout Grid.Row="0" Grid.Column="0" Padding="5,2" WidthRequest="70" VerticalOptions="Center"
-                         BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
-                          <Label Text="{Binding CurrentHeading}" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-                        </StackLayout>
-                        <StackLayout Grid.Row="0" Grid.Column="1" Padding="5,2" WidthRequest="50" VerticalOptions="Center"
-                         BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
-                          <Label Text="{Binding CurrentDirection}" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-                        </StackLayout>
-                        <ffimageloading:CachedImage Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"
-                            WidthRequest="50" HeightRequest="50" Margin="15,0,5,0"
-                            DownsampleToViewSize="true"
-                            LoadingPlaceholder="loading.gif"
-                            ErrorPlaceholder="error404.png"
-                            Rotation="{Binding CurrentHeadingDeg}"
-                            Source="{local:ImageResource GTNTracker.Images.gtn.png}" >
-                        </ffimageloading:CachedImage>
-                      </Grid>
-                    </StackLayout>
-                  </StackLayout>
-
-                  <StackLayout HorizontalOptions="FillAndExpand"  Margin="5,10,5,2" IsVisible="{Binding IsClosestRegionAvailable}">
+                  <StackLayout HorizontalOptions="FillAndExpand"  Margin="5,5,5,2" IsVisible="{Binding IsClosestRegionAvailable}">
                     <Label Text="Direction To Next Waypoint" FontSize="Small" HorizontalOptions="Start" Margin="0" VerticalOptions="Center"/>
-                    <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#E0E0E0" >
+                    <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#E0E0E0" Margin="0,-5,0,0" >
                       <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5,5" Margin="0,2" >
 
                         <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
@@ -188,14 +156,6 @@
                             </ffimageloading:CachedImage>                         
                           </StackLayout>
                         </StackLayout>
-                        
-                        <!--<StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                          <Label Text="Heading" FontSize="Micro" HorizontalOptions="CenterAndExpand" />
-                          <StackLayout WidthRequest="70" VerticalOptions="Center"
-                                  BackgroundColor="#FAFAFA" Orientation="Horizontal" HorizontalOptions="Center" Margin="2,0">
-                            <Label Text="{Binding CurrentHeading}" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-                          </StackLayout>
-                        </StackLayout>-->
                         
                         <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
                           <Label Text="Distance" FontSize="Micro" HorizontalOptions="CenterAndExpand" />

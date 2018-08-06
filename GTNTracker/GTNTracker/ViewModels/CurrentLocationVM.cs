@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Input;
@@ -44,6 +45,8 @@ namespace GTNTracker.ViewModels
         private string _currentRegionName;
         private double _currentRegionImageHeight;
         private double _currentRegionImageWidth;
+
+        private bool _trailComplete;
 
         public CurrentLocationVM()
         {
@@ -166,6 +169,12 @@ namespace GTNTracker.ViewModels
         {
             get => _showImage;
             set => SetProperty(ref _showImage, value);
+        }
+
+        public bool TrailComplete
+        {
+            get => _trailComplete;
+            set => SetProperty(ref _trailComplete, value);
         }
 
         public GeofenceRegion NextRegion
@@ -370,6 +379,7 @@ namespace GTNTracker.ViewModels
             _overrideClosestRegion = false;
             TrailName = "Trail Not Set";
             _currentTrailId = string.Empty;
+            TrailComplete = false;
         }
 
         public void UpdateNextRegion(string regionId)
@@ -461,7 +471,7 @@ namespace GTNTracker.ViewModels
         private void HandleGeofenceMonitoredRegionsMsg(GeofenceMonitoredRegionsArgs args)
         {
             var regionList = args.Regions;
-            var _currPosition = Location;
+            var currPosition = Location;
             var currTrailId = AppStateService.Instance.ActiveTrailId;
 
             if (PositionAvailable && !string.IsNullOrEmpty(currTrailId))
@@ -490,13 +500,14 @@ namespace GTNTracker.ViewModels
                     {
                         foreach (var region in regionList)
                         {
-                            var inRegion = region.IsPositionInside(_currPosition);
+                            var inRegion = region.IsPositionInside(currPosition);
                             var inRegionStr = inRegion ? "In Region" : "Out of Region";
-                            var distance = region.Center.GetDistanceTo(_currPosition);
+                            var distance = region.Center.GetDistanceTo(currPosition);
                             if (closestRegion == null || distance.TotalMeters < closestDistance.TotalMeters)
                             {
                                 // need to check if it's been visited!!!!, don't give distance to already visited regions!
-                                var priorVisit = TrailVisitService.Instance.GetVisits(currTrailId).FirstOrDefault(v => v.RegionIdentifier == region.Identifier);
+                                var priorVisit = TrailVisitService.Instance.GetVisits(currTrailId)
+                                                                  .FirstOrDefault(v => v.RegionIdentifier == region.Identifier);
                                 if (priorVisit == null)
                                 {
                                     closestRegion = region;
@@ -521,7 +532,7 @@ namespace GTNTracker.ViewModels
                     else
                     {
                         closestRegion = NextRegion;
-                        closestDistance = NextRegion.Center.GetDistanceTo(_currPosition);
+                        closestDistance = NextRegion.Center.GetDistanceTo(currPosition);
                     }
 
                     if (closestRegion != null)
@@ -530,10 +541,9 @@ namespace GTNTracker.ViewModels
                     }
                     else
                     {
-                        ClosestRegionName = "All Way Points Visited";
-                        DistanceToClosestRegion = string.Empty;
-                        IsClosestRegionAvailable = false;
-                        ShowImage = false;
+                        // all waypoints visited, setup for closest one
+                        SetupFirstTrailRegion(regionList);       
+                        TrailComplete = true;
                     }
                 }
 
@@ -547,11 +557,46 @@ namespace GTNTracker.ViewModels
             }
             else
             {
-                ClosestRegionName = "No Position Available";
-                _nextRegion = null;
-                IsClosestRegionAvailable = false;
-                ShowImage = false;
+                SetNoRegionAvailable();
             }
+        }
+
+        // use this when we already have finished all the waypoint, but need to choose one, so
+        // try to find the initial region on the current trail.
+        private void SetupFirstTrailRegion(List<GeofenceRegion> regionList)
+        {
+            if (regionList.Any())
+            {
+                // Grab the first region defined for the list which most likely is the trail start
+                var activeTrailId = AppStateService.Instance.ActiveTrailId;
+                if (!string.IsNullOrEmpty(activeTrailId))
+                {
+                    var region = TrailDefService.Instance.GetRegionDefinition(activeTrailId).FirstOrDefault();
+                    //var closetRegion = regionList.OrderBy(r => r.Center.GetDistanceTo(_currPosition).TotalMeters).FirstOrDefault();
+                    if (region != null)
+                    {
+                        var dist = region.Center.GetDistanceTo(_currPosition);
+                        UpdateUsingRegion(region, dist);
+                    }
+                }
+                else
+                {
+                    SetNoRegionAvailable();
+                }
+            }
+            else
+            {
+                // Bad news, no regions around ????
+                SetNoRegionAvailable();
+            }
+        }
+
+        private void SetNoRegionAvailable()
+        {
+            ClosestRegionName = "No Position Available";
+            _nextRegion = null;
+            IsClosestRegionAvailable = false;
+            ShowImage = false;
         }
 
         private void UpdateUsingRegion(GeofenceRegion region, Distance distance)

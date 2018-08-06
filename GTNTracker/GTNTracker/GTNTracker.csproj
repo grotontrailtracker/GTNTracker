@@ -43,6 +43,7 @@
     <Compile Include="Converters\IsStartedConverter.cs" />
     <Compile Include="Converters\IsVisibleConverter.cs" />
     <Compile Include="Converters\MarginConverter.cs" />
+    <Compile Include="Converters\ThumbHeightConverter.cs" />
     <Compile Include="Converters\TimeConverter.cs" />
     <Compile Include="EventArguments\GeofenceEventArgs.cs" />
     <Compile Include="EventArguments\NotificationEventArgs.cs" />
