@@ -19,7 +19,7 @@ namespace GTNTracker.Views
 	{
 		public RegionPopup ()
 		{
-            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
+            //On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
 			InitializeComponent();
 		}
 

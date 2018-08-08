@@ -36,7 +36,7 @@ namespace GTNTracker.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
-            UIBarButtonItem.Appearance.SetBackButtonTitlePositionAdjustment(new UIOffset(-130, 0), UIBarMetrics.Default);
+            //UIBarButtonItem.Appearance.SetBackButtonTitlePositionAdjustment(new UIOffset(-130, 0), UIBarMetrics.Default);
             _myGeofenceContainer = new GeoContainer();
 
             UNUserNotificationCenter.Current.Delegate = new NotificationDelegate();
@@ -45,6 +45,8 @@ namespace GTNTracker.iOS
             var titleAttributes = UINavigationBar.Appearance.GetTitleTextAttributes();
             titleAttributes.TextColor = UIColor.White;
             UINavigationBar.Appearance.SetTitleTextAttributes(titleAttributes);
+
+            UIProgressView.Appearance.TintColor = UIColor.FromRGB(0x1B, 0x5E, 0x20);
 
             return base.FinishedLaunching(app, options);
         }
