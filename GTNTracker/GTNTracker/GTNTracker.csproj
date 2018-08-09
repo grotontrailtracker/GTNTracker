@@ -564,6 +564,9 @@
     <EmbeddedResource Include="Images\GeneralField\gf8.png" />
     <EmbeddedResource Include="Images\GeneralField\gf9.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\GeneralField\gf17.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

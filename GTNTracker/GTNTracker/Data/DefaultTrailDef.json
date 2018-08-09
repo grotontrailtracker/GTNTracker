@@ -155,7 +155,7 @@
     "Identifier": "GeneralField",
     "Name": "The General Field",
     "Description": "In 2006, the Groton Conservation Trust acquired 143 acres of agricultural land as their portion of a successful joint venture with the Town of Groton to protect from development the 265-acre Surrenden Farm property along Farrriers Row.",
-    "ImageName": "GTNTracker.Images.GeneralField.gf7.png",
+    "ImageName": "GTNTracker.Images.GeneralField.gf17.png",
     "Regions": [
       {
         "Identifier": "GF1",
@@ -203,6 +203,18 @@
         "Center": {
           "Latitude": 42.582538803147692,
           "Longitude": -71.5855100099664
+        }
+      },
+      {
+        "Identifier": "GF17",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Mid-field Waypoint",
+        "Description": "From here you'll head to the forest loop",
+        "ImageName": "GTNTracker.Images.GeneralField.gf17.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.583700542652267,
+          "Longitude": -71.58685348369788
         }
       },
       {
