@@ -530,7 +530,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\close.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Images\GeneralField\gf2.png" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\TownForest\tf1.png" />
     <EmbeddedResource Include="Images\TownForest\tf10.png" />
@@ -544,6 +546,23 @@
     <EmbeddedResource Include="Images\TownForest\tf7.png" />
     <EmbeddedResource Include="Images\TownForest\tf8.png" />
     <EmbeddedResource Include="Images\TownForest\tf9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\GeneralField\gf1.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf10.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf11.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf12.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf13.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf14.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf15.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf16.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf3.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf4.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf5.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf6.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf7.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf8.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

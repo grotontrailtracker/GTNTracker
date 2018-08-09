@@ -154,37 +154,206 @@
   {
     "Identifier": "GeneralField",
     "Name": "The General Field",
-    "Description": "",
+    "Description": "In 2006, the Groton Conservation Trust acquired 143 acres of agricultural land as their portion of a successful joint venture with the Town of Groton to protect from development the 265-acre Surrenden Farm property along Farrriers Row.",
+    "ImageName": "GTNTracker.Images.GeneralField.gf7.png",
     "Regions": [
       {
         "Identifier": "GF1",
         "TrailIdentifier": "GeneralField",
         "Name": "Trail Start",
-        "Description": "Information kiosk at trail start.",
-        "ImageName": "GTNTracker.Images.UnderConstruct.jpg",
+        "Description": "Your field walk starts here, walk along Farmer's Row taking in the wonderful views to your left.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf1.png",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.586992,
-          "Longitude": -71.585378
+          "Latitude": 42.5866331113899,
+          "Longitude": -71.58273710875919
+        }
+      },
+      {
+        "Identifier": "GF2",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Along Farmer's Row",
+        "Description": "Halfway down the strech, giving you a great view to your right.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf2.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.584749907294828,
+          "Longitude": -71.582566285572554
+        }
+      },
+      {
+        "Identifier": "GF3",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Start of the field corner",
+        "Description": "The trail skirts around a residence, follow the hedges.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf3.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.582520698236841,
+          "Longitude": -71.584340063921715
+        }
+      },
+      {
+        "Identifier": "GF4",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Heading towards mid-field",
+        "Description": "You'll follow the trail out onto the open field, enjoy the view all around you.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf4.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.582538803147692,
+          "Longitude": -71.5855100099664
+        }
+      },
+      {
+        "Identifier": "GF5",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Across the field",
+        "Description": "You're heading towards the General Forest where you'll loop around.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf5.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.582851322407443,
+          "Longitude": -71.589456293798591
+        }
+      },
+      {
+        "Identifier": "GF6",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Entrance to Loop",
+        "Description": "Take the North part of the loop heading towards Shirley Road.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf6.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.583247325422782,
+          "Longitude": -71.591489324412862
+        }
+      },
+      {
+        "Identifier": "GF8",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Rock Wall",
+        "Description": "An amazing large field stone wall, seems like someone has been rock collecting!",
+        "ImageName": "GTNTracker.Images.GeneralField.gf8.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.583797220180351,
+          "Longitude": -71.592061808399478
+        }
+      },
+      {
+        "Identifier": "GF9",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Towards Shirley Rd",
+        "Description": "Keep following the trail to the Shirley Rd Entrance.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf9.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.584982379379291,
+          "Longitude": -71.59262138425521
+        }
+      },
+      {
+        "Identifier": "GF10",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Shirley Rd Trail Entrance",
+        "Description": "Here's an informational display from the Groton Conservation Trust, you're also right across from Surrenden Farms Trail.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf10.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.586465012321796,
+          "Longitude": -71.5946563427072
+        }
+      },
+      {
+        "Identifier": "GF11",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Entrance To Woods",
+        "Description": "Take this narrow entrance into the General Field Woods. Following the winding trail.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf11.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.584596267009694,
+          "Longitude": -71.594409579477826
+        }
+      },
+      {
+        "Identifier": "GF12",
+        "TrailIdentifier": "GeneralField",
+        "Name": "General Field Woods",
+        "Description": "You're almost back out to the field, keep following the trail.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf12.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.5831419229904,
+          "Longitude": -71.592624234102288
+        }
+      },
+      {
+        "Identifier": "GF13",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Old Mare Barn",
+        "Description": "The abandoned Old Mare Barn",
+        "ImageName": "GTNTracker.Images.GeneralField.gf13.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.58250158749761,
+          "Longitude": -71.591876400701324
+        }
+      },
+      {
+        "Identifier": "GF14",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Middle Field Marker",
+        "Description": "Follow this marker to head towards the end of the trail",
+        "ImageName": "GTNTracker.Images.GeneralField.gf14.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.584209777454454,
+          "Longitude": -71.587370876289512
+        }
+      },
+      {
+        "Identifier": "GF15",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Middle of Field View",
+        "Description": "Enjoy a last look of the wonderful view before you head home.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf15.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.58495497055592,
+          "Longitude": -71.587316310099865
+        }
+      },
+      {
+        "Identifier": "GF16",
+        "TrailIdentifier": "GeneralField",
+        "Name": "Trail End",
+        "Description": "This is the end of the trail (or upper entrance), take a seat under the pines and rest a moment.",
+        "ImageName": "GTNTracker.Images.GeneralField.gf16.png",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.586437226312782,
+          "Longitude": -71.587018668718244
         }
       }
     ]
   },
   {
-    "Identifier": "SurrendenFarm",
-    "Name": "Surrenden Farms",
+    "Identifier": "Hawtree",
+    "Name": "Hawtree Conservation Area",
     "Description": "",
     "Regions": [
       {
-        "Identifier": "SF1",
-        "TrailIdentifier": "SurrendenFarm",
-        "Name": "Trail Start",
-        "Description": "Information kiosk at trail start.",
+        "Identifier": "HT1",
+        "TrailIdentifier": "Hawtree",
+        "Name": "Hawtree Way Entrance",
+        "Description": "",
         "ImageName": "GTNTracker.Images.UnderConstruct.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.586538,
-          "Longitude": -71.594728
+          "Latitude": 42.640305,
+          "Longitude": -71.540467
         }
       }
     ]
