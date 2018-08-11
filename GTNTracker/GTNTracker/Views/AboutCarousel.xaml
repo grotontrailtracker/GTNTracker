@@ -90,7 +90,7 @@
                     <Label Grid.Column="1" Grid.Row="5" IsVisible="{Binding IsAndroid}"
                                Text="Indicates that the app is actively GPS trail tracking your waypoints." FontSize="Small" HorizontalOptions="Start"/>
                     <Image Grid.Column="0" Grid.Row="6"
-                                           Source="{local:ImageResource GTNTracker.Images.gtn.png}" 
+                                           Source="{local:ImageResource GTNTracker.Images.ic_gtnRound.png}" 
                                            IsVisible="{Binding IsAndroid}"
                                            HeightRequest="30" WidthRequest="30" Margin="5,0"/>
                     <Label Grid.Column="1" Grid.Row="6" IsVisible="{Binding IsAndroid}"

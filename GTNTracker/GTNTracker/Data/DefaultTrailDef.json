@@ -3,14 +3,14 @@
     "Identifier": "TownForest",
     "Name": "Town Forest",
     "Description": "The Groton Memorial Town Forest is one of Groton's largest trail systems with over 16 miles in trails.",
-    "ImageName": "GTNTracker.Images.TownForest.tf8.png",
+    "ImageName": "GTNTracker.Images.TownForest.tf8a.jpg",
     "Regions": [
       {
         "Identifier": "TF1",
         "TrailIdentifier": "TownForest",
         "Name": "Trail Start",
         "Description": "Information kiosk at trail start.",
-        "ImageName": "GTNTracker.Images.TownForest.tf1.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf1a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.59727259636167,
@@ -22,7 +22,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "Town Forest Memorial",
         "Description": "The Groton Memorial Town Forest was establihed in 1922 to honor those who fought in the Great War.",
-        "ImageName": "GTNTracker.Images.TownForest.tf2.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf2a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.597181107888552,
@@ -34,7 +34,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "Ames Pond Rd Crossing",
         "Description": "Continue along Town Forest Rd as part of the 'A' Trail.",
-        "ImageName": "GTNTracker.Images.TownForest.tf3.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf3a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.596746170932981,
@@ -46,7 +46,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "A1",
         "Description": "Point 'A1' along the 'A' trail",
-        "ImageName": "GTNTracker.Images.TownForest.tf4.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf4a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.59605981879178,
@@ -58,7 +58,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "A2",
         "Description": "Point 'A2' along the 'A' trail",
-        "ImageName": "GTNTracker.Images.TownForest.tf5.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf5a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.59533641863856,
@@ -70,7 +70,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "Wharton Rd Crossing",
         "Description": "Intersection with Wharton Rd.",
-        "ImageName": "GTNTracker.Images.TownForest.tf6.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf6a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.5944538042346,
@@ -82,7 +82,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "A3",
         "Description": "Point 'A3' along the 'A' trail",
-        "ImageName": "GTNTracker.Images.TownForest.tf7.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf7a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.5941160554463,
@@ -94,7 +94,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "A5",
         "Description": "Point 'A5' along the 'A' trail",
-        "ImageName": "GTNTracker.Images.TownForest.tf8.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf8a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.594540305475327,
@@ -106,7 +106,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "A4",
         "Description": "Point 'A4' along the 'A' trail",
-        "ImageName": "GTNTracker.Images.TownForest.tf9.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf9a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.595099713692996,
@@ -118,7 +118,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "A4 On Loop Trail",
         "Description": "Either follow the 'A' trail or merge onto the Loop Trail",
-        "ImageName": "GTNTracker.Images.TownForest.tf10.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf10a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.595439935142728,
@@ -130,7 +130,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "Kettle Hole #1",
         "Description": "Interesting kettle hole along the 'A' Trail.",
-        "ImageName": "GTNTracker.Images.TownForest.tf11.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf11a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.595462147186133,
@@ -142,7 +142,7 @@
         "TrailIdentifier": "TownForest",
         "Name": "Kettle Hole #2",
         "Description": "Another kettle hole.",
-        "ImageName": "GTNTracker.Images.TownForest.tf12.png",
+        "ImageName": "GTNTracker.Images.TownForest.tf12a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.595561724195811,
@@ -155,14 +155,14 @@
     "Identifier": "GeneralField",
     "Name": "The General Field",
     "Description": "In 2006, the Groton Conservation Trust acquired 143 acres of agricultural land as their portion of a successful joint venture with the Town of Groton to protect from development the 265-acre Surrenden Farm property along Farrriers Row.",
-    "ImageName": "GTNTracker.Images.GeneralField.gf17.png",
+    "ImageName": "GTNTracker.Images.GeneralField.gf17a.jpg",
     "Regions": [
       {
         "Identifier": "GF1",
         "TrailIdentifier": "GeneralField",
         "Name": "Trail Start",
         "Description": "Your field walk starts here, walk along Farmer's Row taking in the wonderful views to your left.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf1.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf1a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.5866331113899,
@@ -174,7 +174,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Along Farmer's Row",
         "Description": "Halfway down the strech, giving you a great view to your right.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf2.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf2a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.584749907294828,
@@ -186,7 +186,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Start of the field corner",
         "Description": "The trail skirts around a residence, follow the hedges.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf3.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf3a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.582520698236841,
@@ -198,7 +198,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Heading towards mid-field",
         "Description": "You'll follow the trail out onto the open field, enjoy the view all around you.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf4.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf4a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.582538803147692,
@@ -210,7 +210,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Mid-field Waypoint",
         "Description": "From here you'll head to the loop around the General Field woods.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf17.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf17a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.583700542652267,
@@ -222,7 +222,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Across the field",
         "Description": "You're heading towards the General Field woods where you'll loop around.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf5.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf5a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.582851322407443,
@@ -234,7 +234,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Entrance to Loop",
         "Description": "Take the North part of the loop heading towards Shirley Road.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf6.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf6a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.583247325422782,
@@ -246,7 +246,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Rock Wall",
         "Description": "An amazing large field stone wall, seems like someone has been rock collecting!",
-        "ImageName": "GTNTracker.Images.GeneralField.gf8.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf8a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.583797220180351,
@@ -258,7 +258,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Towards Shirley Rd",
         "Description": "Keep following the trail to the Shirley Rd Entrance.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf9.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf9a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.584982379379291,
@@ -270,7 +270,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Shirley Rd Trail Entrance",
         "Description": "Here's an informational display from the Groton Conservation Trust, you're also right across from Surrenden Farms Trail.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf10.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf10a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.586465012321796,
@@ -282,7 +282,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Entrance To Woods",
         "Description": "Take this narrow entrance into the General Field woods. Following the winding trail.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf11.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf11a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.584596267009694,
@@ -294,7 +294,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "General Field Woods",
         "Description": "You're almost back out to the field, keep following the trail.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf12.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf12a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.5831419229904,
@@ -306,7 +306,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Old Mare Barn",
         "Description": "The abandoned Old Mare Barn",
-        "ImageName": "GTNTracker.Images.GeneralField.gf13.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf13a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.58250158749761,
@@ -318,7 +318,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Middle Field Marker",
         "Description": "Follow this marker to head towards the end of the trail",
-        "ImageName": "GTNTracker.Images.GeneralField.gf14.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf14a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.584209777454454,
@@ -330,7 +330,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Middle of Field View",
         "Description": "Enjoy a last look of the wonderful view before you head home.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf15.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf15a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.58495497055592,
@@ -342,7 +342,7 @@
         "TrailIdentifier": "GeneralField",
         "Name": "Trail End",
         "Description": "This is the end of the trail (or upper entrance), take a seat under the pines and rest a moment.",
-        "ImageName": "GTNTracker.Images.GeneralField.gf16.png",
+        "ImageName": "GTNTracker.Images.GeneralField.gf16a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.586437226312782,
@@ -375,14 +375,14 @@
     "Identifier": "BertozziWildlife",
     "Name": "Bertozzi Wildlife",
     "Description": "Peter E. Bertozzi Conservation Area. This is a beautiful riverside property that includes wide dirt trails through the forest and a well loved swimming hole. A camping area on the river near a swimming hole.",
-    "ImageName": "GTNTracker.Images.Bertozzi.bw12.png",
+    "ImageName": "GTNTracker.Images.Bertozzi.bw12a.jpg",
     "Regions": [
       {
         "Identifier": "BW1",
         "TrailIdentifier": "BertozziWildlife",
         "Name": "Trail Start",
         "Description": "Information kiosk at trail start.",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw1.png",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw1a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.63628376,
@@ -394,7 +394,7 @@
         "TrailIdentifier": "BertozziWildlife",
         "Name": "Bertozzi / Squannacook Memorial",
         "Description": "Peter Bertozzi and Squannacook River Wildlife Management Area Memorial",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw2.png",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw2a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.63568705,
@@ -406,7 +406,7 @@
         "TrailIdentifier": "BertozziWildlife",
         "Name": "Midway To River",
         "Description": "You're halfway to the Squannacook River from the Trail start.",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw8.png",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw8a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.63416897,
@@ -418,7 +418,7 @@
         "TrailIdentifier": "BertozziWildlife",
         "Name": "Swimming Hole",
         "Description": "Enjoy a refreshing swim! And if you're adventurous, swim across and use the rope swing!",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw12.png",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw12a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.634661,
@@ -430,7 +430,7 @@
         "TrailIdentifier": "BertozziWildlife",
         "Name": "USGS Gauging Station",
         "Description": "This is a gauging station measuring discharge and height of the Squannacook River. You can see the data for station #01096000 at waterdata.usgs.gov",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw4.png",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw4a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.63405279,
@@ -442,7 +442,7 @@
         "TrailIdentifier": "BertozziWildlife",
         "Name": "Groton Leatherboard Memorial / Camping Site",
         "Description": "Groton Leatherboard Memorial. A scenic campsite by the Squannacook River, fall asleep to the sounds of the river flowing by.",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw5.png",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw5a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.63349496,
@@ -454,7 +454,7 @@
         "TrailIdentifier": "BertozziWildlife",
         "Name": "Scenic Squannacook River",
         "Description": "Take a moment and enjoy the view of the Squannacook River!",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw6.png",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw6a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.63310719,
@@ -466,7 +466,7 @@
         "TrailIdentifier": "BertozziWildlife",
         "Name": "Bertozzi Memorial",
         "Description": "A memorial errected by the Town of Groton in honor of Peter E. Bertozzi, Conservationist.",
-        "ImageName": "GTNTracker.Images.Bertozzi.bw13.png",
+        "ImageName": "GTNTracker.Images.Bertozzi.bw13a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.633281,
@@ -479,14 +479,14 @@
     "Identifier": "ForestBells",
     "Name": "The Forest Bells",
     "Description": "A short walk to the Forest Bells by Paul Matisse. Six aluminum organ shaped chimes to ring through the woods. Make sure to ring the bells and listen to them bounce through the forest. And definitly make sure to bring the entire family, so you can compose music with the different bell's notes.",
-    "ImageName": "GTNTracker.Images.ForBells.fb6.png",
+    "ImageName": "GTNTracker.Images.ForBells.fb6a.jpg",
     "Regions": [
       {
         "Identifier": "FB4",
         "TrailIdentifier": "ForestBells",
         "Name": "Sign To Trail Start",
         "Description": "This sign is across from the dirt road on Indian Hill Road leading up to the trail start.",
-        "ImageName": "GTNTracker.Images.ForBells.fb4.png",
+        "ImageName": "GTNTracker.Images.ForBells.fb4a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.58552283,
@@ -498,7 +498,7 @@
         "TrailIdentifier": "ForestBells",
         "Name": "Road Before Trail Start",
         "Description": "Dirt road at very end of Indian Hill Road.",
-        "ImageName": "GTNTracker.Images.ForBells.fb8.png",
+        "ImageName": "GTNTracker.Images.ForBells.fb8a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.58497365,
@@ -510,7 +510,7 @@
         "TrailIdentifier": "ForestBells",
         "Name": "Trail Start",
         "Description": "Start of the trail to the forest bells.",
-        "ImageName": "GTNTracker.Images.ForBells.fb5.png",
+        "ImageName": "GTNTracker.Images.ForBells.fb5a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.58516837,
@@ -522,7 +522,7 @@
         "TrailIdentifier": "ForestBells",
         "Name": "Under Power Lines",
         "Description": "You'll pass under these powerlines as you walk the trail to the bells.",
-        "ImageName": "GTNTracker.Images.ForBells.fb3.png",
+        "ImageName": "GTNTracker.Images.ForBells.fb3a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.58543886,
@@ -534,7 +534,7 @@
         "TrailIdentifier": "ForestBells",
         "Name": "Fork In Trail",
         "Description": "Turn sharp left from the main path towards the forest bells.",
-        "ImageName": "GTNTracker.Images.ForBells.fb1.png",
+        "ImageName": "GTNTracker.Images.ForBells.fb1a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.58575189,
@@ -546,7 +546,7 @@
         "TrailIdentifier": "ForestBells",
         "Name": "Old Fallen Tree Area",
         "Description": "This is where there was a group of fallen trees barring an old road. Follow the road up the hill.",
-        "ImageName": "GTNTracker.Images.ForBells.fb2.png",
+        "ImageName": "GTNTracker.Images.ForBells.fb2a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.58624411,
@@ -558,7 +558,7 @@
         "TrailIdentifier": "ForestBells",
         "Name": "Forest Bells",
         "Description": "Paul Matisse's Forest Bells, commissioned by The Artists Valentine Project and dedicated to the students at Indian Hill Arts.",
-        "ImageName": "GTNTracker.Images.ForBells.fb6.png",
+        "ImageName": "GTNTracker.Images.ForBells.fb6a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.58767835,
@@ -571,14 +571,14 @@
     "Identifier": "GibbetHill",
     "Name": "Gibbet Hill",
     "Description": "The route is simple to follow. The castle and vista are worth the climb.",
-    "ImageName": "GTNTracker.Images.Gibbet.gib3a.png",
+    "ImageName": "GTNTracker.Images.Gibbet.gib3a.jpg",
     "Regions": [
       {
         "Identifier": "GIB1",
         "TrailIdentifier": "GibbetHill",
         "Name": "Trail Start",
         "Description": "Two stone pillars mark the entrance of the trail.",
-        "ImageName": "GTNTracker.Images.Gibbet.gib1a.png",
+        "ImageName": "GTNTracker.Images.Gibbet.gib1a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.60663037,
@@ -590,7 +590,7 @@
         "TrailIdentifier": "GibbetHill",
         "Name": "Lower Castle",
         "Description": "Large remnants of a stone castle still stand on the hill. This is the lower floor.",
-        "ImageName": "GTNTracker.Images.Gibbet.gib2a.png",
+        "ImageName": "GTNTracker.Images.Gibbet.gib2a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.60827187,
@@ -602,7 +602,7 @@
         "TrailIdentifier": "GibbetHill",
         "Name": "Bancroft Castle",
         "Description": "Large stone tower still stands on top of Gibbet Hill.",
-        "ImageName": "GTNTracker.Images.Gibbet.gib3a.png",
+        "ImageName": "GTNTracker.Images.Gibbet.gib3a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.60851569,
@@ -614,7 +614,7 @@
         "TrailIdentifier": "GibbetHill",
         "Name": "Top of Gibbet Hill",
         "Description": "A spectacular view of Groton.",
-        "ImageName": "GTNTracker.Images.Gibbet.gib4a.png",
+        "ImageName": "GTNTracker.Images.Gibbet.gib4a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.61054256,
@@ -626,7 +626,7 @@
         "TrailIdentifier": "GibbetHill",
         "Name": "Trail Marker",
         "Description": "Trail goes back down.",
-        "ImageName": "GTNTracker.Images.Gibbet.gib5a.png",
+        "ImageName": "GTNTracker.Images.Gibbet.gib5a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.61061091,
@@ -638,7 +638,7 @@
         "TrailIdentifier": "GibbetHill",
         "Name": "Valley",
         "Description": "Small Valley off the hill.",
-        "ImageName": "GTNTracker.Images.Gibbet.gib6a.png",
+        "ImageName": "GTNTracker.Images.Gibbet.gib6a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.61048531,
@@ -651,14 +651,14 @@
     "Identifier": "GrotonPlace1",
     "Name": "Groton Place / Sabine Woods",
     "Description": "The Groton Place is a well loved property that follows the Nashua River. With many intertwined loops these trails are optimal for everyone, whether you are an experienced hiker or just looking for a relaxing stroll. This property has stunning features scattered throughout its network of trails.",
-    "ImageName": "GTNTracker.Images.GrotonPlace.gp1.png",
+    "ImageName": "GTNTracker.Images.GrotonPlace.gp1a.jpg",
     "Regions": [
       {
         "Identifier": "GP1",
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Groton Place Entrance",
         "Description": "This magnificent gate leads opens into Groton Place",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp1.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp1a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.6047786,
@@ -673,7 +673,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Trail Start",
         "Description": "The Welcome Kiosk has plenty of information on Groton Place and other places to visit.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp2.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp2a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.60435997,
@@ -688,7 +688,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Groton Hunt Monument",
         "Description": "A memorial to the fox hunts held on the grounds of the Dumaine Family estate.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp3.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp3a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.60403062,
@@ -700,7 +700,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Pine Isle",
         "Description": "Enjoy the view of the tall pines from two stone benches to rest on.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp19.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp19a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.60420141,
@@ -712,7 +712,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Dumaine Memorial",
         "Description": "A memorial to Frederic 'Buck' Dumaine, an avid sportsman and businessman who owned the estate which is now Groton Place.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp5.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp5a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.60191115,
@@ -724,7 +724,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Along the Nashua River",
         "Description": "This part of the Sabine River Trail follows along the Nashua River. It's irresistable to dogs looking for a swim!",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp7.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp7a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.5986607,
@@ -736,7 +736,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Groton School Boathouse",
         "Description": "Robert W. Bingham Boathouse. Home to one of the school's most popular and successful sports.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp8.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp8a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.59493248,
@@ -748,7 +748,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Sabine Woods Trail",
         "Description": "Continue West to Groton School Boathouse or continue East to East Trail.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp12.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp12a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.59321064,
@@ -760,7 +760,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Fork To East Trail Or Joy Ln",
         "Description": "Turn North to head to the East Trail Start or South to Joy Lane",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp13.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp13a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.59178126,
@@ -772,7 +772,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Bridge Near East Trail",
         "Description": "Cross the bridge North will get you to the start of the East Trail.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp15.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp15a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.59390136,
@@ -784,7 +784,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "East Trail Start",
         "Description": "The start of the East Trail, this wide maintained trail goes through Sabine Woods into Groton Place.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp16.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp16a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.59479939,
@@ -796,7 +796,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "On the East Trail in Sabine Woods",
         "Description": "You can continue on the East Trail or follow the fork to explore the Sabine Memorial Woods.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp17.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp17a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.5986628,
@@ -808,7 +808,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Groton Place / Sabine Woods Boundry",
         "Description": "This is where the East Trail crosses between these two areas.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp18.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp18a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.60162154,
@@ -820,7 +820,7 @@
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Rhododendron Trail",
         "Description": "A beautiful path lined with rhododendrons planted long ago by the Dumaine Family.",
-        "ImageName": "GTNTracker.Images.GrotonPlace.gp4.png",
+        "ImageName": "GTNTracker.Images.GrotonPlace.gp4a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.60258854,
@@ -833,14 +833,14 @@
     "Identifier": "Throne",
     "Name": "Throne Hill",
     "Description": "The Throne is a conservation area owned by Groton Conservation Trust and one of largest contiguous undeveloped parcels in the area. It provides habitat for deer, bears, porcupines, fishers, moose, and beavers. It features upland forest and interesting wetlands.",
-    "ImageName":  "GTNTracker.Images.Throne.throne1.png",
+    "ImageName":  "GTNTracker.Images.Throne.throne1a.jpg",
     "Regions": [
       {
         "Identifier": "TH1",
         "TrailIdentifier": "Throne",
         "Name": "Castle Drive Parking",
         "Description": "Castle Dr. Parking.  Room for several vehicles to park along the cul-de-sac.  Trail entrance on cul-de-sac.  To get to the actual trail, walk up the right side of the driveway, staying between the two houses.  The trailhead is at the top of the driveway",
-        "ImageName": "GTNTracker.Images.Throne.throne1.png",
+        "ImageName": "GTNTracker.Images.Throne.throne1a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.6260,
@@ -852,7 +852,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Trail Head",
         "Description": "Trail Start from Castle Drive.",
-        "ImageName": "GTNTracker.Images.Throne.throne2.png",
+        "ImageName": "GTNTracker.Images.Throne.throne2a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.62487142,
@@ -864,7 +864,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Trail Bridge",
         "Description": "Eagle Scout Bridge Project.",
-        "ImageName": "GTNTracker.Images.Throne.throne18.png",
+        "ImageName": "GTNTracker.Images.Throne.throne18a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.6250462,
@@ -876,7 +876,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Waypoint #4",
         "Description": "Follow the trail on your outbound loop segment.",
-        "ImageName": "GTNTracker.Images.Throne.throne17.png",
+        "ImageName": "GTNTracker.Images.Throne.throne17a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.62606045,
@@ -888,7 +888,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Loop Trail Fork",
         "Description": "Loop Trail Fork, Straight West To Rockwood Lane, follow the Loop Trail to the south west.",
-        "ImageName": "GTNTracker.Images.Throne.throne5.png",
+        "ImageName": "GTNTracker.Images.Throne.throne5a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.62727957,
@@ -900,7 +900,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Waypoint #6",
         "Description": "Take either fork, you'll merge back on the same path soon!",
-        "ImageName": "GTNTracker.Images.Throne.throne6.png",
+        "ImageName": "GTNTracker.Images.Throne.throne6a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.62544181,
@@ -912,7 +912,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Waypoint #7",
         "Description": "Back together again!",
-        "ImageName": "GTNTracker.Images.Throne.throne7.png",
+        "ImageName": "GTNTracker.Images.Throne.throne7a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.62370802,
@@ -924,7 +924,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Waypoint #8",
         "Description": "Keep heading south, it's almost snack time!",
-        "ImageName": "GTNTracker.Images.Throne.throne15.png",
+        "ImageName": "GTNTracker.Images.Throne.throne15a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.62214601,
@@ -936,7 +936,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Concord Grapes",
         "Description": "Visit in September for a taste of the grapes!",
-        "ImageName": "GTNTracker.Images.Throne.throne14.png",
+        "ImageName": "GTNTracker.Images.Throne.throne14a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.62080365,
@@ -948,7 +948,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Waypoint #10",
         "Description": "Old beaver home, find some tree stumps.",
-        "ImageName": "GTNTracker.Images.Throne.throne13.png",
+        "ImageName": "GTNTracker.Images.Throne.throne13a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.62024219,
@@ -960,7 +960,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Common Reeds",
         "Description": "Example of how the Phragmites australis is invasively taking over the natural cattails in the wetlands",
-        "ImageName": "GTNTracker.Images.Throne.throne11.png",
+        "ImageName": "GTNTracker.Images.Throne.throne11a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.62016252,
@@ -972,7 +972,7 @@
         "TrailIdentifier": "Throne",
         "Name": "Loop Trail merge",
         "Description": "Back onto the Loop trail, heading homeward towards the Trail Start!",
-        "ImageName": "GTNTracker.Images.Throne.throne9.png",
+        "ImageName": "GTNTracker.Images.Throne.throne9a.jpg",
         "IsImageNameURI": false,
         "Center": {
           "Latitude": 42.62187913,

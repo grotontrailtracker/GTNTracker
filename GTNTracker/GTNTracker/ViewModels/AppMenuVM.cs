@@ -24,15 +24,6 @@ namespace GTNTracker.ViewModels
 
         public void Initialize()
         {
-            //MenuItems.Add(new AppMenuItemVM()
-            //{
-            //    Id = PageManager.WelcomePageId,
-            //    MenuTitle = "Welcome",
-            //    Title = "Groton Trail Tracker",
-            //    TargetType = typeof(Welcome),
-            //    ShowImage = true,
-            //    IconImage = ImageSource.FromResource("GTNTracker.Images.gtn.png")
-            //});
             MenuItems.Add(new AppMenuItemVM()
             {
                 Id = PageManager.TrailListPageId,
@@ -116,8 +107,8 @@ namespace GTNTracker.ViewModels
                 MenuTitle = "Waypoint Capture",
                 Title = "Waypoint Capture",
                 TargetType = typeof(WaypointCapture),
-                IconImage = ImageSource.FromResource("GTNTracker.Images.camera.png"),
-                ShowImage = true
+                //IconImage = ImageSource.FromResource("GTNTracker.Images.camera.png"),
+                ShowImage = false
             });
             MenuItems.Add(new AppMenuItemVM()
             {
@@ -135,8 +126,8 @@ namespace GTNTracker.ViewModels
                 MenuTitle = "Manage Captures",
                 Title = "Manage Captures",
                 TargetType = typeof(CaptureManager),
-                IconImage = ImageSource.FromResource("GTNTracker.Images.collections.png"),
-                ShowImage = true
+                //IconImage = ImageSource.FromResource("GTNTracker.Images.collections.png"),
+                ShowImage = false
             });
 
             PageManager.Instance.RegisterPageTitle(PageManager.WaypointCaptureId, "Waypoint Capture");

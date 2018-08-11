@@ -338,9 +338,6 @@
     <EmbeddedResource Include="Images\checkCircleBlack.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\GrotonPlace\gp3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Images\waypoint.png" />
   </ItemGroup>
   <ItemGroup>
@@ -350,16 +347,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\welldone.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Views\CurrentStatusPopup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\gtn.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\less.png" />
@@ -414,16 +405,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\camera.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Views\CaptureManager.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\collections.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Password.xaml">
@@ -444,85 +429,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\Gibbet\gib1a.png" />
-    <EmbeddedResource Include="Images\Gibbet\gib2a.png" />
-    <EmbeddedResource Include="Images\Gibbet\gib3a.png" />
-    <EmbeddedResource Include="Images\Gibbet\gib4a.png" />
-    <EmbeddedResource Include="Images\Gibbet\gib5a.png" />
-    <EmbeddedResource Include="Images\Gibbet\gib6a.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\GrotonPlace\gp12.png" />
-    <EmbeddedResource Include="Images\GrotonPlace\gp13.png" />
-    <EmbeddedResource Include="Images\GrotonPlace\gp15.png" />
-    <EmbeddedResource Include="Images\GrotonPlace\gp16.png" />
-    <EmbeddedResource Include="Images\GrotonPlace\gp17.png" />
-    <EmbeddedResource Include="Images\GrotonPlace\gp18.png" />
-    <EmbeddedResource Include="Images\GrotonPlace\gp19.png" />
-    <EmbeddedResource Include="Images\GrotonPlace\gp2.png" />
-    <EmbeddedResource Include="Images\GrotonPlace\gp4.png" />
-    <EmbeddedResource Include="Images\GrotonPlace\gp7.png" />
-    <EmbeddedResource Include="Images\GrotonPlace\gp8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\GrotonPlace\gp5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\GrotonPlace\gp1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Views\ImagePopup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\ForBells\fb1.png" />
-    <EmbeddedResource Include="Images\ForBells\fb2.png" />
-    <EmbeddedResource Include="Images\ForBells\fb3.png" />
-    <EmbeddedResource Include="Images\ForBells\fb4.png" />
-    <EmbeddedResource Include="Images\ForBells\fb5.png" />
-    <EmbeddedResource Include="Images\ForBells\fb6.png" />
-    <EmbeddedResource Include="Images\ForBells\fb8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Bertozzi\bw1.png" />
-    <EmbeddedResource Include="Images\Bertozzi\bw2.png" />
-    <EmbeddedResource Include="Images\Bertozzi\bw4.png" />
-    <EmbeddedResource Include="Images\Bertozzi\bw5.png" />
-    <EmbeddedResource Include="Images\Bertozzi\bw6.png" />
-    <EmbeddedResource Include="Images\Bertozzi\bw8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Bertozzi\bw10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Bertozzi\bw12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Bertozzi\bw9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Bertozzi\bw13.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Throne\throne11.png" />
-    <EmbeddedResource Include="Images\Throne\throne13.png" />
-    <EmbeddedResource Include="Images\Throne\throne14.png" />
-    <EmbeddedResource Include="Images\Throne\throne15.png" />
-    <EmbeddedResource Include="Images\Throne\throne17.png" />
-    <EmbeddedResource Include="Images\Throne\throne18.png" />
-    <EmbeddedResource Include="Images\Throne\throne2.png" />
-    <EmbeddedResource Include="Images\Throne\throne5.png" />
-    <EmbeddedResource Include="Images\Throne\throne6.png" />
-    <EmbeddedResource Include="Images\Throne\throne7.png" />
-    <EmbeddedResource Include="Images\Throne\throne9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Throne\throne1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\gtnCompass.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\ic_gtnRound.png" />
@@ -531,41 +441,95 @@
     <EmbeddedResource Include="Images\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\GeneralField\gf2.png" />
+    <EmbeddedResource Include="Images\GeneralField\gf10a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf11a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf12a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf13a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf14a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf15a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf16a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf17a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf1a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf2a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf3a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf4a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf5a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf6a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf7a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf8a.jpg" />
+    <EmbeddedResource Include="Images\GeneralField\gf9a.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\TownForest\tf1.png" />
-    <EmbeddedResource Include="Images\TownForest\tf10.png" />
-    <EmbeddedResource Include="Images\TownForest\tf11.png" />
-    <EmbeddedResource Include="Images\TownForest\tf12.png" />
-    <EmbeddedResource Include="Images\TownForest\tf2.png" />
-    <EmbeddedResource Include="Images\TownForest\tf3.png" />
-    <EmbeddedResource Include="Images\TownForest\tf4.png" />
-    <EmbeddedResource Include="Images\TownForest\tf5.png" />
-    <EmbeddedResource Include="Images\TownForest\tf6.png" />
-    <EmbeddedResource Include="Images\TownForest\tf7.png" />
-    <EmbeddedResource Include="Images\TownForest\tf8.png" />
-    <EmbeddedResource Include="Images\TownForest\tf9.png" />
+    <EmbeddedResource Include="Images\Gibbet\gib1a.jpg" />
+    <EmbeddedResource Include="Images\Gibbet\gib2a.jpg" />
+    <EmbeddedResource Include="Images\Gibbet\gib3a.jpg" />
+    <EmbeddedResource Include="Images\Gibbet\gib4a.jpg" />
+    <EmbeddedResource Include="Images\Gibbet\gib5a.jpg" />
+    <EmbeddedResource Include="Images\Gibbet\gib6a.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\GeneralField\gf1.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf10.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf11.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf12.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf13.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf14.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf15.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf16.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf3.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf4.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf5.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf6.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf7.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf8.png" />
-    <EmbeddedResource Include="Images\GeneralField\gf9.png" />
+    <EmbeddedResource Include="Images\Bertozzi\bw10a.jpg" />
+    <EmbeddedResource Include="Images\Bertozzi\bw12a.jpg" />
+    <EmbeddedResource Include="Images\Bertozzi\bw13a.jpg" />
+    <EmbeddedResource Include="Images\Bertozzi\bw1a.jpg" />
+    <EmbeddedResource Include="Images\Bertozzi\bw2a.jpg" />
+    <EmbeddedResource Include="Images\Bertozzi\bw4a.jpg" />
+    <EmbeddedResource Include="Images\Bertozzi\bw5a.jpg" />
+    <EmbeddedResource Include="Images\Bertozzi\bw6a.jpg" />
+    <EmbeddedResource Include="Images\Bertozzi\bw8a.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\GeneralField\gf17.png" />
+    <EmbeddedResource Include="Images\ForBells\fb1a.jpg" />
+    <EmbeddedResource Include="Images\ForBells\fb2a.jpg" />
+    <EmbeddedResource Include="Images\ForBells\fb3a.jpg" />
+    <EmbeddedResource Include="Images\ForBells\fb4a.jpg" />
+    <EmbeddedResource Include="Images\ForBells\fb5a.jpg" />
+    <EmbeddedResource Include="Images\ForBells\fb6a.jpg" />
+    <EmbeddedResource Include="Images\ForBells\fb8a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Throne\throne11a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne13a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne14a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne15a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne17a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne18a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne1a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne2a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne5a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne6a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne7a.jpg" />
+    <EmbeddedResource Include="Images\Throne\throne9a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\GrotonPlace\gp12a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp13a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp15a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp16a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp17a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp18a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp19a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp1a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp2a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp3a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp4a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp5a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp7a.jpg" />
+    <EmbeddedResource Include="Images\GrotonPlace\gp8a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\TownForest\tf10a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf11a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf12a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf1a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf2a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf3a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf4a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf5a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf6a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf7a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf8a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf9a.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

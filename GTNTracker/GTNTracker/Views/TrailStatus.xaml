@@ -141,7 +141,7 @@
                                 LoadingPlaceholder="loading.gif"
                                 ErrorPlaceholder="error404.png"
                                 Rotation="{Binding CurrentHeadingDeg}"
-                                Source="{local:ImageResource GTNTracker.Images.gtn.png}" >
+                                Source="{local:ImageResource GTNTracker.Images.ic_gtnRound.png}" >
                             </ffimageloading:CachedImage>
                           </Grid>
                         </StackLayout>

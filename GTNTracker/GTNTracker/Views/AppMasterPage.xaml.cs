@@ -117,7 +117,7 @@ namespace GTNTracker.Views
             var trailName = args.TrailName;
             notifyPageVM.Title = trailName + " Completed!";
             //notifyPageVM.Description = !string.IsNullOrEmpty(region.Description) ? region.Description : "<To Be Added>";
-            var imgNameToUse = "GTNTracker.Images.welldone.jpg";
+            var imgNameToUse = "GTNTracker.Images.badge-photo.jpg";
 
             notifyPageVM.ImageData = ImageSource.FromResource(imgNameToUse);
             var notifyPage = new TrailCompletePage();
