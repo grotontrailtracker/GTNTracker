@@ -97,6 +97,7 @@
                                Text="Indicates you've reached a waypoint on the trail you've started tracking on." FontSize="Small" HorizontalOptions="Start"/>
                 </Grid>
                 <StackLayout Grid.Row="2" HorizontalOptions="StartAndExpand" Spacing="0" Margin="5,5">
+                    <Label x:Name="PicInstructions" HorizontalOptions="Start" TextColor="#212121" FontSize="Small" />
                     <Label x:Name="ThankYouText"
                            HorizontalOptions="Start" TextColor="#212121" FontSize="Small" />
                 </StackLayout>

@@ -44,6 +44,7 @@ namespace GTNTracker.Views
 
             Instruction3.Text = "When you've visited all the waypoints, the app will track that you've completed the trail. "
                             + "And, when you've completed all the trails, the app will let you email the GTN organization of your successful completion!";
+            PicInstructions.Text = "You can zoom the pictures by clicking on a thumbnail or double click a picture. Just click once to close.";
 
             ThankYouText.Text = "I would like to thank the Groton Trails Committee for sponsoring and helping me with this project. "
                             + "Also, I'd like to thank the scouts, leaders and parents of Troop 1 West Groton for their help in developing this app and mapping the trails.";

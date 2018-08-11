@@ -209,7 +209,7 @@
         "Identifier": "GF17",
         "TrailIdentifier": "GeneralField",
         "Name": "Mid-field Waypoint",
-        "Description": "From here you'll head to the forest loop",
+        "Description": "From here you'll head to the loop around the General Field woods.",
         "ImageName": "GTNTracker.Images.GeneralField.gf17.png",
         "IsImageNameURI": false,
         "Center": {
@@ -221,7 +221,7 @@
         "Identifier": "GF5",
         "TrailIdentifier": "GeneralField",
         "Name": "Across the field",
-        "Description": "You're heading towards the General Forest where you'll loop around.",
+        "Description": "You're heading towards the General Field woods where you'll loop around.",
         "ImageName": "GTNTracker.Images.GeneralField.gf5.png",
         "IsImageNameURI": false,
         "Center": {
@@ -281,7 +281,7 @@
         "Identifier": "GF11",
         "TrailIdentifier": "GeneralField",
         "Name": "Entrance To Woods",
-        "Description": "Take this narrow entrance into the General Field Woods. Following the winding trail.",
+        "Description": "Take this narrow entrance into the General Field woods. Following the winding trail.",
         "ImageName": "GTNTracker.Images.GeneralField.gf11.png",
         "IsImageNameURI": false,
         "Center": {
