@@ -2,7 +2,7 @@
   {
     "Identifier": "TownForest",
     "Name": "Town Forest",
-    "Description": "The Groton Memorial Town Forest is one of Groton's largest trail systems with over 16 miles in trails.",
+    "Description": "The Groton Memorial Town Forest is one of Groton's largest trail systems with over 16 miles in trails. This waypoint set will take you along the Loop Trail.",
     "ImageName": "GTNTracker.Images.TownForest.tf8a.jpg",
     "Regions": [
       {
@@ -30,22 +30,94 @@
         }
       },
       {
-        "Identifier": "TF3",
+        "Identifier": "TF16",
         "TrailIdentifier": "TownForest",
-        "Name": "Ames Pond Rd Crossing",
-        "Description": "Continue along Town Forest Rd as part of the 'A' Trail.",
-        "ImageName": "GTNTracker.Images.TownForest.tf3a.jpg",
+        "Name": "Nashua River",
+        "Description": "Along Loop Trail near Nashua River.",
+        "ImageName": "GTNTracker.Images.TownForest.tf16a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.596746170932981,
-          "Longitude": -71.605979036606485
+          "Latitude": 42.596715199800762,
+          "Longitude": -71.599837783790747
+        }
+      },
+      {
+        "Identifier": "TF17",
+        "TrailIdentifier": "TownForest",
+        "Name": "D2 Trail Marker",
+        "Description": "D2 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf17a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.591726710128214,
+          "Longitude": -71.600371375746647
+        }
+      },
+      {
+        "Identifier": "TF18",
+        "TrailIdentifier": "TownForest",
+        "Name": "Nashua River Bend",
+        "Description": "Following the Nashua river, bending west.",
+        "ImageName": "GTNTracker.Images.TownForest.tf18a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.5896448968375,
+          "Longitude": -71.6014378891062
+        }
+      },
+      {
+        "Identifier": "TF19",
+        "TrailIdentifier": "TownForest",
+        "Name": "D3 Trail Marker",
+        "Description": "D3 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf19a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.58985046301278,
+          "Longitude": -71.603167411006609
+        }
+      },
+      {
+        "Identifier": "TF20",
+        "TrailIdentifier": "TownForest",
+        "Name": "D4 Trail Marker",
+        "Description": "D4 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf20a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.590986462349619,
+          "Longitude": -71.602972112662712
+        }
+      },
+      {
+        "Identifier": "TF21",
+        "TrailIdentifier": "TownForest",
+        "Name": "D5 Trail Marker",
+        "Description": "D5 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf21a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.593539590055677,
+          "Longitude": -71.602692324734846
+        }
+      },
+      {
+        "Identifier": "TF22",
+        "TrailIdentifier": "TownForest",
+        "Name": "D6 Trail Marker",
+        "Description": "D6 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf22a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.594306450376841,
+          "Longitude": -71.60404306843094
         }
       },
       {
         "Identifier": "TF4",
         "TrailIdentifier": "TownForest",
-        "Name": "A1",
-        "Description": "Point 'A1' along the 'A' trail",
+        "Name": "A1 Trail Marker",
+        "Description": "A1 Trail Marker",
         "ImageName": "GTNTracker.Images.TownForest.tf4a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -56,8 +128,8 @@
       {
         "Identifier": "TF5",
         "TrailIdentifier": "TownForest",
-        "Name": "A2",
-        "Description": "Point 'A2' along the 'A' trail",
+        "Name": "A2 Trail Marker",
+        "Description": "A2 Trail Marker",
         "ImageName": "GTNTracker.Images.TownForest.tf5a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -78,22 +150,298 @@
         }
       },
       {
-        "Identifier": "TF7",
+        "Identifier": "TF23",
         "TrailIdentifier": "TownForest",
-        "Name": "A3",
-        "Description": "Point 'A3' along the 'A' trail",
-        "ImageName": "GTNTracker.Images.TownForest.tf7a.jpg",
+        "Name": "C1 Trail Marker",
+        "Description": "C1 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf23a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.5941160554463,
-          "Longitude": -71.610993761635953
+          "Latitude": 42.593104359733495,
+          "Longitude": -71.609032228655749
+        }
+      },
+      {
+        "Identifier": "TF24",
+        "TrailIdentifier": "TownForest",
+        "Name": "C Trail Wharton Rd Intersection",
+        "Description": "Start onto the C Trail.",
+        "ImageName": "GTNTracker.Images.TownForest.tf24a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.592606851870741,
+          "Longitude": -71.608779598094159
+        }
+      },
+      {
+        "Identifier": "TF25",
+        "TrailIdentifier": "TownForest",
+        "Name": "C Trail Fork",
+        "Description": "Stay to the left on this fork.",
+        "ImageName": "GTNTracker.Images.TownForest.tf25a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.591696074272122,
+          "Longitude": -71.610010732032
+        }
+      },
+      {
+        "Identifier": "TF26",
+        "TrailIdentifier": "TownForest",
+        "Name": "C5 Trail Marker",
+        "Description": "C5 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf26a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.590175764674868,
+          "Longitude": -71.610218184135491
+        }
+      },
+      {
+        "Identifier": "TF27",
+        "TrailIdentifier": "TownForest",
+        "Name": "Towards C7 Trail Marker",
+        "Description": "Follow this trail fork towards C7 Trail Marker.",
+        "ImageName": "GTNTracker.Images.TownForest.tf27a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.589866598176386,
+          "Longitude": -71.609334396265083
+        }
+      },
+      {
+        "Identifier": "TF28",
+        "TrailIdentifier": "TownForest",
+        "Name": "F7 Trail Marker",
+        "Description": "F7 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf28a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.586409230756189,
+          "Longitude": -71.607572352580362
+        }
+      },
+      {
+        "Identifier": "TF29",
+        "TrailIdentifier": "TownForest",
+        "Name": "E1 Trail Marker",
+        "Description": "E1 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf29a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.586349635424639,
+          "Longitude": -71.607234645701581
+        }
+      },
+      {
+        "Identifier": "TF30",
+        "TrailIdentifier": "TownForest",
+        "Name": "E Trail along Wharton Rd",
+        "Description": "Continue following the E trail along Wharton Rd.",
+        "ImageName": "GTNTracker.Images.TownForest.tf30a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.584086814934928,
+          "Longitude": -71.604151194981853
+        }
+      },
+      {
+        "Identifier": "TF31",
+        "TrailIdentifier": "TownForest",
+        "Name": "E4 Trail Marker",
+        "Description": "E4 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf31a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.583506787235457,
+          "Longitude": -71.606279611654216
+        }
+      },
+      {
+        "Identifier": "TF32",
+        "TrailIdentifier": "TownForest",
+        "Name": "E6 Trail Marker",
+        "Description": "E6 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf32a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.583783222402054,
+          "Longitude": -71.606080876730019
+        }
+      },
+      {
+        "Identifier": "TF33",
+        "TrailIdentifier": "TownForest",
+        "Name": "F2 Trail Marker",
+        "Description": "F2 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf33a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.584503479341585,
+          "Longitude": -71.607757257364327
+        }
+      },
+      {
+        "Identifier": "TF34",
+        "TrailIdentifier": "TownForest",
+        "Name": "F3 Trail Marker",
+        "Description": "F3 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf34a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.584413206244427,
+          "Longitude": -71.610078206352526
+        }
+      },
+      {
+        "Identifier": "TF35",
+        "TrailIdentifier": "TownForest",
+        "Name": "F4 Trail Marker",
+        "Description": "F4 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf35a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.585237859787966,
+          "Longitude": -71.609076904199654
+        }
+      },
+      {
+        "Identifier": "TF36",
+        "TrailIdentifier": "TownForest",
+        "Name": "F5 Trail Marker",
+        "Description": "F5 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf36a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.586647863539483,
+          "Longitude": -71.611416041917735
+        }
+      },
+      {
+        "Identifier": "TF37",
+        "TrailIdentifier": "TownForest",
+        "Name": "B4 Trail Marker",
+        "Description": "B4 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf37a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.588614677118684,
+          "Longitude": -71.61365468061679
+        }
+      },
+      {
+        "Identifier": "TF38",
+        "TrailIdentifier": "TownForest",
+        "Name": "B3 Trail Marker",
+        "Description": "B3 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf38a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.587767727712716,
+          "Longitude": -71.614780873126918
+        }
+      },
+      {
+        "Identifier": "TF39",
+        "TrailIdentifier": "TownForest",
+        "Name": "B2 Trail Marker",
+        "Description": "B2 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf39a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.589057995977427,
+          "Longitude": -71.615798436171943
+        }
+      },
+      {
+        "Identifier": "TF40",
+        "TrailIdentifier": "TownForest",
+        "Name": "Trail Split",
+        "Description": "Follow trail along the loop",
+        "ImageName": "GTNTracker.Images.TownForest.tf40a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.589633706996764,
+          "Longitude": -71.615979485280448
+        }
+      },
+      {
+        "Identifier": "TF41",
+        "TrailIdentifier": "TownForest",
+        "Name": "Steep Drop",
+        "Description": "Careful, follow the trail down.",
+        "ImageName": "GTNTracker.Images.TownForest.tf41a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.590958843978669,
+          "Longitude": -71.6181097459715
+        }
+      },
+      {
+        "Identifier": "TF42",
+        "TrailIdentifier": "TownForest",
+        "Name": "Root Problems",
+        "Description": "Large uprooted tree!",
+        "ImageName": "GTNTracker.Images.TownForest.tf42a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.593105156014296,
+          "Longitude": -71.619409108601147
+        }
+      },
+      {
+        "Identifier": "TF43",
+        "TrailIdentifier": "TownForest",
+        "Name": "North on Town Forest Rd",
+        "Description": "Start heading north on the Town Forest Rd.",
+        "ImageName": "GTNTracker.Images.TownForest.tf43a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.591644064562942,
+          "Longitude": -71.620810646630474
+        }
+      },
+      {
+        "Identifier": "TF44",
+        "TrailIdentifier": "TownForest",
+        "Name": "B7 Trail Marker",
+        "Description": "B7 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf44a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.592847454401287,
+          "Longitude": -71.616661101646358
+        }
+      },
+      {
+        "Identifier": "TF45",
+        "TrailIdentifier": "TownForest",
+        "Name": "C3 Trail Marker",
+        "Description": "C3 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf45a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.592021836938883,
+          "Longitude": -71.612346265531713
+        }
+      },
+      {
+        "Identifier": "TF46",
+        "TrailIdentifier": "TownForest",
+        "Name": "A3 Trail Marker",
+        "Description": "A3 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf46a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.593963337170514,
+          "Longitude": -71.611215127698713
         }
       },
       {
         "Identifier": "TF8",
         "TrailIdentifier": "TownForest",
-        "Name": "A5",
-        "Description": "Point 'A5' along the 'A' trail",
+        "Name": "A5 Trail Marker",
+        "Description": "A5 Trail Marker",
         "ImageName": "GTNTracker.Images.TownForest.tf8a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -104,8 +452,8 @@
       {
         "Identifier": "TF9",
         "TrailIdentifier": "TownForest",
-        "Name": "A4",
-        "Description": "Point 'A4' along the 'A' trail",
+        "Name": "A4 Trail Marker",
+        "Description": "A4 Trail Marker",
         "ImageName": "GTNTracker.Images.TownForest.tf9a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -114,39 +462,51 @@
         }
       },
       {
-        "Identifier": "TF10",
+        "Identifier": "TF48",
         "TrailIdentifier": "TownForest",
-        "Name": "A4 On Loop Trail",
-        "Description": "Either follow the 'A' trail or merge onto the Loop Trail",
-        "ImageName": "GTNTracker.Images.TownForest.tf10a.jpg",
+        "Name": "Kettle Hole",
+        "Description": "Kettle Hole",
+        "ImageName": "GTNTracker.Images.TownForest.tf52a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.595439935142728,
-          "Longitude": -71.611977126516038
+          "Latitude": 42.595810708629521,
+          "Longitude": -71.61189221783691
         }
       },
       {
-        "Identifier": "TF11",
+        "Identifier": "TF49",
         "TrailIdentifier": "TownForest",
-        "Name": "Kettle Hole #1",
-        "Description": "Interesting kettle hole along the 'A' Trail.",
-        "ImageName": "GTNTracker.Images.TownForest.tf11a.jpg",
+        "Name": "A13 Trail Marker",
+        "Description": "A13 Trail Marker",
+        "ImageName": "GTNTracker.Images.TownForest.tf49a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.595462147186133,
-          "Longitude": -71.61147882237249
+          "Latitude": 42.597902328746947,
+          "Longitude": -71.6077704169523
         }
       },
       {
-        "Identifier": "TF12",
+        "Identifier": "TF50",
         "TrailIdentifier": "TownForest",
-        "Name": "Kettle Hole #2",
-        "Description": "Another kettle hole.",
-        "ImageName": "GTNTracker.Images.TownForest.tf12a.jpg",
+        "Name": "Back onto Loop Trail",
+        "Description": "Take the fork here to finish on the Loop Trail.",
+        "ImageName": "GTNTracker.Images.TownForest.tf50a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.595561724195811,
-          "Longitude": 71.609235908902818
+          "Latitude": 42.598254662046763,
+          "Longitude": -71.607778212122255
+        }
+      },
+      {
+        "Identifier": "TF47",
+        "TrailIdentifier": "TownForest",
+        "Name": "Home Stretch",
+        "Description": "Almost back to the parking lot!",
+        "ImageName": "GTNTracker.Images.TownForest.tf47a.jpg",
+        "IsImageNameURI": false,
+        "Center": {
+          "Latitude": 42.597690853329929,
+          "Longitude": -71.606402155078584
         }
       }
     ]
