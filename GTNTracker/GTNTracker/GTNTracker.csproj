@@ -519,17 +519,52 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\TownForest\tf10a.jpg" />
-    <EmbeddedResource Include="Images\TownForest\tf11a.jpg" />
-    <EmbeddedResource Include="Images\TownForest\tf12a.jpg" />
     <EmbeddedResource Include="Images\TownForest\tf1a.jpg" />
     <EmbeddedResource Include="Images\TownForest\tf2a.jpg" />
-    <EmbeddedResource Include="Images\TownForest\tf3a.jpg" />
     <EmbeddedResource Include="Images\TownForest\tf4a.jpg" />
     <EmbeddedResource Include="Images\TownForest\tf5a.jpg" />
     <EmbeddedResource Include="Images\TownForest\tf6a.jpg" />
-    <EmbeddedResource Include="Images\TownForest\tf7a.jpg" />
     <EmbeddedResource Include="Images\TownForest\tf8a.jpg" />
     <EmbeddedResource Include="Images\TownForest\tf9a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\TownForest\tf16a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf17a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf18a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf19a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf20a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf21a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf22a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\TownForest\tf23a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf24a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf25a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf26a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf27a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf28a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf29a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf30a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf31a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf32a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf33a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf34a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf35a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf36a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf37a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf38a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf39a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf40a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf41a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf42a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf43a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf44a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf45a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf46a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf47a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf49a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf50a.jpg" />
+    <EmbeddedResource Include="Images\TownForest\tf52a.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
