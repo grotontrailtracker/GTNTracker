@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GTNTracker.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace GTNTracker.Views
 {
@@ -17,6 +18,7 @@ namespace GTNTracker.Views
 		public AboutCarousel ()
 		{
             IsAndroid = Device.RuntimePlatform == Device.Android;
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
 
             BindingContext = this;
 
