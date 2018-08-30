@@ -50,12 +50,14 @@ namespace GTNTracker.iOS
                 mailController.SetSubject("waypoint");
                 mailController.SetMessageBody(waypointData, false);
                 mailController.AddAttachmentData(image.AsJPEG(), "image/JPG", "waypoint.jpg");
-                GetController().PresentViewController(mailController, true, null);
+                //GetController().PresentViewController(mailController, true, null);
                 mailController.Finished += (object s, MFComposeResultEventArgs args) =>
                 {
-                    Console.WriteLine(args.Result.ToString());
+                    Console.WriteLine("---> Mail Result:" + args.Result.ToString() + "for id:" + id);
+                    MessagingCenter.Send<WaypointEmailed, WaypointEMailedArgs>(new WaypointEmailed(), WaypointEmailed.MessageString, new WaypointEMailedArgs(id));
                     args.Controller.DismissViewController(true, null);
                 };
+                GetController().PresentViewController(mailController, true, null);
             }
             else
             {
