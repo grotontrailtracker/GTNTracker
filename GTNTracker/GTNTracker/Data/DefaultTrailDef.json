@@ -1021,8 +1021,8 @@
         "ImageName": "GTNTracker.Images.GrotonPlace.gp1a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.6047786,
-          "Longitude": -71.59616713
+          "Latitude": 42.60460,
+          "Longitude": -71.59605
         },
         "Radius": {
           "TotalKilometers": 0.015
@@ -1036,8 +1036,8 @@
         "ImageName": "GTNTracker.Images.GrotonPlace.gp2a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.60435997,
-          "Longitude": -71.59622755
+          "Latitude": 42.60452,
+          "Longitude": -71.59627
         },
         "Radius": {
           "TotalKilometers": 0.015
@@ -1051,8 +1051,8 @@
         "ImageName": "GTNTracker.Images.GrotonPlace.gp3a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.60403062,
-          "Longitude": -71.59659856
+          "Latitude": 42.60398,
+          "Longitude": -71.59685
         }
       },
       {
