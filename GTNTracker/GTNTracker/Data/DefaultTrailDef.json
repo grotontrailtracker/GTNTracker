@@ -514,14 +514,14 @@
   {
     "Identifier": "GeneralField",
     "Name": "The General Field",
-    "Description": "In 2006, the Groton Conservation Trust acquired 143 acres of agricultural land as their portion of a successful joint venture with the Town of Groton to protect from development the 265-acre Surrenden Farm property along Farrriers Row.",
+    "Description": "In 2006, the Groton Conservation Trust acquired 143 acres of agricultural land as their portion of a successful joint venture with the Town of Groton to protect from development the 265-acre Surrenden Farm property along Farmers Row.",
     "ImageName": "GTNTracker.Images.GeneralField.gf17a.jpg",
     "Regions": [
       {
         "Identifier": "GF1",
         "TrailIdentifier": "GeneralField",
         "Name": "Trail Start",
-        "Description": "Your field walk starts here, walk along Farmer's Row taking in the wonderful views to your left.",
+        "Description": "Your field walk starts here. Walk along Farmers Row taking in the wonderful views to your left.",
         "ImageName": "GTNTracker.Images.GeneralField.gf1a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -545,7 +545,7 @@
         "Identifier": "GF3",
         "TrailIdentifier": "GeneralField",
         "Name": "Start of the field corner",
-        "Description": "The trail skirts around a residence, follow the hedges.",
+        "Description": "The trail skirts around a residence. Follow the hedges.",
         "ImageName": "GTNTracker.Images.GeneralField.gf3a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -557,7 +557,7 @@
         "Identifier": "GF4",
         "TrailIdentifier": "GeneralField",
         "Name": "Heading towards mid-field",
-        "Description": "You'll follow the trail out onto the open field, enjoy the view all around you.",
+        "Description": "You'll follow the trail out onto the open fiel. Enjoy the views all around you.",
         "ImageName": "GTNTracker.Images.GeneralField.gf4a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -605,7 +605,7 @@
         "Identifier": "GF8",
         "TrailIdentifier": "GeneralField",
         "Name": "Rock Wall",
-        "Description": "An amazing large field stone wall, seems like someone has been rock collecting!",
+        "Description": "An amazing large field stone wall. Seems like someone has been rock collecting!",
         "ImageName": "GTNTracker.Images.GeneralField.gf8a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -629,7 +629,7 @@
         "Identifier": "GF10",
         "TrailIdentifier": "GeneralField",
         "Name": "Shirley Rd Trail Entrance",
-        "Description": "Here's an informational display from the Groton Conservation Trust, you're also right across from Surrenden Farms Trail.",
+        "Description": "Here's an informational display from the Groton Conservation Trust. You're also right across from Surrenden Farms Trail.",
         "ImageName": "GTNTracker.Images.GeneralField.gf10a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -641,7 +641,7 @@
         "Identifier": "GF11",
         "TrailIdentifier": "GeneralField",
         "Name": "Entrance To Woods",
-        "Description": "Take this narrow entrance into the General Field woods. Following the winding trail.",
+        "Description": "Take this narrow entrance into the General Field woods. Follow the winding trail.",
         "ImageName": "GTNTracker.Images.GeneralField.gf11a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -653,7 +653,7 @@
         "Identifier": "GF12",
         "TrailIdentifier": "GeneralField",
         "Name": "General Field Woods",
-        "Description": "You're almost back out to the field, keep following the trail.",
+        "Description": "You're almost back out to the field. Keep following the trail.",
         "ImageName": "GTNTracker.Images.GeneralField.gf12a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -701,7 +701,7 @@
         "Identifier": "GF16",
         "TrailIdentifier": "GeneralField",
         "Name": "Trail End",
-        "Description": "This is the end of the trail (or upper entrance), take a seat under the pines and rest a moment.",
+        "Description": "This is the end of the trail (or upper entrance). Take a seat under the pines and rest a moment.",
         "ImageName": "GTNTracker.Images.GeneralField.gf16a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -734,7 +734,7 @@
   {
     "Identifier": "BertozziWildlife",
     "Name": "Bertozzi Wildlife",
-    "Description": "Peter E. Bertozzi Conservation Area. This is a beautiful riverside property that includes wide dirt trails through the forest and a well loved swimming hole. A camping area on the river near a swimming hole.",
+    "Description": "Peter E. Bertozzi Conservation Area. This is a beautiful riverside property that includes wide dirt trails through the forest and a well loved swimming hole. There is a camping area along the river near a swimming hole.",
     "ImageName": "GTNTracker.Images.Bertozzi.bw12a.jpg",
     "Regions": [
       {
@@ -757,8 +757,8 @@
         "ImageName": "GTNTracker.Images.Bertozzi.bw2a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.63568705,
-          "Longitude": -71.65108972
+          "Latitude": 42.63583,
+          "Longitude": -71.65125
         }
       },
       {
@@ -793,15 +793,15 @@
         "ImageName": "GTNTracker.Images.Bertozzi.bw4a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.63405279,
-          "Longitude": -71.65787638
+          "Latitude": 42.63411,
+          "Longitude": -71.65783
         }
       },
       {
         "Identifier": "BW5",
         "TrailIdentifier": "BertozziWildlife",
         "Name": "Groton Leatherboard Memorial / Camping Site",
-        "Description": "Groton Leatherboard Memorial. A scenic campsite by the Squannacook River, fall asleep to the sounds of the river flowing by.",
+        "Description": "Groton Leatherboard Memorial. A scenic campsite by the Squannacook River. Fall asleep to the sounds of the river flowing by.",
         "ImageName": "GTNTracker.Images.Bertozzi.bw5a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -829,8 +829,8 @@
         "ImageName": "GTNTracker.Images.Bertozzi.bw13a.jpg",
         "IsImageNameURI": false,
         "Center": {
-          "Latitude": 42.633281,
-          "Longitude": -71.655981
+          "Latitude": 42.63335,
+          "Longitude": -71.65591
         }
       }
     ]
@@ -1017,7 +1017,7 @@
         "Identifier": "GP1",
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Groton Place Entrance",
-        "Description": "This magnificent gate leads opens into Groton Place",
+        "Description": "This magnificent gate leads into Groton Place",
         "ImageName": "GTNTracker.Images.GrotonPlace.gp1a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -1131,7 +1131,7 @@
         "Identifier": "GP15",
         "TrailIdentifier": "GrotonPlace1",
         "Name": "Bridge Near East Trail",
-        "Description": "Cross the bridge North will get you to the start of the East Trail.",
+        "Description": "Crossing the bridge North will get you to the start of the East Trail.",
         "ImageName": "GTNTracker.Images.GrotonPlace.gp15a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -1143,7 +1143,7 @@
         "Identifier": "GP16",
         "TrailIdentifier": "GrotonPlace1",
         "Name": "East Trail Start",
-        "Description": "The start of the East Trail, this wide maintained trail goes through Sabine Woods into Groton Place.",
+        "Description": "The start of the East Trail. This wide maintained trail goes through Sabine Woods into Groton Place.",
         "ImageName": "GTNTracker.Images.GrotonPlace.gp16a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -1247,7 +1247,7 @@
         "Identifier": "TH5",
         "TrailIdentifier": "Throne",
         "Name": "Loop Trail Fork",
-        "Description": "Loop Trail Fork, Straight West To Rockwood Lane, follow the Loop Trail to the south west.",
+        "Description": "Loop Trail Fork. Go straight West To Rockwood Lane. Go south west to follow the Loop Trail.",
         "ImageName": "GTNTracker.Images.Throne.throne5a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -1259,7 +1259,7 @@
         "Identifier": "TH6",
         "TrailIdentifier": "Throne",
         "Name": "Waypoint #6",
-        "Description": "Take either fork, you'll merge back on the same path soon!",
+        "Description": "Take either fork. You'll merge back on the same path soon!",
         "ImageName": "GTNTracker.Images.Throne.throne6a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -1283,7 +1283,7 @@
         "Identifier": "TH15",
         "TrailIdentifier": "Throne",
         "Name": "Waypoint #8",
-        "Description": "Keep heading south, it's almost snack time!",
+        "Description": "Keep heading south. It's almost snack time!",
         "ImageName": "GTNTracker.Images.Throne.throne15a.jpg",
         "IsImageNameURI": false,
         "Center": {
@@ -1307,7 +1307,7 @@
         "Identifier": "TH13",
         "TrailIdentifier": "Throne",
         "Name": "Waypoint #10",
-        "Description": "Old beaver home, find some tree stumps.",
+        "Description": "Old beaver home. Find some tree stumps.",
         "ImageName": "GTNTracker.Images.Throne.throne13a.jpg",
         "IsImageNameURI": false,
         "Center": {
