@@ -44,7 +44,7 @@
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This app needs access always to location.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This app needs access location when open and in the background.</string>
+	<string>This app needs location access when open and in the background. Location is used to detect proximity to trail waypoints. It is only active while trail tracking.</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Needs Calendar Permission</string>
 	<key>NSCameraUsageDescription</key>
@@ -58,8 +58,8 @@
 	<key>CFBundleIdentifier</key>
 	<string>org.grotontrails.GrotonTrailTracker</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.10</string>
+	<string>1.0.11</string>
 </dict>
 </plist>
